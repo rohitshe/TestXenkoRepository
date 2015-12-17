@@ -1,4 +1,4 @@
-# Highlights
+# Version 1.5-beta - Highlights
 
 ## Skeleton asset
 
@@ -70,9 +70,9 @@ You have now the ability to copy assets with their dependencies. To do that use 
 For example, if you copy/paste a model with its dependencies, you will get a copy of this model along with a copy of all its dependencies (skeleton, materials, textures)
 
 ## Border and Center support in sprite sheet editor
-For ‘Sprite2D’ sprites, you can move the position of the center by selecting the <img src="http://doc.xenko.com/1.5/rn_images/SpriteCenterIcon.png" /> in the toolbar of the sprite editor. Grab and move the cross to the desired position.
+For ‘Sprite2D’ sprites, you can move the position of the center by selecting the <img src="http://doc.xenko.com/1.5/rn_images/SpriteCenterIcon.png" /> icon in the toolbar of the sprite editor. Grab and move the cross to the desired position.
 
-For ‘UI’ sprites, you can change the borders by selecting the <img src="http://doc.xenko.com/1.5/rn_images/SpriteBorderIcon.png" /> in the toolbar of the sprite editor. You can then resize each border (left, top, right and bottom) separately in the same way as the texture region, by grabbing and moving one of them. Note that the <img src="http://doc.xenko.com/1.5/rn_images/SpriteBorderLockIcon.png" /> lets you ‘lock’or ‘unlock’ the sprite borders while resizing the texture region.
+For ‘UI’ sprites, you can change the borders by selecting the <img src="http://doc.xenko.com/1.5/rn_images/SpriteBorderIcon.png" /> icon in the toolbar of the sprite editor. You can then resize each border (left, top, right and bottom) separately in the same way as the texture region, by grabbing and moving one of them. Note that the <img src="http://doc.xenko.com/1.5/rn_images/SpriteBorderLockIcon.png" /> icon lets you ‘lock’or ‘unlock’ the sprite borders while resizing the texture region.
 
 ## New built-in scripts
 We added a few more built-in scripts with this release such as an FPS camera script and First player controller script. To use them, just click on “New Asset”, “Script source code”, select the desired script and attach it to an adequate entity.
@@ -166,8 +166,6 @@ Release date: 2015/12/17
 ### Rendering
 
 - Fixed disappearing shadows due to wrong cascade distance calculation
-
-# Breaking changes
 
 # Known Issues
 

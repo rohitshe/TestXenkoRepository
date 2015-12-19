@@ -2,7 +2,7 @@
 
 In Xenko, Layout System is very similar to the one in WPF.
 
-You can find a much more detailed explanation in [WPF Layout System documentation](http://msdn.microsoft.com/en-us/library/ms745058(v=vs.110).aspx) .
+You can find a much more detailed explanation in [WPF Layout System documentation](http://msdn.microsoft.com/en-us/library/ms745058%28v=vs.100%29.aspx) .
 
 # Introduction
 

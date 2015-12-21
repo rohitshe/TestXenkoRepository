@@ -2,7 +2,7 @@
 
 Xenko contains a complete UI system to build visually impressive in-game UI interfaces.
 
-It is built upon a simplified design of [Windows Presentation Foundation (WPF)](http://msdn.microsoft.com/en-us/library/ms754130(v=vs.110).aspx)  so that people can get quickly up to speed.
+It is built upon a simplified design of [Windows Presentation Foundation (WPF)](http://msdn.microsoft.com/en-us/library/ms754130%28v=vs.110%29.aspx)  so that people can get quickly up to speed.
 
 Many of the usual components and containers are all here, and on top of that it supports both 2D and 3D in a resolution-independent way.
 

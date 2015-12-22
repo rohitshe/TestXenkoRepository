@@ -86,9 +86,26 @@ To generate a precompiled sprite font, the owner of the original font file just 
 
 <img src="http://doc.xenko.com/1.5/rn_images/PrecompiledSpriteFont.png" />
 
+# Version 1.5.1-beta
+Release date: 2015/12/22
+
+## Issues fixed
+
+### Engine
+
+- Fix LLVM AOT compilation in release configuration for iOS
+
+### Game Studio
+
+- Fix a possible crash when using types with no base type in scripts ([#342](https://github.com/SiliconStudio/paradox/issues/342))
+- Fix double-click on folder in asset picker window
+- Fix settings of default IDE reset to null when it shouldn't.
+- Fix the problem of the texture thumbnail not updating when modify the content of the source file.
+- Creating an asset with a template can be properly undone. ([#343](https://github.com/SiliconStudio/paradox/issues/343))
+
+
 # Version 1.5.0-beta
 Release date: 2015/12/17
-
 
 ## Enhancements
 
@@ -170,3 +187,4 @@ Release date: 2015/12/17
 # Known Issues
 
 - iOS has an outstanding crash issue after a few second, especially on recent devices (iPhone 6s). This is currently under investigation.
+- Windows 10 Universal AOT compilation is not working 

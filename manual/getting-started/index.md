@@ -1,7 +1,7 @@
 # Getting started
 
 This part of the manual gets you started making a basic, runnable project as fast and painless as possible in 3 easy steps:  
-1. Check [install xenko](howto-install-xenko.md) to install the Xenko engine if you haven't already  
+1. Check [install xenko](http://xenko.com/download/) to install the Xenko engine if you haven't already  
 2. Create your [first project ](howto-create-and-setup-new-game.md)  
 3. And set up your [first basic scene](howto-create-and-setup-new-game.md) in the project
  

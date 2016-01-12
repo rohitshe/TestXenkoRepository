@@ -68,7 +68,7 @@ Asset.Unload(firstReference); // decrease the reference counter (ref count = 1)
 Asset.Get<Texture>("MyTexture"); // return the loaded asset without increasing the reference counter (ref count = 1)
  
 // the texture can still be used here
-Asset.Unload("secondReference"); // decrease the reference counter and unload the asset (ref count = 0)
+Asset.Unload(secondReference); // decrease the reference counter and unload the asset (ref count = 0)
  
 // The texture has been unloaded, it cannot be used here anymore.```
 

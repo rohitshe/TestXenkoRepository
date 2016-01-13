@@ -24,12 +24,6 @@ The graphics compositor is accessible by clicking on the scene root object and t
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > Note that while the Scene Graphics Compositor is currently editable only through the property editor, we will add in a future release a dedicated editor to considerably ease the use of it    
 
 # Concepts

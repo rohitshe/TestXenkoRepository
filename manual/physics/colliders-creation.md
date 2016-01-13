@@ -51,12 +51,6 @@ Second we need to add the PhysicsComponent to the entity we want to have physics
 
 > **Error**
 > 
-> 
->     
->             
->     
->     
-> 
 > Currently skinned meshes and physics are not working properly, but this will be fixed very soon    
 
  

@@ -6,12 +6,6 @@ It offers all basic operations such as reading, writing, copying, checking exist
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > Path separator is / (Unix/Linux convention).    
 
 # Usage

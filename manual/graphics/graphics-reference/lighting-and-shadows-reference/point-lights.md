@@ -18,12 +18,6 @@ Once selected, the gizmo of the point light displays its sphere influence:
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > Shadows for point lights are not yet supported in 1.1.x-beta versions    
 
 # Properties

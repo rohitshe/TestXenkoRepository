@@ -35,12 +35,6 @@ The size of this region depends on several factors:
 
 > **Warning**
 > 
-> 
->     
->             
->     
->     
-> 
 > In order to simplify the parametrization, the Shadow Importance property will be merged into the Shadow Size property in a future release.    
 
  

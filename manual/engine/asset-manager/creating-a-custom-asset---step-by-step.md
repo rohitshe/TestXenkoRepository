@@ -2,12 +2,6 @@
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > This tutorial is little bit outdated, and will be improved later.    
 
 Xenko allows to integrate new assets into the asset pipeline.
@@ -47,12 +41,6 @@ We need to create two separate project assembly:
 - create a project assembly that will contain our **design time asset classes**
 
 > **Warning**
-> 
-> 
->     
->             
->     
->     
 > 
 > TODO: we should provide a VS wizard/template to create this kind of project    
 
@@ -154,12 +142,6 @@ Profiles:
 
 > **Warning**
 > 
-> 
->     
->             
->     
->     
-> 
 > This will later be part of GameStudio interface.    
 
 ## Add an asset file
@@ -176,12 +158,6 @@ Step: 1```
 
 
 > **Warning**
-> 
-> 
->     
->             
->     
->     
 > 
 > TODO: An asset file can also be create through the asset editor if it provides a factory. Explain how to create a factory    
 

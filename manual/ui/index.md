@@ -8,12 +8,6 @@ Many of the usual components and containers are all here, and on top of that it 
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > It doesn't support Xaml-like format and editor yet, but please be assured that's in our roadmap.    
 
 # Controls

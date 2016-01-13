@@ -11,12 +11,6 @@ The principle of HDR rendering is to render to a scene to a HDR render target an
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > As part of the Graphics Compositor, we will provide a set of default pre-configured rendering paths including a HDR to LDR rendering path as described here.    
 
 # Step0: Visualize the pipeline

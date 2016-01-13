@@ -17,12 +17,6 @@ Basic rules:
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > Creating currently requires some manual steps (i.e. editing `xkpkg` by hand). In the future, we intend to move this feature in GameStudio.    
 
 Open the `xkprj` file of the game executable and add the following configuration:
@@ -61,12 +55,6 @@ Bundles:
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > Asset dependencies are automatically placed in the most appropriate bundle.
 > 
 > Current process works that way:
@@ -85,7 +73,7 @@ Bundles:
 
 # Loading Bundle at runtime
 
-Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (ref:{SiliconStudio.Core.Storage.ObjectDatabase.LoadBundle':
+Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (ref:{SiliconStudio.Core.Storage.ObjectDatabase.LoadBundle})`:
 
 ```cs
 // Load bundle

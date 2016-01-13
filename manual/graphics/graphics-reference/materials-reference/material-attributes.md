@@ -205,12 +205,6 @@ The shading attributes define the main color characteristics of the material and
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > At least one shading model - diffuse, specular or emissive model -  must be selected in order to display a material.    
 
 ## Diffuse Color
@@ -239,12 +233,6 @@ In the screenshot below, we can see a pure diffuse material with Lambert lightin
 ![images/material-attributes-25.png](images/material-attributes-25.png) 
 
 > **Note**
-> 
-> 
->     
->             
->     
->     
 > 
 > A pure Lambertian material does not exist in practice. A material has always a bit of specular reflection. This effect is more visible at grazing angles (a mostly diffuse surface becomes shiny at grazing angle)    
 
@@ -299,12 +287,6 @@ The specular workflow provides more control on the actual specular color but req
 Unlike the metallness workflow, It allows to have a different specular color from the diffuse color even in low reflectance scenarios, allowing some materials with special behavior.
 
 > **Note**
-> 
-> 
->     
->             
->     
->     
 > 
 > With the layering system, it is still possible to combine into a same material a metalness and specular workflow.    
 

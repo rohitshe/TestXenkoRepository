@@ -38,13 +38,4 @@ The following diagram shows the definition of a material blend above:
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
-> - Individual attributes of layers are blend if they share the same shading model otherwise it is the result of the shading model that is blend.
-> 
->     
-
+> - Individual attributes of layers are blend if they share the same shading model otherwise it is the result of the shading model that is blend.    

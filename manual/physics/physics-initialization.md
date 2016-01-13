@@ -4,12 +4,6 @@
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > Currently, Bullet Physics is used as physics engine.    
 
 Once you create a new Game project the Physics engine will be dormant by default, to actually use Physics we need to initialize the engine first.

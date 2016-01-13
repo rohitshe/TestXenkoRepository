@@ -16,12 +16,6 @@ As a result, you can seamlessly develop your games on mobile devices without wor
 
 > **Error**
 > 
-> 
->     
->             
->     
->     
-> 
 > Do not forget to switch back "Effect Compilation Mode" to Local or None before distributing your game, so that it doesn't open connection (and block on them if only "Remote" is enabled).    
 
 # Record effect compilations (before redistributing package)
@@ -42,12 +36,6 @@ As soon as you click the button, shaders will be imported as "EffectLog" asset. 
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > If you run the game again, GameStudio will let you know only when there is new effects that are not already in the "EffectLog" asset. This allows you to record effects in multiple runs.
 > 
 > Also, if you want to restart from scratch (i.e. remove old unused effect permutations), you can simply delete the "EffectLog" asset.    
@@ -56,21 +44,9 @@ If you want to make sure you game contains all its effects permutations, you sho
 
 > **Error**
 > 
-> 
->     
->             
->     
->     
-> 
 > Do not forget to untick "Record Effect Requested" before distributing your game.    
 
 > **Error**
-> 
-> 
->     
->             
->     
->     
 > 
 > We might invalidate current Effect Log assets in Xenko new version, so you might need to regenerate it during some version upgrades.    
 

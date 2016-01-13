@@ -15,12 +15,6 @@ In order to use a skybox light, an entity must have both:
 
 > **Note**
 > 
-> 
->     
->             
->     
->     
-> 
 > If the Skybox Component is enabled, both the lighting and the skybox background are displayed, otherwise only the lighting is displayed    
 
  

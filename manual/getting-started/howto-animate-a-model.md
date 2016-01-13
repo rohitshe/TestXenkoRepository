@@ -88,6 +88,7 @@ public class AnimationScript : SyncScript
             Entity.Get<AnimationComponent>().Crossfade(currentAnimation, TimeSpan.FromMilliseconds(100));
         }
     }
-}```
+}
+```
 
 

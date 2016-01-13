@@ -12,7 +12,8 @@ GraphicsDevice.DrawTexture(myTexture);
 GraphicsDevice.DrawTexture(myTexture, Color.Red);
  
 // use a custom sampler
-GraphicsDevice.DrawTexture(myTexture, mySamplerState);```
+GraphicsDevice.DrawTexture(myTexture, mySamplerState);
+```
 
 
 The texture will be displayed in the set viewport (so often fullscreen). To change where the exture will be displayed or wich part will be displayed, the user should use [viewport](render-states.md#viewport-states) and [scissor](render-states.md#scissor-states) states.
@@ -36,7 +37,8 @@ GraphicsDevice.DrawTexture(myTexture, GraphicsDevice.SamplerStates.PointClamp);
 GraphicsDevice.DrawTexture(myTexture, GraphicsDevice.SamplerStates.LinearWrap);
 GraphicsDevice.DrawTexture(myTexture, GraphicsDevice.SamplerStates.LinearClamp);
 GraphicsDevice.DrawTexture(myTexture, GraphicsDevice.SamplerStates.AnisotropicWrap);
-GraphicsDevice.DrawTexture(myTexture, GraphicsDevice.SamplerStates.AnisotropicClamp);```
+GraphicsDevice.DrawTexture(myTexture, GraphicsDevice.SamplerStates.AnisotropicClamp);
+```
 
 
 The user can also create custom samplers. This is achieved thanks to the @'SiliconStudio.Xenko.Graphics.SamplerState' and @'SiliconStudio.Xenko.Graphics.SamplerStateDescription' classes. To have the whole list of features, please refer to the documentation of each class.
@@ -52,6 +54,7 @@ samplerStateDescription.MaxAnisotropy = 8;
 var samplerState = new SamplerState(GraphicsDevice, samplerStateDescription);
  
 // use it
-GraphicsDevice.DrawTexture(myTexture, samplerState);```
+GraphicsDevice.DrawTexture(myTexture, samplerState);
+```
 
 

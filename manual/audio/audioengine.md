@@ -22,7 +22,8 @@ To access the Xenko default audio engine, use the @'SiliconStudio.Xenko.Audio.IA
 **Code:** Access to the default audio engine
 
 ```cs
-var defaultAudioEngine = Audio.AudioEngine;```
+var defaultAudioEngine = Audio.AudioEngine;
+```
 
 
 ## Loading a music or a sound
@@ -38,7 +39,8 @@ var soundEffect = Asset.Load<SoundEffect>("/assets/mySoundEffect"); // or await 
  
 // alternative method: use the SoundEffect and SoundMusic load methods.
 var soundMusic2 = SoundMusic.Load(audioEngine, "/assets/mySoundMusic");
-var soundEffect2 = SoundEffect.Load(audioEngine, audioDataStream);```
+var soundEffect2 = SoundEffect.Load(audioEngine, audioDataStream);
+```
 
 
 ## Playing a music or a sound
@@ -66,7 +68,8 @@ if(soundMusic.PlayState == SoundPlayState.Stopped) // inquiry a sound play state
  
 // ...
  
-nextSoundMusic.Stop(); // immediately stop the new background music.```
+nextSoundMusic.Stop(); // immediately stop the new background music.
+```
 
 
 ## Playing a 3D localized sound
@@ -104,7 +107,8 @@ void async Task UpdateSoundLocalization()
 		soundEffect1.Apply3D(audioListener, audioEmitter1);
 		soundEffect2.Apply3D(audioListener, audioEmitter2);
 	}
-}```
+}
+```
 
 
 To play a same sound effect simultaneously at different intensities and positions at the same time, use @'SiliconStudio.Xenko.Audio.SoundEffectInstance'. 
@@ -128,7 +132,8 @@ if(shouldPlaySEInstance1)
 // ... 
 
 if(shouldPlaySEInstance2)
-	seInstance2.Play();```
+	seInstance2.Play();
+```
 
 
 ## Playing a dynamic synthesized sound
@@ -158,6 +163,7 @@ void Execute()
 	dynamicSE.Stop();
 }
  
- ```
+ 
+```
 
 

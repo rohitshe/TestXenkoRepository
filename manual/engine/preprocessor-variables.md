@@ -36,6 +36,7 @@ Note that using `Platform.Type (ref:{SiliconStudio.Core.Platform.Type})` is re
     // iOS and Android specific code goes here...
 #else
     // Other platforms code goes here...
-#endif```
+#endif
+```
 
 

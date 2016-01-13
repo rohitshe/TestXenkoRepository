@@ -68,7 +68,8 @@ Run it with your developer host/IP:
 
 ```cs
 # replace 192.168.1.2 with hostname or IP of your Windows PC running GameStudio
-./xenko-ios-relay.py 192.168.1.2```
+./xenko-ios-relay.py 192.168.1.2
+```
 
 
 It should start displaying information about connected iOS devices, and connections established.

@@ -28,7 +28,8 @@ override stage void VSMain()
 	...
 	streams.ShadingPosition = ...;
 	...
-}```
+}
+```
 
 
 # Pixel shader
@@ -43,7 +44,8 @@ override stage void PSMain()
 	...
 	streams.ColorTarget = ...;
 	...
-}```
+}
+```
 
 
 # Geometry shader
@@ -62,7 +64,8 @@ void GSMain(triangle Input input[3], inout PointStream<Output> pointStream)
 	// always append streams
 	pointStream.Append(streams);
 	...
-}```
+}
+```
 
 
 `Input` can be used in the method body. It behaves like the streams object and contains the same members.
@@ -99,7 +102,8 @@ void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants c
 	...
 	output = streams;
 	...
-}```
+}
+```
 
 
 `Input` and `Input2` both behave like streams. Don't forget to assign `ouput` to `streams` at the end of your stage.
@@ -113,7 +117,8 @@ void DSMain(const OutputPatch<Input, 3> input, out Output output, in Constants c
 void CSMain()
 {
 	...
-}```
+}
+```
 
 
 you can inherit from the `ComputeShaderBase` class and override the `Compute` method.

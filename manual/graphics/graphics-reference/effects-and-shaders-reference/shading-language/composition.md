@@ -44,7 +44,8 @@ class BaseClass
 	{
 		return Comp0.Compute() + Comp1.Compute();
 	}
-};```
+};
+```
 
 
 The compositions are compiled in their own context, meaning that the non stage variables are only accessible within the composition. It is also possible to have compositions inside compositions.
@@ -62,7 +63,8 @@ class CompositionClassC : CompositionBase
 	{
 		return rootShader.GetColor();
 	}
-};```
+};
+```
 
 
 This is really error prone since `CompositionClassC` expects `BaseClass` to be available in the root context.
@@ -87,7 +89,8 @@ class BaseClassArray
  
 		return resultColor;
 	}
-};```
+};
+```
 
 
 # Stage behavior
@@ -116,7 +119,8 @@ class TestClass
 	float NonStageValue;
 	float comp0_NonStageValue;
 	float comp1_NonStageValue;
-};```
+};
+```
 
 
 **Code:** Stage member bahavior
@@ -161,7 +165,8 @@ class TestClass
 	{
 		return 2.0;
 	}
-};```
+};
+```
 
 
 Keep in mind that even in composition, you can call for base methods, override them etc. Overriding happens in the same order than the compositions.
@@ -236,7 +241,8 @@ class TestClass
 	{
 		return 1.0f + base_BaseStageMethodNotCloned(); // 2.0f
 	}
-};```
+};
+```
 
 
 This behavior is useful when you want to repeat a simple function but with different parameters (like adding color on top of another).

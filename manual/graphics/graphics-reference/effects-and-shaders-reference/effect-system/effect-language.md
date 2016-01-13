@@ -56,7 +56,8 @@ namespace ParadoxEffects
 			mixin compose albedoSpecular = MaterialParameters.AlbedoSpecular;
 		}
 	};
-}```
+}
+```
 
 
 ## Adding mixins
@@ -78,7 +79,8 @@ using params MaterialParameters;
 if (MaterialParameters.AlbedoDiffuse != null)
 {
 	mixin MaterialParameters.AlbedoDiffuse;
-}```
+}
+```
 
 
 The parameters behave like any variable, you can read and write their value. They can be used to perform test, to set template values. Since some parameters store mixins, key can be used for compositions and inheritance too.
@@ -93,7 +95,8 @@ You can create your own set of parameters using a structure definition syntax. E
 params MyParameters
 {
 	bool EnableSpecular = true; // true is the default value
-}```
+}
+```
 
 
 ## Compositions
@@ -108,7 +111,8 @@ mixin compose albedoSpecular = ComputeColorTexture;
  
 or
  
-mixin compose albedoSpecular = MaterialParameters.AlbedoSpecular;```
+mixin compose albedoSpecular = MaterialParameters.AlbedoSpecular;
+```
 
 
 ## Partial shaders
@@ -127,7 +131,8 @@ partial shader MyPartialShader
  
 // to use it
 mixin MyPartialShader;
-mixin compose myComposition = MyPartialShader;```
+mixin compose myComposition = MyPartialShader;
+```
 
 
 You can now use the `MyPartialShader` mixin like any other mixin in the code.

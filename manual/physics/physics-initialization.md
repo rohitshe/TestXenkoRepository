@@ -11,14 +11,16 @@ Once you create a new Game project the Physics engine will be dormant by default
 Within your Game class add a PhysicsSystem variable:
 
 ```cs
-private IPhysicsSystem physicsSystem;```
+private IPhysicsSystem physicsSystem;
+```
 
 
 Now we initialize the system, using Bullet2 as internal engine ( also currently the only available ):
 
 ```cs
 physicsSystem = new Bullet2PhysicsSystem(this); //where "this" is our Game derived class
-physicsSystem.PhysicsEngine.Initialize();```
+physicsSystem.PhysicsEngine.Initialize();
+```
 
 
 The best location for this line is either in the Game constructor or in any step that will execute before the actual game starts ( e.g. LoadContent )
@@ -36,7 +38,8 @@ During debug you might want to enable the rendering of debug collider shapes. To
 ```cs
 physicsSystem.PhysicsEngine.CreateDebugPrimitives = true;
 physicsSystem.PhysicsEngine.RenderDebugPrimitives = true;
-physicsSystem.PhysicsEngine.DebugEffect = new PhysicsDebugEffect(GraphicsDevice);```
+physicsSystem.PhysicsEngine.DebugEffect = new PhysicsDebugEffect(GraphicsDevice);
+```
 
 
  

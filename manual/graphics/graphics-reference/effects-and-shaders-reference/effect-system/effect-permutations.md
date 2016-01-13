@@ -23,7 +23,8 @@ Root:
 				Mesh.UseParameters: true
 		-	Keys:
 				MaterialAsset.UseParameters: false
-				Mesh.UseParameters: false```
+				Mesh.UseParameters: false
+```
 
 
 It is possible to specify a set of values using the following syntax:
@@ -37,7 +38,8 @@ or
  
 Mesh.UseParameters:
 	- true
-	- false```
+	- false
+```
 
 
 Range of values is also available.
@@ -55,7 +57,8 @@ or
 MyParameters.FloatParam: !fxparam.range
 	From: 1.52
 	To: 4.58
-	Step: 0.67```
+	Step: 0.67
+```
 
 
 Be sure to correctly tune your xkfxlib file so that not too many nor too few shaders are produced.
@@ -90,7 +93,8 @@ Root:
 				MyParameters.IntParam1: 5
 		-	Keys:
 				MyParameters.UseSkinning: [true, false]
-				Mesh.UseParameters: false```
+				Mesh.UseParameters: false
+```
 
 
 This code will produce 5 permutations.
@@ -102,6 +106,7 @@ Effect.Name=BasicEffect, MyParameters.IntParam0=0, MyParameters.IntParam1=5
 Effect.Name=BasicEffect, MyParameters.IntParam0=2, MyParameters.IntParam1=5
 Effect.Name=BasicEffect, MyParameters.IntParam0=4, MyParameters.IntParam1=5
 Effect.Name=BasicEffect, MyParameters.UseSkinning=true, Mesh.UseParameters=false
-Effect.Name=BasicEffect, MyParameters.UseSkinning=false, Mesh.UseParameters=false```
+Effect.Name=BasicEffect, MyParameters.UseSkinning=false, Mesh.UseParameters=false
+```
 
 

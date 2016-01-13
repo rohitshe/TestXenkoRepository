@@ -44,7 +44,8 @@ technique10 Render
 		SetVertexShader( CompileShader( vs_4_0, VS() ) );
 		SetPixelShader( CompileShader( ps_4_0, PS() ) );
 	}
-}```
+}
+```
 
 
 Imagine that you want to add a normal to you model and modify the resulting color according to it. You have to modify the code that computes the color and adjust the intermediate structures to pass the attribute from the vertex to the pixel shader. You also have to be careful of the semantics you use.
@@ -90,7 +91,8 @@ technique10 Render
 		SetVertexShader( CompileShader( vs_4_0, VS() ) );
 		SetPixelShader( CompileShader( ps_4_0, PS() ) );
 	}
-}```
+}
+```
 
 
 This example is quite simple but in a real project situation, the number of shaders is way higher and a single change might mean rewriting tons of shader, structures etc.
@@ -130,7 +132,8 @@ class BaseShader
 	{
 		return streams.myVar;
 	}
-};```
+};
+```
 
 
 **Code:** Stream specification
@@ -147,7 +150,8 @@ class ShaderA : BaseShader, StreamShader
 	{
 		return streams.BaseShader.myVar + streams.StreamShader.myVar;
 	}
-}```
+}
+```
 
 
 # Example of XKSL shader
@@ -171,7 +175,8 @@ class MyShader : ShaderBase
 	{
 		streams.ColorTarget = streams.col;
 	}
-};```
+};
+```
 
 
 And now let's change it to add the normal computation.
@@ -194,7 +199,8 @@ class MyShader : ShaderBase
 	{
 		streams.ColorTarget = streams.col * max(streams.normal.z, 0.0);
 	}
-};```
+};
+```
 
 
 In XKSL, adding a new attribute is as simple as adding it to the pool of streams and use it where you want!

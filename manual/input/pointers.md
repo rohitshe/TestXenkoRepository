@@ -71,7 +71,8 @@ Here is a simple sample program that tracks of the pointer currently on the scre
                 var positionsStr = pointerPositions.Values.Aggregate("", (current, pointer) => current + (pointer.ToString() + ", "));
                 logger.Info("There are currently {0} pointers on the screen located at {1}", pointerPositions.Count, positionsStr);
             }
-        }```
+        }
+```
 
 
 # Remarks

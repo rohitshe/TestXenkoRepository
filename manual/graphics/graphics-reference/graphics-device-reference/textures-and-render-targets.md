@@ -10,7 +10,8 @@ To load a texture from an asset in Xenko, simply calls this function:
 
 ```cs
 // loads the texture called duck.dds (or .png etc.)
-var myTexture = Asset.Load<Texture2D>("duck");```
+var myTexture = Asset.Load<Texture2D>("duck");
+```
 
 
 It will automatically generate a texture object with all of its field correctly filled.
@@ -22,7 +23,8 @@ The user can also create textures without any asset (for example to be used as r
 **Code:** Creating a texture
 
 ```cs
-var myTexture = Texture2D.New(GraphicsDevice, 512, 512, PixelFormat.R8G8B8A8_UNorm, TextureFlags.ShaderResource);```
+var myTexture = Texture2D.New(GraphicsDevice, 512, 512, PixelFormat.R8G8B8A8_UNorm, TextureFlags.ShaderResource);
+```
 
 
 # Render targets
@@ -38,7 +40,8 @@ The @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class always provides a defa
 var myRenderTarget = Texture2D.New(GraphicsDevice, 512, 512, PixelFormat.R8G8B8A8_UNorm, TextureFlags.ShaderResource | TextureFlags.RenderTarget).ToRenderTarget();
  
 // writable depth buffer
-var myDepthBuffer = Texture2D.New(GraphicsDevice, 512, 512, PixelFormat.D16_UNorm, TextureFlags.DepthStencil).ToDepthStencilBuffer(false);```
+var myDepthBuffer = Texture2D.New(GraphicsDevice, 512, 512, PixelFormat.D16_UNorm, TextureFlags.DepthStencil).ToDepthStencilBuffer(false);
+```
 
 
 Do not forget the flag TextureFlags.RenderTarget to enable the render target behavior.
@@ -56,7 +59,8 @@ Once these buffers are created, the user can easily set them are the current ren
 GraphicsDevice.SetRenderTarget(myDepthBuffer, myRenderTarget);
  
 // setting the default render target
-GraphicsDevice.SetRenderTarget(GraphicsDevice.DepthStencilBuffer, GraphicsDevice.BackBuffer);```
+GraphicsDevice.SetRenderTarget(GraphicsDevice.DepthStencilBuffer, GraphicsDevice.BackBuffer);
+```
 
 
 Also make sure that both the render target and the depth buffer have the same size. Otherwise, the depth buffer will not be used.
@@ -73,7 +77,8 @@ To clear a render target, the user must call the @'SiliconStudio.Xenko.Graphics.
 
 ```cs
 GraphicsDevice.Clear(GraphicsDevice.BackBuffer, Color.Black);
-GraphicsDevice.Clear(GraphicsDevice.DepthStencilBuffer, DepthStencilClearOptions.DepthBuffer); // only clear the depth buffer```
+GraphicsDevice.Clear(GraphicsDevice.DepthStencilBuffer, DepthStencilClearOptions.DepthBuffer); // only clear the depth buffer
+```
 
 
 The user must not forget to clear the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.Backbuffer' and the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.DepthStencilBuffer' at each frame because it can have unexpected behavior depending on the device. If the user wants to keep the content of a frame, he should use an intermediate render target.

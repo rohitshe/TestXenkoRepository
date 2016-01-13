@@ -60,7 +60,8 @@ public partial class RangeValues
         Values = new List<float>();
     }
     public List<float> Values { get; set; }
-}```
+}
+```
 
 
 ## Create the design-time asset
@@ -82,7 +83,8 @@ public class RangeAsset : Asset
     public float From {get; set;}
     public float To {get; set;}
     public float Step {get; set;}
-}```
+}
+```
 
 
 This asset is providing a compiler in order to transform it from design-time to game time
@@ -117,7 +119,8 @@ internal class RangeAssetCompiler : AssetCompilerBase<RangeAsset>
             return Task.FromResult(ResultStatus.Successful);
         }
     }
-}```
+}
+```
 
 
 # **Using a custom Asset, step by step**
@@ -137,7 +140,8 @@ Profiles:
         ProjectReferences:
             -   Id: CC235793-54DE-4ED6-9A2C-0CF2521CDF93
                 Location: ../../RangeAssetLib/RangeAssetLib.csproj
-                Type: Library```
+                Type: Library
+```
 
 
 > **Warning**
@@ -154,7 +158,8 @@ We need to write a `RangeAsset` file in a YAML file with the extension `.xkrange
 !RangeAsset
 From: 0
 To: 10
-Step: 1```
+Step: 1
+```
 
 
 > **Warning**
@@ -166,7 +171,8 @@ Step: 1```
 We simply have to use the AssetManager to load the asset at game time:
 
 ```cs
-var rangeValues = Assets.Load<RangeValues>("MyRangeAsset1");```
+var rangeValues = Assets.Load<RangeValues>("MyRangeAsset1");
+```
 
 
 # Advanced usages
@@ -193,7 +199,8 @@ ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ColorKeyEnabled: false
 Format: null
 GenerateMipmaps: true
-PremultiplyAlpha: true```
+PremultiplyAlpha: true
+```
 
 
 The `TextureAsset` has a compiler that will save the texture using Image serializer. At runtime, this texture can be loaded through the asset manager using either an image or a texture.

@@ -29,7 +29,8 @@ var texture = Asset.Load<Texture>("texture1");
 var scene = Asset.Load<Scene>("scenes/scene1");
  
 // Load an Entity asset
-var entity = Asset.Load<Entity>("entity1");```
+var entity = Asset.Load<Entity>("entity1");
+```
 
 
 Note that loading an asset that has already been loaded only increment the reference counter and do not reload the asset.
@@ -39,7 +40,8 @@ Note that loading an asset that has already been loaded only increment the refer
 Unloading is also done using the AssetManager class:
 
 ```cs
- Asset.Unload(asset);```
+ Asset.Unload(asset);
+```
 
 
 ## Asset life time
@@ -70,6 +72,7 @@ Asset.Get<Texture>("MyTexture"); // return the loaded asset without increasing t
 // the texture can still be used here
 Asset.Unload(secondReference); // decrease the reference counter and unload the asset (ref count = 0)
  
-// The texture has been unloaded, it cannot be used here anymore.```
+// The texture has been unloaded, it cannot be used here anymore.
+```
 
 

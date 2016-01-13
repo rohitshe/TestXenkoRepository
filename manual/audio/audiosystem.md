@@ -23,7 +23,8 @@ The @'SiliconStudio.Xenko.Engine.AudioSystem' can be accessed via the @'SiliconS
 
 ```cs
 // Accessing a method of the AudioSystem
-Audio.AddListener(...);```
+Audio.AddListener(...);
+```
 
 
 ## Loading a sound or music
@@ -36,7 +37,8 @@ To load sound effects or sound musics, use the asset loader *Load* and *LoadAs
 
 ```cs
 var soundMusic = Asset.Load<SoundMusic>("/assets/mySoundMusic"); // or await Asset.LoadAsync<SoundMusic>("/assets/mySoundMusic");
-var soundEffect = Asset.Load<SoundEffect>("/assets/mySoundEffect"); // or await Asset.LoadAsync<SoundEffect>("/assets/mySoundEffect");```
+var soundEffect = Asset.Load<SoundEffect>("/assets/mySoundEffect"); // or await Asset.LoadAsync<SoundEffect>("/assets/mySoundEffect");
+```
 
 
 ## Playing a music
@@ -49,7 +51,8 @@ To play a background compressed music use directly the low level API @'SiliconSt
 
 ```cs
 soundMusic.IsLooped = true;
-soundMusic.Play();```
+soundMusic.Play();
+```
 
 
 ## Attaching an Audio listener and emitter
@@ -68,7 +71,8 @@ Audio.AddListener(listenerComponent1); // activate the listener by adding it to 
 // possibly change the active rendering camera and update the listener in accordance.
 // ...
 Audio.RemoveListener(listenerComponent1);
-Audio.AddListener(listenerComponent2);```
+Audio.AddListener(listenerComponent2);
+```
 
 
  
@@ -89,7 +93,8 @@ entity2.Set(AudioEmitterComponent.Key, emitterComponent2);
 // attach sound effects to the components
 emitterComponent1.AttachSoundEffect(soundEffect1);
 emitterComponent1.AttachSoundEffect(soundEffect2);
-emitterComponent2.AttachSoundEffect(soundEffect1);```
+emitterComponent2.AttachSoundEffect(soundEffect1);
+```
 
 
  
@@ -115,7 +120,8 @@ soundControllerEntity1SE1.Play(); // plays sound effect 1 of entity 1
 // ... 
 
 soundControllerEntity2SE1.Play(); // plays sound effect 1 of entity 2
- ```
+ 
+```
 
 
 # Remarks

@@ -102,7 +102,8 @@ Input.ActivatedGestures.Add(doubleTapConfig ); // start the double tap gesture r
 Input.ActivatedGestures.Remove(singleTapConfig); // stop the tap gesture recognition
  
 // ...
-Input.ActivatedGestures.Clear(); // stop all remaining gesture recognitions```
+Input.ActivatedGestures.Clear(); // stop all remaining gesture recognitions
+```
 
 
  
@@ -114,7 +115,8 @@ Each configuration class has a parameterless constructor corresponding to the de
 ```cs
 var singleTapConfig = new GestureConfigTap(); // default config for the gesture.
 var doubleTapConfig = new GestureConfigTap(2, 2); // personalize the gesture config by using the dedicated constructor
-var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zero }; // personalize the gesture config by directly accessing the desired property (user must be aware of was he does, this may break the input system coherency in some cases)```
+var noLatencyTap = new GestureConfigTap() { MaximumTimeBetweenTaps= TimeSpan.Zero }; // personalize the gesture config by directly accessing the desired property (user must be aware of was he does, this may break the input system coherency in some cases)
+```
 
 
  
@@ -124,7 +126,8 @@ The programmer can access the recognized gestures via the @'SiliconStudio.Xenko.
 **Code:** Access Gesture events
 
 ```cs
-var currentFrameGestureEvents = Input.GestureEvents;```
+var currentFrameGestureEvents = Input.GestureEvents;
+```
 
 
  
@@ -141,7 +144,8 @@ foreach( var gestureEvent in Input.GestureEvents)
    
 	GestureEventTap  tapEvent = (GestureEventTap) gestureEvent; // cast the event the specific tap event class
     log.Info("Tap position: {0}.", tapEvent.TapPosition); // access tap event specific field
-}```
+}
+```
 
 
  
@@ -164,7 +168,8 @@ case GestureState.Ended:
 	break;
 default:
 	break;
-}```
+}
+```
 
 
  

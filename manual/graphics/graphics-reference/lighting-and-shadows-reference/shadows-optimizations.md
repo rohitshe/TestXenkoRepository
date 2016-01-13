@@ -47,6 +47,7 @@ var shadowMapSizeFinalFactor = shadowImportanceFactor * shadowMapSizeFactor;
 // Multiply the light projected size by the size factor
 var shadowMapSize = NextPowerOfTwo(lightSize * shadowSizeFinalFactor);
 // Clamp to a maximum size
-shadowMapSize = min(shadowMapSize, ShadowMapBaseSize  * shadowSizeFinalFactor);```
+shadowMapSize = min(shadowMapSize, ShadowMapBaseSize  * shadowSizeFinalFactor);
+```
 
 

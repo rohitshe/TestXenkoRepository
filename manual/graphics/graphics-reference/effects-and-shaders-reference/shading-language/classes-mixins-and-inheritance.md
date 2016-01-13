@@ -55,7 +55,8 @@ class BaseClass
 	Texture2D texture;
  
 	[Map("Texturing.Texture0")] Texture2D defaultTexture;
-};```
+};
+```
 
 
 # Inheritance example
@@ -91,7 +92,8 @@ class ClassB : BaseClass
 		float prevValue = base.Compute();
 		return (5.0f + prevValue);
 	}
-};```
+};
+```
 
 
 Now let's look at what happens when we change the inheritance order between `ClassA` and `ClassB`.
@@ -143,7 +145,8 @@ class MixBA : BaseInterface, BaseClass, ClassB, ClassA
 
 		return v2; // = 2.0f
 	}
-};```
+};
+```
 
 
 # Static calls
@@ -193,6 +196,7 @@ class IncorrectStaticCallClassFixed : StaticClass
 	{
 		return NonStaticMethod();
 	}
-};```
+};
+```
 
 

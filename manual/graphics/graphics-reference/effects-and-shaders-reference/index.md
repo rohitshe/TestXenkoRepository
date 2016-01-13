@@ -9,7 +9,8 @@ The @'SiliconStudio.Xenko.Effects.EffectSystem' class provides an easy way to 
 **Code:** Load an effect
 
 ```cs
-var myEffect = EffectSystem.LoadEffect("MyEffect");```
+var myEffect = EffectSystem.LoadEffect("MyEffect");
+```
 
 
 Then the user can apply it on any mesh or drawable entity:
@@ -21,7 +22,8 @@ Then the user can apply it on any mesh or drawable entity:
 myEffect.Apply();
  
 // draw calls
-// (...)```
+// (...)
+```
 
 
 An effect often has a set of parameters. To learn how to set them, please refer to the documentation of the @'SiliconStudio.Xenko.Graphics.Effect' class.
@@ -43,6 +45,7 @@ simpleEffect.Texture = myTexture; // set a custom texture
  
 // use it on a primitive
 simpleEffect.Apply();
-myTorus.Draw();```
+myTorus.Draw();
+```
 
 

@@ -56,7 +56,8 @@ Permutations:
                                 FilterType: Nearest
             Children: []
         -   Keys: {}
-            Children: []```
+            Children: []
+```
 
 
 Once it is created, you can attach this configuration to your mesh through the `LightingParameters` field. Since it is an asset, you can share configurations with multiple meshes.
@@ -85,7 +86,8 @@ Permutations:
                 ShadowMapParameters.ShadowMapCascadeCount: !fxparam.range
                     From: 1
                     To: 4
-            Children: []```
+            Children: []
+```
 
 
 **NOTE**: this will be done automatically in a later release.

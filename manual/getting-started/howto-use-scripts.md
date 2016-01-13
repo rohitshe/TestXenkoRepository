@@ -37,7 +37,8 @@ namespace MyGame
             }
         }
     }
-}```
+}
+```
 
 
 # Attach the script to an entity
@@ -93,7 +94,8 @@ namespace MyGame
             }
         }
     }
-}```
+}
+```
 
 
 # Add references to other scripts or entities
@@ -126,7 +128,8 @@ public class MyFirstScript : AsyncScript
             await Script.NextFrame();
         }
     }
-}```
+}
+```
 
 
 Now, go to the Studio and re-open the project (live update of script will be supported in future version so that this step won't be needed anymore).

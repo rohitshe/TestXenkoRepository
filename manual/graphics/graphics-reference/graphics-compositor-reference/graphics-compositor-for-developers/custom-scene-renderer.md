@@ -25,7 +25,8 @@ public sealed class MyCustomRenderer : SceneRendererBase
         graphicsDevice.Clear(output.RenderTargets[0], Color.CornflowerBlue);
         // [...] 
     }
-}```
+}
+```
 
 
 # Using a delegate
@@ -41,6 +42,7 @@ var sceneDelegateRenderer = new SceneDelegateRenderer(
         // Clears the the currrent render target
         graphicsDevice.Clear(output.RenderTargets[0], Color.CornflowerBlue);
         // [...] 
-   });```
+   });
+```
 
 

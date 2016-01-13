@@ -43,7 +43,8 @@ engine.EntityManager.AddEntity(myEntity);
 foreach (var entity in engine.EntityManager.Entities)
 {
 	Console.WriteLine(entity.Name);
-}```
+}
+```
 
 
 @'SiliconStudio.Xenko.EntityModel.EntitySystem' can be used to enumerate its `Entities (ref:{SiliconStudio.Xenko.EntityModel.Entity})`. Note that children of a given entities will also be in this list.

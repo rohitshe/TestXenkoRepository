@@ -30,6 +30,7 @@ myEntity.Set(ModelComponent.Key, modelComponent);
 myEntity.Transformation.Translation = new Vector3(100.0f, 100.0f, 0.0f);
  
 // Add entity to scene; from now on its model will be rendered
-Entities.Add(myEntity);```
+Entities.Add(myEntity);
+```
 
 

@@ -7,13 +7,15 @@ Step by step:
 - **Entity Asset loading:**
   
   ```cs
-  var ball0 = Asset.Load<Entity>("ball");```
+  var ball0 = Asset.Load<Entity>("ball");
+```
   
   
   The asset is now loaded but not quite yet into the Physics pipeline, and so we can change now the initial starting position for example:
   
   ```cs
-  ball0.Transformation.Translation = new Vector3((VirtualResolution.X / 2.0f) + 100, VirtualResolution.Y / 2.0f, 0.0f);```
+  ball0.Transformation.Translation = new Vector3((VirtualResolution.X / 2.0f) + 100, VirtualResolution.Y / 2.0f, 0.0f);
+```
   
   
   Having a correct initial position is very important for a RigidBody as it will start immediate simulation and so might have consequences in the physics world.
@@ -22,7 +24,8 @@ Step by step:
 - **Adding the entity to the engine pipeline:**
   
   ```cs
-  Entities.Add(ball0);```
+  Entities.Add(ball0);
+```
   
   
   This step is simple but hides something very important: this is exactly when the Collider/RigidBody/Character is created and added to the Physics engine for simulation. 
@@ -33,7 +36,8 @@ Step by step:
 - **Access the Collider/RigidBody/Character objects:**
   
   ```cs
-  var ball0RigidBody = ball0.GetOrCreate(PhysicsComponent.Key)[0].RigidBody;```
+  var ball0RigidBody = ball0.GetOrCreate(PhysicsComponent.Key)[0].RigidBody;
+```
   
   
   An Entity with a PhysicsComponent might have multiple PhysicsElement/s. Using the indexer on PhysicsComponent you can easy access each of the elements.
@@ -43,7 +47,8 @@ Step by step:
   
   ```cs
   ball1RigidBody.CanSleep = false; //disable sleeping so to never get stuck in case of no motion
-  ball1RigidBody.Restitution = 1.0f;```
+  ball1RigidBody.Restitution = 1.0f;
+```
 
  
 

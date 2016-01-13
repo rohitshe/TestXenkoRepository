@@ -9,7 +9,8 @@ Xenko offers a easy way to deal will batches of sprites through the @'SiliconStu
 **Code:** Creating a sprite batch
 
 ```cs
-var spriteBatch = new SpriteBatch(GraphicsDevice);```
+var spriteBatch = new SpriteBatch(GraphicsDevice);
+```
 
 
 The user can specify the size of his batch size. It is not the maximum number of sprites the SpriteBatch is able to display, but simply the maximum number of sprites it can store before drawing.
@@ -17,7 +18,8 @@ The user can specify the size of his batch size. It is not the maximum number of
 **Code:** Setting the batch size
 
 ```cs
-var spriteBatch = new SpriteBatch(GraphicsDevice, 2000);```
+var spriteBatch = new SpriteBatch(GraphicsDevice, 2000);
+```
 
 
 It is also possible to set various states like the ones discussed in the [state documentation page](render-states.md).
@@ -36,7 +38,8 @@ spriteBatch.Begin(SpriteSortMode.Immediate);
 spriteBatch.Draw(myTexture, new Vector2(10, 20));
  
 // end the sprite batch operations
-spriteBatch.End();```
+spriteBatch.End();
+```
 
 
 There are five modes to draw a sprite batch. They are enumerated in the @'SiliconStudio.Xenko.Graphics.SpriteSortMode' enum:
@@ -59,7 +62,8 @@ spriteBatch.Begin(); // same as spriteBatch.Begin(SpriteSortMode.Deferred);
 spriteBatch.Draw(myTexture, new Vector2(10, 20));
 
 // end the sprite batch operations, draw all the sprites
-spriteBatch.End();```
+spriteBatch.End();
+```
 
 
 It is possible to set several parameters on the sprite, for example:
@@ -92,6 +96,7 @@ for (int y = 0; y < gridCount; y++)
 }
  
 // end the sprite batch operations, draw all the sprites
-spriteBatch.End();```
+spriteBatch.End();
+```
 
 

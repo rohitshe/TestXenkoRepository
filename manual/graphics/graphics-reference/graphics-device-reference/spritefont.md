@@ -9,7 +9,8 @@ Since the font is an asset, the user can easily load it. The asset loader will r
 **Code:** Load a SpriteFont
 
 ```cs
-var myFont = Asset.Load<SpriteFont>("MyFont");```
+var myFont = Asset.Load<SpriteFont>("MyFont");
+```
 
 
 # Write text on screen
@@ -29,7 +30,8 @@ spriteBatch.Begin();
 spriteBatch.DrawString(myFont, "Helloworld!", new Vector2(0.5,0.5), Color.Red);
  
 // do not forget the end
-spriteBatch.End();```
+spriteBatch.End();
+```
 
 
 There a many draw methods. The user can specify the orientation of the text, its scale, its depth, its origin etc. There are also some effects that can be applied on the text through some DrawString methods. They are available as @'SiliconStudio.Xenko.Graphics.SpriteEffects' enum:
@@ -43,6 +45,7 @@ There a many draw methods. The user can specify the orientation of the text, its
 
 ```cs
 // draw the text "Helloworld!" upside down in red from the center of the screen
-spriteBatch.DrawString(myFont, "Helloworld!", new Vector2(0.5,0.5), Color.Red, 0, new Vector2(0,0), new Vector2(1,1), SpriteEffects.FlipVertically, 0);```
+spriteBatch.DrawString(myFont, "Helloworld!", new Vector2(0.5,0.5), Color.Red, 0, new Vector2(0,0), new Vector2(1,1), SpriteEffects.FlipVertically, 0);
+```
 
 

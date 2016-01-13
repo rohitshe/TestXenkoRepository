@@ -23,7 +23,8 @@ The user can set the rasterizer states thanks to the @'SiliconStudio.Xenko.Graph
 ```cs
 GraphicsDevice.SetRasterizerState(GraphicsDevice.RasterizerStates.CullNone);
 GraphicsDevice.SetRasterizerState(GraphicsDevice.RasterizerStates.CullFront);
-GraphicsDevice.SetRasterizerState(GraphicsDevice.RasterizerStates.CullBack);```
+GraphicsDevice.SetRasterizerState(GraphicsDevice.RasterizerStates.CullBack);
+```
 
 
 However, the user can create its own custom state. It needs a @'SiliconStudio.Xenko.Graphics.RasterizerState' object and a @'SiliconStudio.Xenko.Graphics.RasterizerStateDescription' object. Please refer to the reference documentation of the @'SiliconStudio.Xenko.Graphics.RasterizerStateDescription' class to get the complete list of available options and the default values.
@@ -34,7 +35,8 @@ However, the user can create its own custom state. It needs a @'SiliconStudio.X
 var rasterizerStateDescription = new RasterizerStateDescription(CullMode.Front);
 rasterizerStateDescription.ScissorTestEnable = true; // enables the scissor test
 var rasterizerState = RasterizerState.New(GraphicsDevice, rasterizerStateDescription);
-GraphicsDevice.SetRasterizerState(rasterizerState);```
+GraphicsDevice.SetRasterizerState(rasterizerState);
+```
 
 
 # Depth and stencil states
@@ -52,7 +54,8 @@ The user can set the depth and stencil states thanks to the @'SiliconStudio.Xenk
 GraphicsDevice.SetDepthStencilState(GraphicsDevice.DepthStencilStates.Default);
 GraphicsDevice.SetDepthStencilState(GraphicsDevice.DepthStencilStates.DefaultInverse);
 GraphicsDevice.SetDepthStencilState(GraphicsDevice.DepthStencilStates.DepthRead);
-GraphicsDevice.SetDepthStencilState(GraphicsDevice.DepthStencilStates.None);```
+GraphicsDevice.SetDepthStencilState(GraphicsDevice.DepthStencilStates.None);
+```
 
 
 If necessary, the user can set totally customs depth and stencil states. It needs a @'SiliconStudio.Xenko.Graphics.DepthStencilState' object.
@@ -68,7 +71,8 @@ var depthStencilState = DepthStencilState.New(GraphicsDevice, depthStencilStateD
 GraphicsDevice.SetDepthStencilState(depthStencilState);
  
 // setting the depth state and the stencil with a reference value of 2
-GraphicsDevice.SetDepthStencilState(depthStencilState, 2);```
+GraphicsDevice.SetDepthStencilState(depthStencilState, 2);
+```
 
 
 # Blend state
@@ -86,7 +90,8 @@ The user can set the blend state thanks to the @'SiliconStudio.Xenko.Graphics.Gr
 GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.Additive);
 GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.AlphaBlend);
 GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.NonPremultiplied);
-GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.Opaque);```
+GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.Opaque);
+```
 
 
 If necessary, the user can create custom blend states. It needs a @'SiliconStudio.Xenko.Graphics.BlendState' object and a @'SiliconStudio.Xenko.Graphics.BlendStateDescription' object. Please refer to the reference documentation of the @'SiliconStudio.Xenko.Graphics.BlendStateDescription' and @'SiliconStudio.Xenko.Graphics.BlendStateRenderTargetDescription' classes to get the complete list of available options and the default values.
@@ -109,7 +114,8 @@ var blendState = BlendState.New(GraphicsDevice, blendStateDescription);
 GraphicsDevice.SetBlendState(blendState);
  
 // using a blend factor and a mask
-GraphicsDevice.SetBlendState(blendState, Color4.White, 2);```
+GraphicsDevice.SetBlendState(blendState, Color4.White, 2);
+```
 
 
 # Viewport states
@@ -127,7 +133,8 @@ GraphicsDevice.SetRenderTarget(GraphicsDevice.BackBuffer); // viewport automatic
 // example of setting the viewport to have a 10 pixel border around the image in a full hd buffer (1920x1080)
 var viewport = new Viewport(10, 10, 1900, 1060);
 GraphicsDevice.SetViewport(viewport);
-GraphicsDevice.SetViewport(0, viewport);```
+GraphicsDevice.SetViewport(0, viewport);
+```
 
 
 # Scissor states
@@ -141,6 +148,7 @@ The @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetScissorRectangles' method 
 GraphicsDevice.SetScissorRectangles(10, 10, 1910, 1070);
  
 var rectangles = new[] { new Rectangle(10, 10, 1900, 1060), new Rectangle(0, 0, 256, 256) };
-GraphicsDevice.SetScissorRectangles(rectangles);```
+GraphicsDevice.SetScissorRectangles(rectangles);
+```
 
 

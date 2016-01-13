@@ -50,7 +50,8 @@ Bundles:
         - folder1/
         - /folder2/
         - *.bin
-        - folder3/*.xml```
+        - folder3/*.xml
+```
 
 
 > **Note**
@@ -80,7 +81,8 @@ Loading bundle is done through `ObjectDatabase.LoadBundle(string bundleName) (re
 Assets.DatabaseFileProvider.ObjectDatabase.LoadBundle("MyBundleName2");
  
 // Load specified asset
-var texture = Assets.Load<Texture2D>("AssetContainedInMyBundleName2");```
+var texture = Assets.Load<Texture2D>("AssetContainedInMyBundleName2");
+```
 
 
 # Selectors

@@ -28,7 +28,8 @@ class TemplateClass<float speed, Texture2D myTexture, SamplerState mySampler, Se
 };
  
 // TO INSTANCIATE THE CLASS, USE A CODE AS FOLLOW
-TemplateClass<1.0f, Texturing.Texture0, Texturing.Sampler0, TEXCOORD0, MyColorLink>```
+TemplateClass<1.0f, Texturing.Texture0, Texturing.Sampler0, TEXCOORD0, MyColorLink>
+```
 
 
  

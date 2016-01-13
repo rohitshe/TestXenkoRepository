@@ -14,7 +14,7 @@ The Xenko engine provides the user a set of built-in primitives:
 - torus
 - teapot
 
-These are not automatically created with the `GraphicsDevice (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice})` so the user has to manually ask for their creation. This is really simple since they are part of the engine through the `GeometricPrimitive (ref:{SiliconStudio.Xenko.Graphics.GeometricPrimitive})` class.
+These are not automatically created with the @'SiliconStudio.Xenko.Graphics.GraphicsDevice' so the user has to manually ask for their creation. This is really simple since they are part of the engine through the @'SiliconStudio.Xenko.Graphics.GeometricPrimitive' class.
 
 **Code:** Creating and using a primitive
 
@@ -29,13 +29,13 @@ var myTorus = GeometricPrimitive.Torus.New(GraphicsDevice);
 myCube.Draw();```
 
 
-There is no effect associated to them so the user has to manually set one. For example he can use the built-in `SimpleEffect (ref:{SiliconStudio.Xenko.Graphics.SimpleEffect})` one. Here is a page with information about [effects and shaders](../effects-and-shaders-reference/index.md).
+There is no effect associated to them so the user has to manually set one. For example he can use the built-in @'SiliconStudio.Xenko.Graphics.SimpleEffect' one. Here is a page with information about [effects and shaders](../effects-and-shaders-reference/index.md).
 
 # Custom drawing
 
-Outside of these primitives, the user can draw any set of vertices. There are many functions to draw vertex array objects based on the way the vertices are indexed, the type of primitive etc. To know how to create vertex array object, refer to the `VertexArrayObject (ref:{SiliconStudio.Xenko.Graphics.VertexArrayObject})` class documentation.
+Outside of these primitives, the user can draw any set of vertices. There are many functions to draw vertex array objects based on the way the vertices are indexed, the type of primitive etc. To know how to create vertex array object, refer to the @'SiliconStudio.Xenko.Graphics.VertexArrayObject' class documentation.
 
-The user should first specify the vertex array object he wants to draw. This is done through the `SetVertexArrayObject (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.SetVertexArrayObject})` method. Then he can call the `Draw (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.Draw})` method. He needs to specify various parameters including the primitive type. Please refer to the `Draw (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.Draw})` method and its derived methods documentation (for example `DrawIndexed (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.DrawIndexed})`, `DrawInstanced (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.DrawInstanced})` etc.).
+The user should first specify the vertex array object he wants to draw. This is done through the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetVertexArrayObject' method. Then he can call the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.Draw' method. He needs to specify various parameters including the primitive type. Please refer to the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.Draw' method and its derived methods documentation (for example @'SiliconStudio.Xenko.Graphics.GraphicsDevice.DrawIndexed', @'SiliconStudio.Xenko.Graphics.GraphicsDevice.DrawInstanced' etc.).
 
 **Code:** Drawing a VAO
 
@@ -53,7 +53,7 @@ GraphicsDevice.SetVertexArrayObject(myVao);
 GraphicsDevice.Draw(PrimitiveType.TriangleList, 300);```
 
 
-The list of the supported primitive types can be found in the `PrimitiveType (ref:{SiliconStudio.Xenko.Graphics.PrimitiveType})` enum documentation.
+The list of the supported primitive types can be found in the @'SiliconStudio.Xenko.Graphics.PrimitiveType' enum documentation.
 
  
 

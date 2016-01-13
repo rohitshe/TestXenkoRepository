@@ -40,11 +40,11 @@ Then, the easiest way to create an UI is to **use scripts**.
 
 **Create a new script** in your game project.
 
-Use the `Entity (ref:{SiliconStudio.Xenko.Engine.Entity})`, to **retrieve a reference to the `UIComponent (ref:{SiliconStudio.Xenko.Engine.UIComponent})`**.
+Use the @'SiliconStudio.Xenko.Engine.Entity', to **retrieve a reference to the @'SiliconStudio.Xenko.Engine.UIComponent'**.
 
-Create your layout by **building a hierarchy of `UIElement (ref:{SiliconStudio.Xenko.UI.UIElement})`**.
+Create your layout by **building a hierarchy of @'SiliconStudio.Xenko.UI.UIElement'**.
 
-**Set the `RootElement (ref:{SiliconStudio.Xenko.Engine.RootElement})` property** of the UI component to the newly created hierarchy.
+**Set the @'SiliconStudio.Xenko.Engine.RootElement' property** of the UI component to the newly created hierarchy.
 
 Here is a simple sample script, showing how to proceed in details.
 

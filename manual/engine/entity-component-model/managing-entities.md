@@ -24,15 +24,15 @@ This approach also solves many update order dependencies issues (just need to or
 
 Here is some examples of entity processors:
 
-- `TransformationProcessor (ref:{SiliconStudio.Xenko.Engine.TransformationProcessor})`: Compute transformation matrices from hierarchy and local transformation stored in `TransformationComponent (ref:{SiliconStudio.Xenko.Engine.TransformationComponent})`.
+- @'SiliconStudio.Xenko.Engine.TransformationProcessor': Compute transformation matrices from hierarchy and local transformation stored in @'SiliconStudio.Xenko.Engine.TransformationComponent'.
   
-  As a result, `EntitySystem (ref:{SiliconStudio.Xenko.EntityModel.EntitySystem})` can be used as a hierarchical scenegraph instead of a simple entity list.
-- `MeshProcessor (ref:{SiliconStudio.Xenko.Engine.MeshProcessor})`: Add `ModelComponent.Model (ref:{SiliconStudio.Xenko.Engine.ModelComponent.Model})` to rendering.
-- `LightProcessor (ref:{SiliconStudio.Xenko.Engine.LightProcessor})`: Collects and update lights, and transfer it to rendering system. It can hides implementation details (deferred or forward rendering, etc...)
+  As a result, @'SiliconStudio.Xenko.EntityModel.EntitySystem' can be used as a hierarchical scenegraph instead of a simple entity list.
+- @'SiliconStudio.Xenko.Engine.MeshProcessor': Add @'SiliconStudio.Xenko.Engine.ModelComponent.Model' to rendering.
+- @'SiliconStudio.Xenko.Engine.LightProcessor': Collects and update lights, and transfer it to rendering system. It can hides implementation details (deferred or forward rendering, etc...)
 
 # Entity System
 
-Entity are grouped together in an `EntitySystem (ref:{SiliconStudio.Xenko.EntityModel.EntitySystem})`. It will also contains the list of entity processors. When an entity is added or an entity components changes, it will ask entity processors if they should be included.
+Entity are grouped together in an @'SiliconStudio.Xenko.EntityModel.EntitySystem'. It will also contains the list of entity processors. When an entity is added or an entity components changes, it will ask entity processors if they should be included.
 
 ```cs
 // Add an entity:
@@ -46,7 +46,7 @@ foreach (var entity in engine.EntityManager.Entities)
 }```
 
 
-`EntitySystem (ref:{SiliconStudio.Xenko.EntityModel.EntitySystem})` can be used to enumerate its `Entities (ref:{SiliconStudio.Xenko.EntityModel.Entity})`. Note that children of a given entities will also be in this list.
+@'SiliconStudio.Xenko.EntityModel.EntitySystem' can be used to enumerate its `Entities (ref:{SiliconStudio.Xenko.EntityModel.Entity})`. Note that children of a given entities will also be in this list.
 
-To manipulate entities as a scenegraph, refer to `TransformationComponent (ref:{SiliconStudio.Xenko.Engine.TransformationComponent})` class.
+To manipulate entities as a scenegraph, refer to @'SiliconStudio.Xenko.Engine.TransformationComponent' class.
 

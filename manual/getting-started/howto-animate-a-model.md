@@ -50,11 +50,11 @@ For that, the easiest way to do is to use **scripts**. 
 
 First, **assign a script to the entity** containing the animation component.
 
-Then, inside the script, retrieve a reference to the component and **call either the `Play (ref:{SiliconStudio.Xenko.Engine.AnimationComponent.Play})` or `Crossfade (ref:{SiliconStudio.Xenko.Engine.AnimationComponent.Crossfade})` functions**.
+Then, inside the script, retrieve a reference to the component and **call either the @'SiliconStudio.Xenko.Engine.AnimationComponent.Play' or @'SiliconStudio.Xenko.Engine.AnimationComponent.Crossfade' functions**.
 
-The **`Play (ref:{SiliconStudio.Xenko.Engine.AnimationComponent.Play})`** function starts playing the new animation without performing any transitions. It is generally used to play the first animation.
+The **@'SiliconStudio.Xenko.Engine.AnimationComponent.Play'** function starts playing the new animation without performing any transitions. It is generally used to play the first animation.
 
-The **`Crossfade (ref:{SiliconStudio.Xenko.Engine.AnimationComponent.Crossfade})`** function does the same but performs a smooth transition between the old and the new animation.
+The **@'SiliconStudio.Xenko.Engine.AnimationComponent.Crossfade'** function does the same but performs a smooth transition between the old and the new animation.
 
 Here is a sample script that shows you how you can start playing a default animation for an entity and perform simple animation crossfading when touching the screen.
 

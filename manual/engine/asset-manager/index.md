@@ -2,7 +2,7 @@
 
 # Assets
 
-After creating your assets in GameStudio, `AssetManager (ref:{SiliconStudio.Core.Serialization.Assets.AssetManager})` is the class responsible for loading, unloading and saving assets.
+After creating your assets in GameStudio, @'SiliconStudio.Core.Serialization.Assets.AssetManager' is the class responsible for loading, unloading and saving assets.
 
 ## Creating
 
@@ -19,7 +19,7 @@ Please check [HOWTO: Create or import asset data](../../getting-started/howto-c
 
 ## Loading
 
-Loading an asset should be done with the help of `AssetManager (ref:{SiliconStudio.Core.Serialization.Assets.AssetManager})` class:
+Loading an asset should be done with the help of @'SiliconStudio.Core.Serialization.Assets.AssetManager' class:
 
 ```cs
 // Load an asset directly from a file:
@@ -50,7 +50,7 @@ An asset is actually loaded only during the first call to 'load'. All subsequent
 
 An asset is actually unload only when the number of call to unload match the number of call the load.
 
-The `Get (ref:{SiliconStudio.Core.Serialization.Assets.AssetManager.Get})` method returns the reference to a loaded asset but does not increment the asset reference counter.
+The @'SiliconStudio.Core.Serialization.Assets.AssetManager.Get' method returns the reference to a loaded asset but does not increment the asset reference counter.
 
 ```cs
  var firstReference = Asset.Load<Texture>("MyTexture"); // load the asset and increase the reference counter (ref count = 1)

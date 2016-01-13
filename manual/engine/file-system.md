@@ -1,6 +1,6 @@
 # File System
 
-The static class `VirtualFileSystem (ref:{SiliconStudio.Core.IO.VirtualFileSystem})` is the recommended way to access files in a cross-platform manner.
+The static class @'SiliconStudio.Core.IO.VirtualFileSystem' is the recommended way to access files in a cross-platform manner.
 
 It offers all basic operations such as reading, writing, copying, checking existence and deleting files.
 

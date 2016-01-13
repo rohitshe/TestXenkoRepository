@@ -1,10 +1,10 @@
 # SpriteFont
 
-the `SpriteFont (ref:{SiliconStudio.Xenko.Graphics.SpriteFont})` class offers an convenient way to draw text. It works with the `SpriteBatch (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch})` class.
+the @'SiliconStudio.Xenko.Graphics.SpriteFont' class offers an convenient way to draw text. It works with the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class.
 
 # Load a SpriteFont
 
-Since the font is an asset, the user can easily load it. The asset loader will return a `SpriteFont (ref:{SiliconStudio.Xenko.Graphics.SpriteFont})` object. It contains all the options to display a text (bitmaps, kerning, line spacing etc.).
+Since the font is an asset, the user can easily load it. The asset loader will return a @'SiliconStudio.Xenko.Graphics.SpriteFont' object. It contains all the options to display a text (bitmaps, kerning, line spacing etc.).
 
 **Code:** Load a SpriteFont
 
@@ -14,7 +14,7 @@ var myFont = Asset.Load<SpriteFont>("MyFont");```
 
 # Write text on screen
 
-Once the font is loaded, the user can display any text on screen with a `SpriteBatch (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch})` object. To learn more about the SpriteBatch, read the [related documentation page](spritebatch.md). The `DrawString (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch.DrawString})` method performs the draw.
+Once the font is loaded, the user can display any text on screen with a @'SiliconStudio.Xenko.Graphics.SpriteBatch' object. To learn more about the SpriteBatch, read the [related documentation page](spritebatch.md). The @'SiliconStudio.Xenko.Graphics.SpriteBatch.DrawString' method performs the draw.
 
 **Code:** Write text
 
@@ -32,7 +32,7 @@ spriteBatch.DrawString(myFont, "Helloworld!", new Vector2(0.5,0.5), Color.Red);
 spriteBatch.End();```
 
 
-There a many draw methods. The user can specify the orientation of the text, its scale, its depth, its origin etc. There are also some effects that can be applied on the text through some DrawString methods. They are available as `SpriteEffects (ref:{SiliconStudio.Xenko.Graphics.SpriteEffects})` enum:
+There a many draw methods. The user can specify the orientation of the text, its scale, its depth, its origin etc. There are also some effects that can be applied on the text through some DrawString methods. They are available as @'SiliconStudio.Xenko.Graphics.SpriteEffects' enum:
 
 - None
 - FlipHorizontally

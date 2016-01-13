@@ -82,7 +82,7 @@ In the design-time project (RangeAssetLib) , we are going to create 2 classes:
 - The asset description in itself `RangeAsset` that describes parameters of the asset
 - The asset compiler `CustomAssetCompiler` that will describe how to generate `RangeValues` based on `RangeAsset` description.
 
-The `RangeAsset` must inherit from `Asset (ref:{SiliconStudio.Assets.Asset})`class in order to work under the Asset pipeline:
+The `RangeAsset` must inherit from @'SiliconStudio.Assets.Asset'class in order to work under the Asset pipeline:
 
 ```cs
 [DataContract("HeightMap")] // Name of the Asset serialized in YAML
@@ -200,7 +200,7 @@ var rangeValues = Assets.Load<RangeValues>("MyRangeAsset1");```
 
 # Other examples
 
-For example, in Xenko, we have the `TextureAsset (ref:{SiliconStudio.Xenko.Assets.Texture.TextureAsset})` that represents a Texture that can be loaded at runtime.
+For example, in Xenko, we have the @'SiliconStudio.Xenko.Assets.Texture.TextureAsset' that represents a Texture that can be loaded at runtime.
 
 The design representation of a `TextureAsset` contains information about how to import a texture, source of the data, how to resize the texture, change the format...etc.
 

@@ -8,11 +8,11 @@ Xenko offers total control over the rendering states. This includes:
 - Viewport states
 - Scissor states
 
-The states are accessible through the `GraphicsDevice (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice})` class.
+The states are accessible through the @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class.
 
 # Rasterizer states
 
-The user can set the rasterizer states thanks to the `SetRasterizerState (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.SetRasterizerState})` method. The `GraphicsDevice (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice})` class has a set of predefined rasterizer states which should be enough in most cases. They deal with the cull mode:
+The user can set the rasterizer states thanks to the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetRasterizerState' method. The @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class has a set of predefined rasterizer states which should be enough in most cases. They deal with the cull mode:
 
 - CullNone: no culling
 - CullFront: front-face culling
@@ -26,7 +26,7 @@ GraphicsDevice.SetRasterizerState(GraphicsDevice.RasterizerStates.CullFront);
 GraphicsDevice.SetRasterizerState(GraphicsDevice.RasterizerStates.CullBack);```
 
 
-However, the user can create its own custom state. It needs a `RasterizerState (ref:{SiliconStudio.Xenko.Graphics.RasterizerState})` object and a `RasterizerStateDescription (ref:{SiliconStudio.Xenko.Graphics.RasterizerStateDescription})` object. Please refer to the reference documentation of the `RasterizerStateDescription (ref:{SiliconStudio.Xenko.Graphics.RasterizerStateDescription})` class to get the complete list of available options and the default values.
+However, the user can create its own custom state. It needs a @'SiliconStudio.Xenko.Graphics.RasterizerState' object and a @'SiliconStudio.Xenko.Graphics.RasterizerStateDescription' object. Please refer to the reference documentation of the @'SiliconStudio.Xenko.Graphics.RasterizerStateDescription' class to get the complete list of available options and the default values.
 
 **Code:** Custom rasterizer states
 
@@ -39,7 +39,7 @@ GraphicsDevice.SetRasterizerState(rasterizerState);```
 
 # Depth and stencil states
 
-The user can set the depth and stencil states thanks to the `SetDepthStencilState (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.SetDepthStencilState})` method. The `GraphicsDevice (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice})` class has a set of predefined depth states:
+The user can set the depth and stencil states thanks to the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetDepthStencilState' method. The @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class has a set of predefined depth states:
 
 - Default: depth read and write with a less than function
 - DefaultInverse: read and write with a greater-equal function
@@ -55,7 +55,7 @@ GraphicsDevice.SetDepthStencilState(GraphicsDevice.DepthStencilStates.DepthRead)
 GraphicsDevice.SetDepthStencilState(GraphicsDevice.DepthStencilStates.None);```
 
 
-If necessary, the user can set totally customs depth and stencil states. It needs a `DepthStencilState (ref:{SiliconStudio.Xenko.Graphics.DepthStencilState})` object.
+If necessary, the user can set totally customs depth and stencil states. It needs a @'SiliconStudio.Xenko.Graphics.DepthStencilState' object.
 
 **Code:** Custom depth and stencil state
 
@@ -73,7 +73,7 @@ GraphicsDevice.SetDepthStencilState(depthStencilState, 2);```
 
 # Blend state
 
-The user can set the blend state thanks to the `SetBlendState (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.SetBlendState})` method. The `GraphicsDevice (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice})` class has a set of predefined blend states:
+The user can set the blend state thanks to the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetBlendState' method. The @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class has a set of predefined blend states:
 
 - Additive: sums the colors 
 - AlphaBlend: sums the colors using the alpha of the source on the destination color
@@ -89,7 +89,7 @@ GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.NonPremultiplied);
 GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.Opaque);```
 
 
-If necessary, the user can create custom blend states. It needs a `BlendState (ref:{SiliconStudio.Xenko.Graphics.BlendState})` object and a `BlendStateDescription (ref:{SiliconStudio.Xenko.Graphics.BlendStateDescription})` object. Please refer to the reference documentation of the `BlendStateDescription (ref:{SiliconStudio.Xenko.Graphics.BlendStateDescription})` and `BlendStateRenderTargetDescription (ref:{SiliconStudio.Xenko.Graphics.BlendStateRenderTargetDescription})` classes to get the complete list of available options and the default values.
+If necessary, the user can create custom blend states. It needs a @'SiliconStudio.Xenko.Graphics.BlendState' object and a @'SiliconStudio.Xenko.Graphics.BlendStateDescription' object. Please refer to the reference documentation of the @'SiliconStudio.Xenko.Graphics.BlendStateDescription' and @'SiliconStudio.Xenko.Graphics.BlendStateRenderTargetDescription' classes to get the complete list of available options and the default values.
 
 **Code:** Custom blend state
 
@@ -114,9 +114,9 @@ GraphicsDevice.SetBlendState(blendState, Color4.White, 2);```
 
 # Viewport states
 
-When the user sets a render target or a depth buffer, the viewport is reset to its full size. However, the user might want to use a custom viewport. To achieve this, Xenko provides a method which, as a result, should be called **after** the `SetRenderTarget (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.SetRenderTarget})` method.
+When the user sets a render target or a depth buffer, the viewport is reset to its full size. However, the user might want to use a custom viewport. To achieve this, Xenko provides a method which, as a result, should be called **after** the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetRenderTarget' method.
 
-The user can set the viewport thanks to the `SetViewport (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.SetViewport})` methods and the `Viewport (ref:{SiliconStudio.Xenko.Graphics.Viewport})` class. The origin of a viewport is at the top left of the screen. The user can also specify which viewport to update.
+The user can set the viewport thanks to the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetViewport' methods and the @'SiliconStudio.Xenko.Graphics.Viewport' class. The origin of a viewport is at the top left of the screen. The user can also specify which viewport to update.
 
 **Code:** Setting the viewports
 
@@ -132,7 +132,7 @@ GraphicsDevice.SetViewport(0, viewport);```
 
 # Scissor states
 
-The `SetScissorRectangles (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice.SetScissorRectangles})` method is available to set the scissor. Contrary to the viewport, the user must provide the coordinates of the location of the vertices defining the scissor instead of its size. The method can be invocked with a `Rectangle (ref:{SiliconStudio.Core.Mathematics.Rectangle})` object in order to support multiple scissors.
+The @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetScissorRectangles' method is available to set the scissor. Contrary to the viewport, the user must provide the coordinates of the location of the vertices defining the scissor instead of its size. The method can be invocked with a @'SiliconStudio.Core.Mathematics.Rectangle' object in order to support multiple scissors.
 
 **Code:** Setting the scissor
 

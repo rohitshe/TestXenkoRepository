@@ -4,7 +4,7 @@
 
 Xenko uses a programmable shading pipeline. The user can write a custom shader, create an associate effect and use it. This section will only cover how to use such effect. To learn how to create an effect from a shader, the user should learn the Xenko extensions of HLSL used in to write a shader. Please refer to the documentation.
 
-The `EffectSystem (ref:{SiliconStudio.Xenko.Effects.EffectSystem})` class provides an easy way to load an effect. It creates an instance of the `Effect (ref:{SiliconStudio.Xenko.Graphics.Effect})` class.
+The @'SiliconStudio.Xenko.Effects.EffectSystem' class provides an easy way to load an effect. It creates an instance of the @'SiliconStudio.Xenko.Graphics.Effect' class.
 
 **Code:** Load an effect
 
@@ -24,11 +24,11 @@ myEffect.Apply();
 // (...)```
 
 
-An effect often has a set of parameters. To learn how to set them, please refer to the documentation of the `Effect (ref:{SiliconStudio.Xenko.Graphics.Effect})` class.
+An effect often has a set of parameters. To learn how to set them, please refer to the documentation of the @'SiliconStudio.Xenko.Graphics.Effect' class.
 
 # Simple effect shader
 
-Xenko is bundled with a basic built-in shader: SimpleEffect. To use it, simply create an instance of the `SimpleEffect (ref:{SiliconStudio.Xenko.Graphics.SimpleEffect})` class. Please refer to the `SimpleEffect (ref:{SiliconStudio.Xenko.Graphics.SimpleEffect})` class reference to know all the available options. These options include:
+Xenko is bundled with a basic built-in shader: SimpleEffect. To use it, simply create an instance of the @'SiliconStudio.Xenko.Graphics.SimpleEffect' class. Please refer to the @'SiliconStudio.Xenko.Graphics.SimpleEffect' class reference to know all the available options. These options include:
 
 - a tint color
 - a transformation matrix

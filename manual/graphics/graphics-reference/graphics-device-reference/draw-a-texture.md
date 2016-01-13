@@ -1,6 +1,6 @@
 # Draw a texture
 
-In addition to the convenient way to create and manipulate textures in Xenko, the engine provides a built-in method to display such texture on screen. This can be useful to display a buffer fullscreen in case of indirect rendering, to generate mipmaps or for debugging purposes (visualization of GBuffer). The user simply calls the `DrawTexture (ref:{SiliconStudio.Xenko.GraphicsDevice.DrawTexture})` method. The user cannot change the shader used on this texture. The sampling method and a color filter are the only variables accessible to the user. To create a sampler, please refer to the corresponding documentation.
+In addition to the convenient way to create and manipulate textures in Xenko, the engine provides a built-in method to display such texture on screen. This can be useful to display a buffer fullscreen in case of indirect rendering, to generate mipmaps or for debugging purposes (visualization of GBuffer). The user simply calls the @'SiliconStudio.Xenko.GraphicsDevice.DrawTexture' method. The user cannot change the shader used on this texture. The sampling method and a color filter are the only variables accessible to the user. To create a sampler, please refer to the corresponding documentation.
 
 **Code:** Drawing a texture
 
@@ -19,7 +19,7 @@ The texture will be displayed in the set viewport (so often fullscreen). To chan
 
 # Sampler states
 
-Since a sampler state can be provided, the `GraphicsDevice (ref:{SiliconStudio.Xenko.Graphics.GraphicsDevice})` class offers a set of predefined ones. These are:
+Since a sampler state can be provided, the @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class offers a set of predefined ones. These are:
 
 - PointWrap
 - PointClamp
@@ -39,7 +39,7 @@ GraphicsDevice.DrawTexture(myTexture, GraphicsDevice.SamplerStates.AnisotropicWr
 GraphicsDevice.DrawTexture(myTexture, GraphicsDevice.SamplerStates.AnisotropicClamp);```
 
 
-The user can also create custom samplers. This is achieved thanks to the `SamplerState (ref:{SiliconStudio.Xenko.Graphics.SamplerState})` and `SamplerStateDescription (ref:{SiliconStudio.Xenko.Graphics.SamplerStateDescription})` classes. To have the whole list of features, please refer to the documentation of each class.
+The user can also create custom samplers. This is achieved thanks to the @'SiliconStudio.Xenko.Graphics.SamplerState' and @'SiliconStudio.Xenko.Graphics.SamplerStateDescription' classes. To have the whole list of features, please refer to the documentation of each class.
 
 **Code:** Custom sampler
 

@@ -4,7 +4,7 @@ A sprite batch is a collection of sprites (2D textured planes).
 
 # Creating a sprite batch
 
-Xenko offers a easy way to deal will batches of sprites through the `SpriteBatch (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch})` class. The user can use this class to regroup all of his sprites, update them and display them efficiently.
+Xenko offers a easy way to deal will batches of sprites through the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class. The user can use this class to regroup all of his sprites, update them and display them efficiently.
 
 **Code:** Creating a sprite batch
 
@@ -24,7 +24,7 @@ It is also possible to set various states like the ones discussed in the [state 
 
 # Drawing a sprite batch
 
-The `SpriteBatch (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch})` class has multiple draw methods to set various parameters. For a comprehensive list of all the features, please refer to the `SpriteBatch (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch})` class reference documentation.
+The @'SiliconStudio.Xenko.Graphics.SpriteBatch' class has multiple draw methods to set various parameters. For a comprehensive list of all the features, please refer to the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class reference documentation.
 
 **Code:** Drawing a sprite batch
 
@@ -39,15 +39,15 @@ spriteBatch.Draw(myTexture, new Vector2(10, 20));
 spriteBatch.End();```
 
 
-There are five modes to draw a sprite batch. They are enumerated in the `SpriteSortMode (ref:{SiliconStudio.Xenko.Graphics.SpriteSortMode})` enum:
+There are five modes to draw a sprite batch. They are enumerated in the @'SiliconStudio.Xenko.Graphics.SpriteSortMode' enum:
 
 - Deferred (default mode): the sprites are drawn at the same time at the end to reduce the drawcall overhead
-- Immediate: the sprites are draw after each each `Draw (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch.Draw})` call
+- Immediate: the sprites are draw after each each @'SiliconStudio.Xenko.Graphics.SpriteBatch.Draw' call
 - Texture: Deferred mode but sprites are sorted based on their texture to reduce effect parameters update
 - BackToFront: Deferred mode with a sort based on the z-order of the sprites
 - FrontToBack: Deferred mode with a sort based on the z-order of the sprites
 
-To set the mode, the user should specify it in the `Begin (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch.Begin})` method.
+To set the mode, the user should specify it in the @'SiliconStudio.Xenko.Graphics.SpriteBatch.Begin' method.
 
 **Code:** Deferred drawing of the sprite batch
 
@@ -71,7 +71,7 @@ It is possible to set several parameters on the sprite, for example:
 - center offset
 - color tint
 
-For a comprehensive list, please refer to the `SpriteBatch (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch})` class reference documentation, especially the `Draw (ref:{SiliconStudio.Xenko.Graphics.SpriteBatch.Draw})` methods.
+For a comprehensive list, please refer to the @'SiliconStudio.Xenko.Graphics.SpriteBatch' class reference documentation, especially the @'SiliconStudio.Xenko.Graphics.SpriteBatch.Draw' methods.
 
 **Code:** More complex sprite batch drawing
 

@@ -1,13 +1,13 @@
 # Custom Scene Renderer
 
-You can create custom renderer by implementing directly the `ISceneRenderer (ref:{SiliconStudio.Xenko.Rendering.ISceneRenderer})` or by using a delegate through the `SceneDelegateRenderer (ref:{SiliconStudio.Xenko.Rendering.SceneDelegateRenderer})`
+You can create custom renderer by implementing directly the @'SiliconStudio.Xenko.Rendering.ISceneRenderer' or by using a delegate through the @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer'
 
 # Implementing an ISceneRenderer
 
 You can use a base implementation of this interface
 
-- `SceneRendererBase (ref:{SiliconStudio.Xenko.Rendering.SceneRendererBase})`: Provides a default implementation of `ISceneRenderer (ref:{SiliconStudio.Xenko.Rendering.ISceneRenderer})` and automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
-- `SceneRendererViewportBase (ref:{SiliconStudio.Xenko.Rendering.SceneRendererViewportBase})`: Inherits from `SceneRendererBase (ref:{SiliconStudio.Xenko.Rendering.SceneRendererBase})` and add the ability to configure a specific viewport 
+- @'SiliconStudio.Xenko.Rendering.SceneRendererBase': Provides a default implementation of @'SiliconStudio.Xenko.Rendering.ISceneRenderer' and automatically binds the output defines on the renderer to the GraphicsDevice before calling the `DrawCore` method.
+- @'SiliconStudio.Xenko.Rendering.SceneRendererViewportBase': Inherits from @'SiliconStudio.Xenko.Rendering.SceneRendererBase' and add the ability to configure a specific viewport 
 
  
 
@@ -30,7 +30,7 @@ public sealed class MyCustomRenderer : SceneRendererBase
 
 # Using a delegate
 
-In some scenarios, you simply want to develop a renderer and attach it to a method directly. You can use a `SceneDelegateRenderer (ref:{SiliconStudio.Xenko.Rendering.SceneDelegateRenderer})` for this usage:
+In some scenarios, you simply want to develop a renderer and attach it to a method directly. You can use a @'SiliconStudio.Xenko.Rendering.SceneDelegateRenderer' for this usage:
 
 ```cs
 var sceneDelegateRenderer = new SceneDelegateRenderer(

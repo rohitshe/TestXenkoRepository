@@ -2,7 +2,7 @@
 
 # Overview
 
-`Entity (ref:{SiliconStudio.Xenko.EntityModel.Entity})` is the base class for objects that are managed by the high-level engine.
+@'SiliconStudio.Xenko.EntityModel.Entity' is the base class for objects that are managed by the high-level engine.
 
 To improve flexibility, entity are component-based: they can contains as many components as required, containing data and/or logic.
 
@@ -14,7 +14,7 @@ To improve flexibility, entity are component-based: they can contains as many co
 
 
 
-A `component (ref:{SiliconStudio.Xenko.EntityModel.EntityComponent})` is tied to its entity (that is, one component can't be added to two entities at the same time).
+A @'SiliconStudio.Xenko.EntityModel.Entitycomponent' is tied to its entity (that is, one component can't be added to two entities at the same time).
 
 # How to create an entity and some components
 

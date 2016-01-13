@@ -18,7 +18,7 @@ Once you have opened the solution, create a new C# file in the Game project.
 
 ![images/newfile.png](images/newfile.png) 
 
-Make your script ***public*** and inherit from `AsyncScript (ref:{SiliconStudio.Xenko.Engine.AsyncScript})`, `SyncScript (ref:{SiliconStudio.Xenko.Engine.SyncScript})` or simply `Script (ref:{SiliconStudio.Xenko.Engine.Script})` depending on the type of script you need.
+Make your script ***public*** and inherit from @'SiliconStudio.Xenko.Engine.AsyncScript', @'SiliconStudio.Xenko.Engine.SyncScript' or simply @'SiliconStudio.Xenko.Engine.Script' depending on the type of script you need.
 
 **Code:** Empty Script
 
@@ -68,7 +68,7 @@ Return to Visual Studio and open your script file (here *MyFirstScript.cs*).
 
 Using the **script context** (available from any type of script), you can easily **access any base system of the engine as well as the script entity.**
 
-The script entity is the entity to which the script has been attached to. It can be accessed using the `Entity (ref:{SiliconStudio.Xenko.Engine.Script.Entity})` property of the script.
+The script entity is the entity to which the script has been attached to. It can be accessed using the @'SiliconStudio.Xenko.Engine.Script.Entity' property of the script.
 
 Using the script entity property, you can **access all the components** of the entity and **alter its current state**.
 

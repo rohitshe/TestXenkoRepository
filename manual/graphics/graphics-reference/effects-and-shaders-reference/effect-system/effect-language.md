@@ -2,11 +2,11 @@
 
 # Create shader in C#
 
-You can create a shader at runtime with children of the `ShaderSource (ref:{SiliconStudio.Xenko.Shaders.ShaderSource})` class. There are 3 of them:
+You can create a shader at runtime with children of the @'SiliconStudio.Xenko.Shaders.ShaderSource' class. There are 3 of them:
 
-- `ShaderClassSource (ref:{SiliconStudio.Xenko.Shaders.ShaderClassSource})`: corresponding to a unique class
-- `ShaderMixinSource (ref:{SiliconStudio.Xenko.Shaders.ShaderMixinSource})`: mix several `ShaderSource (ref:{SiliconStudio.Xenko.Shaders.ShaderSource})`, setting preprocessor values, defining compositions
-- `ShaderArraySource (ref:{SiliconStudio.Xenko.Shaders.ShaderArraySource})`: used for arrays of compositions
+- @'SiliconStudio.Xenko.Shaders.ShaderClassSource': corresponding to a unique class
+- @'SiliconStudio.Xenko.Shaders.ShaderMixinSource': mix several @'SiliconStudio.Xenko.Shaders.ShaderSource', setting preprocessor values, defining compositions
+- @'SiliconStudio.Xenko.Shaders.ShaderArraySource': used for arrays of compositions
 
 This method will produce shaders at runtime. However, many platforms do not support HLSL and do not have the ability to compile shaders at runtime. Futhermore, this approach do not benefit from the reusability of the mixins. 
 

@@ -12,7 +12,7 @@ This logic happens in .XKFX files.
 
 # Effect System: instantiate Effect
 
-`EffectSystem (ref:{SiliconStudio.Xenko.Effects.EffectSystem})` is used to instantiate `Effect (ref:{SiliconStudio.Xenko.Graphics.Effect})` from a given .XKFX definition.
+@'SiliconStudio.Xenko.Effects.EffectSystem' is used to instantiate @'SiliconStudio.Xenko.Graphics.Effect' from a given .XKFX definition.
 
 At runtime, if effect parameters are supposed to instantiate a new shader, it will be automatically generated and used.
 

@@ -9,4 +9,6 @@ _navRel: ../toc.html
 
 Welcome to Xenko manual.
 
-It contains various getting started guides, HOWTO and reference documentation.
+It contains various [getting started and HOWTO guides](getting-started/index.md), as well as API reference documentation.
+
+[!include[Getting Started](getting-started/index.md)]

@@ -16,7 +16,7 @@ Packages are saved on the disk with the *.xkpkg* extension.
 
 # Game assets
 
-Assets are the data, meshes, textures, materials, sounds,... used in your game. Most of these assets are generated while importing a source file, such as an audio file or a 3D model while some other can be created from scratch (like entities). For each asset, a single file is created, usually with an extension starting by *.xk*. For instance, texture uses the *.xktex* extension. Assets can be sorted into folders and sub-folders for easy browsing. The root path of the assets of a package is stored in the package file.
+[Assets](../glossary.md#asset) are the data, meshes, textures, materials, sounds,... used in your game. Most of these assets are generated while importing a source file, such as an audio file or a 3D model while some other can be created from scratch (like entities). For each asset, a single file is created, usually with an extension starting by *.xk*. For instance, texture uses the *.xktex* extension. Assets can be sorted into folders and sub-folders for easy browsing. The root path of the assets of a package is stored in the package file.
 
 # Code libraries
 

@@ -1,7 +1,16 @@
-Xenko Documentation
-=======
+Contributing
+============
 
-This is the source code for Xenko Game Engine Documentation (http://doc.xenko.com/).
+## Process
+
+If you plan to add content, submit an suggestion issue so that we can make sure it would fit well in the documentation and doesn't overlap with in-progress work.
+
+## Building locally
+
+1. Checkout both https://github.com/SiliconStudio/xenko and this repository in the same folder (API doc will be built from ../xenko).
+2. Run build.bat to build the doc.
+3. Run run_local_website.bat which will allow you to view the doc in your browser (page should automatically open).
+4. Every time you want to see your latest changes, run again build.bat or build_manual_only.bat (faster), and refresh your browser (no need to run run_local_website.bat again).
 
 ## Contribution terms
 

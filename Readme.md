@@ -1,3 +1,10 @@
+Xenko Documentation
+=======
+
+This is the source code for Xenko Game Engine Documentation (http://doc.xenko.com/).
+
+## Contribution terms
+
 By submitting suggestions, corrections, or content to this forum you hereby agree to the following terms and conditions:
 
 Any content submitted to these forums will be reviewed to check for accuracy, usability, and direction for the Xenko project. Although all submissions will be considered fairly, Silicon Studio makes no guarantees to accept and or use any submitted content.

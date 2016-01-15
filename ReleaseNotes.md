@@ -86,6 +86,45 @@ To generate a precompiled sprite font, the owner of the original font file just 
 
 <img src="http://doc.xenko.com/1.5/rn_images/PrecompiledSpriteFont.png" />
 
+# Version 1.5.2-beta
+Release date: 2016/01/15
+
+## Issues fixed
+
+### Assets
+
+- Added the missing XenkoDefaultFont required by the profiler system.
+- The convex hull generation is now working along with the new Skeleton Asset.
+
+### Engine
+
+- Fix problem occuring with debugging async functions (local variable gone, namespace ignored, step over broken).
+- Fix the issues preventing from passing Windows 10 store certification. 
+- Added support for proper resizing in Windows Universal Apps.
+
+### Game Studio
+
+- Fixed issues with the displayed values of rotations changing after validation.
+
+### iOS
+
+- The Connection Router script required to compile shaders on iOS devices has been fixed.
+
+
+## Enhancements
+
+### Assets
+
+- Skybox compilation does not require a DX11 GPU anymore. We added DX10 support to ensure GameStudio works fine with less recent GPUs as well.
+
+### Engine
+
+- Added support for OpenGLES devices that do not support packed depth-stencil-formats.
+
+### Game Studio
+
+- Add the possibility to edit the 3 components of a vector simultaneously.
+
 # Version 1.5.1-beta
 Release date: 2015/12/22
 

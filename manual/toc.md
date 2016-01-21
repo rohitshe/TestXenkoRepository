@@ -98,6 +98,5 @@
 ## [Pointers](input/pointers.md)
 ## [Virtual Keys](input/virtual-keys.md)
 # [Physics](physics/index.md)
-## [Physics Initialization](physics/physics-initialization.md)
 ## [Colliders Creation](physics/colliders-creation.md)
 ## [Colliders Manipulation](physics/colliders-manipulation.md)

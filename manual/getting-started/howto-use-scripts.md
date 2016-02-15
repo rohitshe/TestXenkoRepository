@@ -1,6 +1,6 @@
 # HOWTO: Use scripts
 
-After that your created your first basic scene, the first thing that you probably want to do is to move and animate your entities. **Scripts** are the most suited way to do that in Xenko. 
+After you created your first basic scene, the first thing you might want to do is to move and animate your entities. **Scripts** are the most suited way to do that in Xenko. 
 
 # Scripts
 

@@ -86,6 +86,16 @@ To generate a precompiled sprite font, the owner of the original font file just 
 
 <img src="http://doc.xenko.com/1.5/rn_images/PrecompiledSpriteFont.png" />
 
+
+# Version 1.5.3-beta
+Release date: 2016/02/18
+
+## Issues fixed
+- Fix a problem in the package upgrade erasing the content of shader and effect files.
+- Fix a crash in the resolution of invalid relative pathes preventing to load the project in the editor.
+- Do not add pillar boxes when resizing the window of a landscape game under Windows 10 but readjust the size of the buffer.
+- Replace the `MS Mincho` font by an embeded free font in samples (The font is not available on every systems)
+
 # Version 1.5.2-beta
 Release date: 2016/01/15
 
@@ -100,11 +110,11 @@ Release date: 2016/01/15
 
 - Fix problem occuring with debugging async functions (local variable gone, namespace ignored, step over broken).
 - Fix the issues preventing from passing Windows 10 store certification. 
-- Added support for proper resizing in Windows Universal Apps.
+- Add support for proper resizing in Windows Universal Apps.
 
 ### Game Studio
 
-- Fixed issues with the displayed values of rotations changing after validation.
+- Fix issues with the displayed values of rotations changing after validation.
 
 ### iOS
 
@@ -119,7 +129,7 @@ Release date: 2016/01/15
 
 ### Engine
 
-- Added support for OpenGLES devices that do not support packed depth-stencil-formats.
+- Add support for OpenGLES devices that do not support packed depth-stencil-formats.
 
 ### Game Studio
 
@@ -225,5 +235,4 @@ Release date: 2015/12/17
 
 # Known Issues
 
-- iOS has an outstanding crash issue after a few second, especially on recent devices (iPhone 6s). This is currently under investigation.
-- Windows 10 Universal AOT compilation is not working 
+- iOS has an outstanding crash issue after a few second on ARM64 iPhones. This is currently under investigation.

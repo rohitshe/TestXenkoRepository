@@ -2,8 +2,6 @@
 
 ## Reference
 
-[Placeholder] Reference go here.
-
 - [Terminology](particles-reference/particles-reference-terminology/index.md)
 - [Editing Particle Effects](particles-reference/particles-reference-editor/index.md)
 - [Emitters](particles-reference/particles-reference-emitters/index.md)
@@ -14,8 +12,6 @@
 - [Materials](particles-reference/particles-reference-materials/index.md)
 
 ## Samples
-
-[Placeholder] Samples go here.
 
 - [Simple Particles Sample](particles-samples/particles-samples-simple/index.md)
 - [Custom Particles Sample](particles-samples/particles-samples-custom/index.md)

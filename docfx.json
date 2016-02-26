@@ -17,6 +17,7 @@
               "sources/engine/SiliconStudio.Xenko.Shaders/SiliconStudio.Xenko.Shaders.csproj",
               "sources/engine/SiliconStudio.Xenko.Graphics/SiliconStudio.Xenko.Graphics.csproj",
               "sources/engine/SiliconStudio.Xenko.Input/SiliconStudio.Xenko.Input.csproj",
+              "sources/engine/SiliconStudio.Xenko.Particles/SiliconStudio.Xenko.Particles.csproj",
               "sources/engine/SiliconStudio.Xenko.UI/SiliconStudio.Xenko.UI.csproj",
             ],
 			"cwd": "../xenko",

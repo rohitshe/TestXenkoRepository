@@ -1,8 +1,25 @@
 # Particle Shape Builders
 
-Placeholder text.
-
 ![images/particles-reference-shapebuilders-0.png](images/particles-reference-shapebuilders-0.png) 
-	
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique rhoncus sem. Suspendisse venenatis vitae eros ut ultricies. Quisque rutrum fringilla velit, sit amet iaculis sem ornare id. Sed ullamcorper magna in lorem vestibulum, vitae feugiat felis egestas. Nulla in metus vitae massa mattis tempus. Mauris maximus dictum ligula, sed placerat mi sodales pharetra. Mauris vestibulum vel leo id maximus. Phasellus consequat scelerisque lectus, posuere tincidunt lectus molestie sed. Phasellus tincidunt lectus id pharetra efficitur. Donec in augue aliquam diam gravida accumsan. Sed at pulvinar nisl, in commodo nulla. Donec cursus porta elit et aliquet.
 
+Shape Builders create mesh shapes from the living particles so that they can be rendered. Currently only one type of shape can be assigned to an emitter.
+
+## Billboard
+
+Every particle is expanded to a 1 meter by 1 meter camera-facing quad. If the particle has any size, it is scaled accordingly. The billboards only support angular rotation.
+
+## Hexagon
+
+Every particle is expanded to a camera-facing hexagon with 0.5 meter sides. If the particle has any size, it is scaled accordingly. The hexagons only support angular rotation.
+
+## Quad
+
+Every particle is expanded to a 1 meter by 1 meter up-facing quad. If the particle has any size, it is scaled accordingly. The quads support 3D orientation and rotation.
+
+The picture below shows a billboard, a hexagon and a quad:
+
+![images/particles-reference-shapebuilders-1.png](images/particles-reference-shapebuilders-1.png) 
+
+## More
+
+Ribbons, trails and meshes are also planned for future releases.

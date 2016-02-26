@@ -1,6 +1,6 @@
 # Particles Reference
 
-[Placehodler text] Loren ipsum.
+In this section you will find a user's reference about how to create, edit and use particle effects.
 
 - [Terminology](particles-reference-terminology/index.md)
 - [Editor](particles-reference-editor/index.md)

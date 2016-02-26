@@ -70,7 +70,7 @@ The force field is defined by a bounding shape and several force vectors which o
 |                       |                                                                                                                                  |
 
 
-#### Falloff
+### Falloff
 
 The default falloff has the following behavior:
 
@@ -78,9 +78,59 @@ The default falloff has the following behavior:
 
 For example, if the bounding shape is a sphere with a radius 10m, particles within 1m from its center (0.1 x 10m) will be moved with full strength. After the 1m distance the strength will linearly decrease until it reaches zero at 9m distance (0.9 x 10m). After that point the forces won't affect the particle.
 
-#### Bounding Shapes
+### Bounding Shapes
 
-[Placeholder] PNG example of bounding shapes
+#### Sphere
+
+![images/particles-reference-updaters-7.png](images/particles-reference-updaters-7.png) 
+
+When the bounding shape is a shpere, the falloff distance is based on the radial distance of the particle from the sphere's center. If the sphere is scaled to an ellipsoid, this distance is also scaled. The distance is relative to the radius, with 1.0 being the sphere's surface.
+
+The directed force vector is parallel to the sphere's local Y axis.
+
+The repulsive force vector is pointing out from the center to the particle.
+
+The vortex force vector goes around the sphere's Y axis at the particle's position (using the right-hand rule for rotation).
+
+#### Box
+
+![images/particles-reference-updaters-8.png](images/particles-reference-updaters-8.png) 
+
+When the bounding shape is a box, the falloff distance is the longest of the three distances on the X, Y and Z axes. The distance is relative to the box's sizes, with 1.0 being the box's surface.
+
+The directed force vector is parallel to the box's local Y axis.
+
+The repulsive force vector is pointing out from the center to the particle.
+
+The vortex force vector goes around the box's Y axis at the particle's position (using the right-hand rule for rotation).
+
+
+#### Cylinder
+
+![images/particles-reference-updaters-9.png](images/particles-reference-updaters-9.png) 
+
+When the bounding shape is a cylinder, the falloff distance is based on the radial distance of the particle from the cylinder's local Y axis. Particle's height (position on the Y axis) is ignored unless the particle is outside the cylinder, in which case the distance is always 1.
+
+The directed force vector is parallel to the cylinder's local Y axis.
+
+The repulsive force vector is pointing out from the cylinder's local Y axis to the particle. As such the repulsive force is always horizontal.
+
+The vortex force vector goes around the cylinder's Y axis at the particle's position (using the right-hand rule for rotation).
+
+
+#### Torus
+
+![images/particles-reference-updaters-10.png](images/particles-reference-updaters-10.png) 
+
+When the bounding shape is a torus, the field's nature changes completely. The falloff distance is based on the radial distance of the particle from the torus's inner circle (axis of revolution, shown in red), choosing a point on the circle closest to the particle.
+
+The directed force vector is tangent to the axis of revolution at the point closest to the particle.
+
+The repulsive force vector is pointing out from the axis to the particle.
+
+The vortex force vector goes around the directed force vector using the particle's position relative to the axis (using the right-hand rule for rotation).
+
+While the math is a little complicated, using the torus force field is not, and we encourage you to try it out for better understanding.
 
 ## Gravity
 

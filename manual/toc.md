@@ -100,7 +100,7 @@
 # [Particles](particles/index.md)
 ## [Particles Reference](particles/particles-reference/index.md)
 ### [Terminology](particles/particles-reference/particles-reference-terminology/index.md)
-### [Editor](particles/particles-reference/particles-reference-editor/index.md)
+### [Editing Particle Effects](particles/particles-reference/particles-reference-editor/index.md)
 ### [Emitters](particles/particles-reference/particles-reference-emitters/index.md)
 ### [Spawners](particles/particles-reference/particles-reference-spawners/index.md)
 ### [Initializers](particles/particles-reference/particles-reference-initializers/index.md)

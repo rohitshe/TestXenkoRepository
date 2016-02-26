@@ -5,7 +5,7 @@
 [Placeholder] Reference go here.
 
 - [Terminology](particles-reference/particles-reference-terminology/index.md)
-- [Editor](particles-reference/particles-reference-editor/index.md)
+- [Editing Particle Effects](particles-reference/particles-reference-editor/index.md)
 - [Emitters](particles-reference/particles-reference-emitters/index.md)
 - [Spawners](particles-reference/particles-reference-spawners/index.md)
 - [Initializers](particles-reference/particles-reference-initializers/index.md)

@@ -100,6 +100,183 @@ The values we set here will be used by the ComputeColorRadial shader for the par
 
 ### Two Textures Particle System
 
+The last sample show how to create custom materials and effects for the particles. The DynamicColor material supports one RGBA channel. For our sample, we are going to separate RGB and A channels, allowing them to use different texture coordinate animations and different textures and binary trees for computing the color.
 
-TODO
+#### Parameter Keys
+
+Parameter keys are used to map data and pass it to the shader. Some of them are generated, and we can define our own too.
+
+If we define more streams in our shader (ParticleCustomShader), they will be exported to an automatically generated class. Try adding the following to ParticleCustomShader.xksl:
+
+  ```cs
+    // -------------------------------------
+    // streams
+    // -------------------------------------
+    stage float4 SomeRandomKey;
+```
+
+The generated .cs file should now contain:
+
+  ```cs
+namespace SiliconStudio.Xenko.Rendering
+{
+    public static partial class ParticleCustomShaderKeys
+    {
+        public static readonly ParameterKey<Vector4> SomeRandomKey = ParameterKeys.New<Vector4>();
+    }
+}
+```
+
+We don't really need this stream for now so we can delete it. We will define some extra keys in ParticleCustomMaterialKeys.cs to use in our material and effects.
+
+  ```cs
+namespace SiliconStudio.Xenko.Rendering
+{
+    public partial class ParticleCustomShaderKeys
+    {
+        static ParticleCustomShaderKeys()
+        {
+            
+        }
+
+        public static readonly ParameterKey<ShaderSource> BaseColor     = ParameterKeys.New<ShaderSource>();
+
+        public static readonly ParameterKey<Texture> EmissiveMap = ParameterKeys.New<Texture>();
+        public static readonly ParameterKey<Color4> EmissiveValue = ParameterKeys.New<Color4>();
+
+
+
+        public static readonly ParameterKey<ShaderSource> BaseIntensity = ParameterKeys.New<ShaderSource>();
+
+        public static readonly ParameterKey<Texture> IntensityMap = ParameterKeys.New<Texture>();
+        public static readonly ParameterKey<float> IntensityValue = ParameterKeys.New<float>();
+    }
+}
+```
+
+As we saw above, the generated class has the same name and the namespace is SiliconStudio.Xenko.Rendering, so we have to make our class partial and match the namespace. This has no effect on this specific sample, but will result in compilation error if your shader code auto-generates some keys.
+
+The rest of the code is self-explanatory. We will need the map and value keys for shader generation later, and we will set our generated code to the BaseColor and BaseIntensity keys respectively so the shader can use it.
+
+#### Custom Shader
+
+Let's have a look at the ParticleCustomShader.xksl:
+
+  ```cs
+
+class ParticleCustomShader : ParticleBase
+{
+    // This shader is settable by the user, and it's a binary tree made up from smaller shaders
+    compose ComputeColor  baseColor;
+
+    // This shader is settable by the user, and it's a binary tree made up from smaller shaders
+    compose ComputeColor  baseIntensity;
+
+    // Shading of the sprite - we override the base class's Shading(), which only returns ColorScale
+    stage override float4 Shading()
+    {
+        // -----------------------------------------------
+        // Base particle color RGB
+        // -----------------------------------------------        
+        float4 finalColor = base.Shading() * baseColor.Compute();
+
+        // -----------------------------------------------
+        // Base particle alpha
+        // -----------------------------------------------        
+        finalColor.a    = baseIntensity.Compute();
+
+        //  Don't forget to premultiply the alpha
+        finalColor.rgb *= finalColor.aaa; 
+
+        return finalColor;
+    }
+};
+```
+
+It defines two composed shaders, baseColor and abseIntensity, where we will plug our generated shaders for RGB and A respectively. It inherits ParticleBase which already defines VSMain, PSMain and texturing, and uses very simple Shading() method.
+
+By overriding the Shading() method we can define our custom behavior. Because the composed shaders we use are derived from ComputeColor we can easily evaluate them using Compute() which will give us the root of the compute tree for color and intensity.
+
+#### Custom Effect
+
+Our effect describes how to mix and compose the shaders. It's in ParticleCustomEffect.xkfx:
+
+  ```cs
+namespace SiliconStudio.Xenko.Rendering
+{
+    partial shader ParticleCustomEffect
+    {
+        // Use the ParticleBaseKeys for constant attributes, defined in the game engine
+        using params ParticleBaseKeys;
+
+        // Use the ParticleCustomShaderKeys for constant attributes, defined in this project
+        using params ParticleCustomShaderKeys;
+
+        // Inherit from the ParticleBaseEffect.xkfx, defined in the game engine
+        mixin ParticleBaseEffect;
+
+        // Use the ParticleCustomShader.xksl, defined in this project
+        mixin ParticleCustomShader;
+
+        // If the user-defined shader for the baseColor is not null use it
+        if (ParticleCustomShaderKeys.BaseColor != null)
+        {
+            mixin compose baseColor = ParticleCustomShaderKeys.BaseColor;
+        }
+
+        // If the user-defined shader for the baseIntensity (alpha) is not null use it
+        if (ParticleCustomShaderKeys.BaseIntensity != null)
+        {
+            mixin compose baseIntensity = ParticleCustomShaderKeys.BaseIntensity;
+        }
+
+   };
+
+}
+```
+
+The ParticleBaseKeys and the ParticleBaseEffect and required by the base shader which we inherit.
+
+ParticleCustomShaderKeys provides the keys we defined earlier, where we will plug our shaders.
+
+Finally, for both shaders we only need to check if there is user-defined code for it and plug it. The baseColor and baseIntensity parameters are from the shader we created earlier.
+
+Lastly, we need a material which sets all the keys and uses the newly created effect.
+
+#### Custom particle material 
+
+We are going to copy @`SiliconStudio.Xenko.Particles.Materials.ParticleMaterialComputeColor` into ParticleCustomMaterial.cs in our project and customize it to use two shaders for color binary trees.
+
+  ```cs
+        [DataMemberIgnore]
+        protected override string EffectName { get; set; } = "ParticleCustomEffect";
+```
+
+The base class automatically tries to load the effect specified with EffectName. We give it the name of the effect we crated earlier.
+
+  ```cs
+        [DataMember(300)]
+        [Display("Alpha")]
+        public IComputeScalar ComputeScalar { get; set; } = new ComputeTextureScalar();
+
+        [DataMember(400)]
+        [Display("TexCoord1")]
+        public UVBuilder UVBuilder1;
+        private AttributeDescription texCoord1 = new AttributeDescription("TEXCOORD1");
+```
+
+In addition to the already existing @`SiliconStudio.Xenko.Rendering.Materials.IComputeColor` we are going to use @`SiliconStudio.Xenko.Rendering.Materials.IComputeScalar` for intensity, which returns a float, rather than a float4. We will also add another  @`SiliconStudio.Xenko.Particles.Materials.UVBuilder` for a second texture coordinates animation.
+
+
+  ```cs
+    var shaderBaseColor = ComputeColor.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.EmissiveMap, ParticleCustomShaderKeys.EmissiveValue, Color.White));
+    shaderGeneratorContext.Parameters.Set(ParticleCustomShaderKeys.BaseColor, shaderBaseColor);
+
+    var shaderBaseScalar = ComputeScalar.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.IntensityMap, ParticleCustomShaderKeys.IntensityValue, Color.White));
+    shaderGeneratorContext.Parameters.Set(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
+```
+
+We load the two shaders - one for the main color and one for the intensity. These are similar to the shaders we wrote manually in the last two examples, except we generate them on the fly directly from the ComputeColor and ComputeScalar properties which the user can edit with the Property Grid. The generated code is similar to the shader code we wrote in the way that it calls Compute() and it returns the final result of our color or scalar compute tree.
+
+After we generate the shader code, we set it to the respective key we need. Check how ParticleCustomShaderKeys.BaseColor is defined in ParticleCustomShaderKeys.cs. In the effect file we check if this key is set, and if yes, we pass it to the stream defined in our shader code.
 

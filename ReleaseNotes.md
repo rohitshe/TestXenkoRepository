@@ -86,6 +86,12 @@ To generate a precompiled sprite font, the owner of the original font file just 
 
 <img src="http://doc.xenko.com/1.5/rn_images/PrecompiledSpriteFont.png" />
 
+# Version 1.5.4-beta
+Release date: 2016/03/03
+
+## Issues fixed
+- Fix a certification issue remaining for Windows Universal Apps.
+- Fix a problem with the selection of the Graphic Profile on INTEL graphic cards.
 
 # Version 1.5.3-beta
 Release date: 2016/02/18

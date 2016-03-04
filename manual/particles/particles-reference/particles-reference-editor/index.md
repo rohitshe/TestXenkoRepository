@@ -34,7 +34,7 @@ The transform component provides a locator for the particle system. Think of it 
 
 ### Editor Control
 
-The editor control provides control for authoring particles which are only used when in the game studio. These preperties have no effect on the particle system when you play it in your game. There are sumple controls for playing, pausing and stopping a particle system, as well as resetting the simulation every few seconds to allow one-shot effects to be repeatedly played.
+The editor control provides control for authoring particles which are only used when in the game studio. These properties have no effect on the particle system when you play it in your game. There are simple controls for playing, pausing and stopping a particle system, as well as resetting the simulation every few seconds to allow one-shot effects to be repeatedly played.
 
 ### Source
 
@@ -46,11 +46,11 @@ When you first play the effect it will appear already running if you set this va
 
 #### Bounding Shape
 
-Contains a user-defined shape used for culling and optimizations.
+Contains a user-defined shape used by the engine for culling and optimizations.
 
 #### Emitters
 
-A list of [Emitters](../particles-reference-emitters/index.md) contained in the particle system. They are updated and drawn in the order they appear on the list and can be reordered.
+The list of the [Emitters](../particles-reference-emitters/index.md) contained by the particle system. They are updated and drawn in the order they appear on the list and can be reordered.
 
 #### Exposed values
 

@@ -51,7 +51,7 @@ The force field is defined by a bounding shape and several force vectors which o
 | Inheritance           | The force updater can inherit none or several of the following: position, rotation, scale                                        |
 | Offset                | Offset is the local location matrix for the updater, applied on top of the inherited values                                      |
 | Shape                 | The bounding shape which can be shpere, cylinder, box or a torus.                                                                |
-| Falloff               | The falloff is a simple linear function which dictates how strong the force is based on the particle's distance from its center. |
+| Falloff               | The falloff is a simple linear function which dictates the intensity of the force applied on particles. It is based on the particle's distance from its center. |
 |                       | Strength inside is how much of the magnitude should apply when the particle is within *falloff start* distance from the center.  |
 |                       | Strength outside is how much of the magnitude should apply when the particle more than *falloff end* away from the center.       |
 |                       | Both values are relative to the bounding shape's sizes and values in-between are interpolated between the two magnitudes.        |

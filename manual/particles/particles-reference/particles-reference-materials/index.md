@@ -2,7 +2,7 @@
 
 ![images/particles-reference-materials-0.png](images/particles-reference-materials-0.png) 
 
-The particle materials are a simplified version of the [Materials](../../../graphics/graphics-reference/materials-reference/index.md) used for meshes. There is only one type of material for now which is the Dynamic Emissive material.
+The particle materials are a simplified version of the [Materials](../../../graphics/graphics-reference/materials-reference/index.md) used for meshes. There is only one type of material currently, the Dynamic Emissive material.
 
 ## Dynamic Emissive
 
@@ -13,11 +13,11 @@ This material uses a translucent emissive color RGBA for the pixel shading. In H
 
 | Property            | Description                                                                                                     |
 |---------------------|-----------------------------------------------------------------------------------------------------------------|
-| Alpha-Add           | The translucent rendering supports alpha-blending, additive blending or anything in-between.                    |
+| Alpha-Add           | Translucent rendering supports alpha-blending, additive blending or anything in-between.                    |
 |                     | With this parameter you can control how much alpha-blended (0) or additive (1) the particles should be.         |
 |                     |                                                                                                                 |
 | Culling             | There are options for no culling, front face culling and back face culling.                                     |
-|                     | Camera-facing particles always have their fron face towards the camera.                                         |
+|                     | Camera-facing particles always have their front face towards the camera.                                         |
 |                     |                                                                                                                 |
 | Emissive            | The emissive RGBA color for the particle.                                                                       |
 |                     | Refer to the [Material Colors](../../../graphics/graphics-reference/materials-reference/material-colors.md) for a full description.       |
@@ -57,7 +57,7 @@ The flipbook animation has the following properties:
 
 ### UV Coords - Scrolling
 
-The scrolling animation defines a starting rectangle for the billboard or quad, which moves across the texture to its end position, creating the effect that the pattern is scrolling or scaling across the quad's surface.
+The scrolling animation defines a starting rectangle for the billboard or quad, which moves across the texture to its end position. This creates a scrolling or a scaling effect of the texture across the quad's surface.
 
 The texture coordinates can go below 0 or above 1. How is the texture sampled depends on the addressing mode defined in the [Material Colors](../../../graphics/graphics-reference/materials-reference/material-colors.md). Refer to the [Texture Addressing Modes](http://tinyurl.com/TextureAddressingModes) for a more detailed information.
 

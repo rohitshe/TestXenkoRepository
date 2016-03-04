@@ -34,8 +34,8 @@ Particles are spawned in an axis-aligned bounding box, defined by its left lower
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it the same to force the position to be coupled with other         |
-|                             | particle fields which have 3 properties (x, Y, Z), like velocity for example.                           |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the position to be coupled with other         |
+|                             | other particle fields which have 3 properties (X, Y, Z), like velocity for example.                           |
 |                             | Make them different to force the position to be unique and independant from other fields.               |
 |                             |                                                                                                         |
 | Position min                | Left lower back corner for the box.                                                                     |
@@ -55,8 +55,8 @@ Particles are spawned with initial velocity which ranges between the defined val
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it the same to force the velocity to be coupled with other         |
-|                             | particle fields which have 3 properties (x, Y, Z), like position for example.                           |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the velocity to be coupled with other         |
+|                             | other particle fields which have 3 properties (x, Y, Z), like position for example.                           |
 |                             | Make them different to force the velocity to be unique and independant from other fields.               |
 |                             |                                                                                                         |
 | Velocity min                | Left lower back corner for the box.                                                                     |
@@ -71,7 +71,7 @@ Initial size sets the particle's uniform size when it's spawned for the first ti
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it the same to force the size to be coupled with other             |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the size to be coupled with other             |
 |                             | particle fields which have 1 property, like color for example.                                          |
 |                             | Make them different to force the size to be unique and independant from other fields.                   |
 |                             |                                                                                                         |
@@ -86,7 +86,7 @@ Initial rotation sets the particle's angular rotation when facing the camera. Po
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it the same to force the angle to be coupled with other            |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the angle to be coupled with other            |
 |                             | particle fields which have 1 property, like color for example.                                          |
 |                             | Make them different to force the angle to be unique and independant from other fields.                  |
 |                             |                                                                                                         |
@@ -105,7 +105,7 @@ Initial color sets the particle's initial color at spawn time. It goes into the 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it the same to force the color to be coupled with other            |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the color to be coupled with other            |
 |                             | particle fields which have 1 property, like size for example.                                           |
 |                             | Make them different to force the color to be unique and independant from other fields.                  |
 |                             |                                                                                                         |
@@ -125,7 +125,7 @@ Initial 3D orientation sets the orientation for 3d aware particles when they fir
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Seed offset                 | This is used for random numbers. Set it the same to force the orientation to be coupled with other      |
+| Seed offset                 | This is used for random numbers. Set it to the same value to force the orientation to be coupled with other      |
 |                             | particle fields which have 1 property, like size for example.                                           |
 |                             | Make them different to force the orientation to be unique and independant from other fields.            |
 |                             |                                                                                                         |

@@ -32,9 +32,9 @@ Emitters are contained in a list and they are updated and drawn in the order in 
 |                  | Other possibilities is to sort the particles by depth (away from the camera) or by age, in which       |
 |                  | case particles spawned first will be drawn on top.                                                     |
 |                  |                                                                                                        |
-| Shape            | What [Shape](../particles-reference-shapebuilders/index.md) should be used for drawing the particles.  |
+| Shape            | Specifies the [Shape](../particles-reference-shapebuilders/index.md) to use to draw the particles.     |
 |                  |                                                                                                        |
-| Material         | What [Material](../particles-reference-materials/index.md) should be used for rendering.               |
+| Material         | Specifies the [Material](../particles-reference-materials/index.md) to use use for rendering.          |
 |                  |                                                                                                        |
 | Spawners         | [Spawners](../particles-reference-spawners/index.md) control the rate of emitting new particles.       |
 |                  |                                                                                                        |

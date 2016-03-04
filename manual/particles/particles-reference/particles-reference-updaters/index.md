@@ -51,15 +51,15 @@ The force field is defined by a bounding shape and several force vectors which o
 | Inheritance           | The force updater can inherit none or several of the following: position, rotation, scale                                        |
 | Offset                | Offset is the local location matrix for the updater, applied on top of the inherited values                                      |
 | Shape                 | The bounding shape which can be shpere, cylinder, box or a torus.                                                                |
-| Energy Conservation   | What part of the force energy should be conserved as particle velocity.                                                          |
-|                       | Energy which is not conserved directly applies to the particle's position and is lost when the force vanishes.                   |
-|                       | Energy which is conserved is stored as particle velocity and results in gradually increasing speed.                              |
 | Falloff               | The falloff is a simple linear function which dictates how strong the force is based on the particle's distance from its center. |
 |                       | Strength inside is how much of the magnitude should apply when the particle is within *falloff start* distance from the center.  |
 |                       | Strength outside is how much of the magnitude should apply when the particle more than *falloff end* away from the center.       |
 |                       | Both values are relative to the bounding shape's sizes and values in-between are interpolated between the two magnitudes.        |
 |                       | Values in the center can still be 0, making the force only work *outside* the bounding shape.                                    |
 |                       |                                                                                                                                  |
+| Energy Conservation   | What part of the force energy should be conserved by the particles.                                                          |
+|                       | Energy which is conserved is stored as particle velocity and results in gradually increasing speed.                              |
+|                       | Energy which is not conserved directly applies to the particle's position and is lost when the force vanishes.                   |
 | Directed Force        | Vector force which moves the particle along the field's central axis (normally upwards)                                          |
 |                       |                                                                                                                                  |
 | Vortex Force          | Vector force which moves the particle around the field's central axis using the right-hand rule for rotation                     |

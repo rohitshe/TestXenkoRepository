@@ -62,11 +62,11 @@ The force field is defined by a bounding shape and several force vectors which o
 |                       | Energy which is not conserved directly applies to the particle's position and is lost when the force vanishes.                   |
 | Directed Force        | Vector force which moves the particle along the field's central axis (normally upwards)                                          |
 |                       |                                                                                                                                  |
-| Vortex Force          | Vector force which moves the particle around the field's central axis using the right-hand rule for rotation                     |
+| Vortex Force          | The force which moves the particle around the field's central axis using the right-hand rule for rotation                     |
 |                       |                                                                                                                                  |
-| Repulsive Force       | Vector force which moves the particle away from the field's center or towards it, if negative.                                   |
+| Repulsive Force       | The force which moves the particle away from the field's center or towards it, if negative.                                   |
 |                       |                                                                                                                                  |
-| Fixed Force           | Vector force which moves the particle along a fixed non-rotating and non-scaling axis.                                           |
+| Fixed Force           | The force which moves the particle along a fixed non-rotating and non-scaling axis.                                           |
 |                       |                                                                                                                                  |
 
 

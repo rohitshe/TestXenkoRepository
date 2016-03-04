@@ -22,11 +22,9 @@ This spawner emits a fixed number of particles per second while it's active. It 
 |                         |                                                                                                        |
 | Duration                | The duration for which this spawner is actively spawning particles.                                    |
 |                         | After this duration it deactivates if the Loop setting is set to One-shot.                             |
-|                         | It enters the Delay phase if the Loop is set to Looping, or it stays active indefinitely if the        |
-|                         | Loop is set to Looping, no delay.                                                                      |
+|                         | It enters the Delay phase if the Loop is set to Looping, or it stays active indefinitely if the Loop is set to Looping, no delay.       |
 |                         |                                                                                                        |
-| Particles               | The amount of particles this spawner will try to spawn in the emitter per second.                      |
-|                         | The value can also be a real number, like 36.875.                                                      |
+| Particles               | The amount of particles this spawner will try to spawn in the emitter per second. The value can also be a floating value, like 36.875.                       |
 |                         |                                                                                                        |
 
 ## Spawn per frame
@@ -49,7 +47,7 @@ This spawner emits a fixed number of particles every frame regardless of the act
 |                         | Loop is set to Looping, no delay.                                                                      |
 |                         |                                                                                                        |
 | Particles               | The amount of particles this spawner will try to spawn in the emitter every frame.                     |
-|                         | The value can also be a real number, including less than 1, in which case a new particle will be       |
+|                         | The value can also be a floating value, including less than 1, in which case a new particle will be    |
 |                         | spawned every few frames.                                                                              |
 |                         |                                                                                                        |
 | Framerate               | This is purely for estimation purposes only when the engine calculates the maximum number of particles.|

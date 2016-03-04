@@ -10,18 +10,17 @@ Similarly, initializers which operate on the same field are exclusive and only t
 
 ## Common Properties
 
-There are several properties shared among all initializers:
+There are several properties common for many initializers:
 
 ![images/particles-reference-initializers-1.png](images/particles-reference-initializers-1.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
-| Debug Draw                  | A debug wireframe shape will be drawn, if possible, to show the boundaries for this initializer.        |
-|                             | In some cases this feature is ignored, for example in case of a Initial Color initializer.              |
+| Debug Draw                  | A debug wireframe shape will be drawn to show the boundaries for this initializer. This feature only works for the editor and is ignored when you run your game.        |
 |                             |                                                                                                         |
 | Inheritance                 | Any initializer can inherit one or more features from its containing particle system, like location.    |
 |                             | Some initializers like Initial Position use all three of them - position, rotation and scale.           |
-|                             | Some use only one, like the Initial Size, and some ignore all, like the Initial Color.                  |
+|                             | Some use only one, like the Initial Size.                  |
 |                             |                                                                                                         |
 | Offset                      | In addition to inheritance, initializers can have their own local offset of position, rotation and scale|
 |                             |                                                                                                         |

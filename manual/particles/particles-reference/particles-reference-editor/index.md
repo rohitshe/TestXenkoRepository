@@ -38,11 +38,13 @@ The editor control provides control for authoring particles which are only used 
 
 ### Source
 
-The source is a reference to the low-level particle system, which is your data. On the root level it has several properties:
+Contrary to the exposed values, the source is the low-level implementation of the particle effect itself. It is reserved for the author of the effect and not the user.
+
+*Note! The source of the particle effect is currently in-lined in the component but will potentially move to dedicated asset in the future.*
 
 #### Warm-up time
 
-When you first play the effect it will appear already running if you set this value to greater than 0.
+When you first play the particle effect it will appear already running if you set this value to greater than 0. The units are in seconds, so if you set 1 as warm-up time the particle effect will appear as if it has already been active for 1 second.
 
 #### Bounding Shape
 

@@ -14,18 +14,10 @@ This spawner emits a fixed number of particles per second while it's active. It 
 
 | Property                | Description                                                                                            |
 |-------------------------|--------------------------------------------------------------------------------------------------------|
-| Loop                    | If the spawner should loop when it reaches the end of its duration.                                    |
-|                         | By default all spawners loop indefinitely, but can be set to only fire particles once and then stop.   |
-|                         |                                                                                                        |
-| Delay                   | The amount of time (minimum and maximum) the spawner has to delay when the particle system starts      |
-|                         | before it starts spawning particles.                                                                   |
-|                         |                                                                                                        |
-| Duration                | The duration for which this spawner is actively spawning particles.                                    |
-|                         | After this duration it deactivates if the Loop setting is set to One-shot.                             |
-|                         | It enters the Delay phase if the Loop is set to Looping, or it stays active indefinitely if the Loop is set to Looping, no delay.       |
-|                         |                                                                                                        |
+| Loop                    | If the spawner should loop when it reaches the end of its duration. By default all spawners loop indefinitely, but can be set to only fire particles once and then stop.   |
+| Delay                   | The amount of time (minimum and maximum) the spawner has to delay when the particle system starts before it starts spawning particles.                                                                   |
+| Duration                | The duration for which this spawner is actively spawning particles. After this duration it deactivates if the Loop setting is set to One-shot. It enters the Delay phase if the Loop is set to Looping, or it stays active indefinitely if the Loop is set to Looping, no delay.       |
 | Particles               | The amount of particles this spawner will try to spawn in the emitter per second. The value can also be a floating value, like 36.875.                       |
-|                         |                                                                                                        |
 
 ## Spawn per frame
 
@@ -35,22 +27,11 @@ This spawner emits a fixed number of particles every frame regardless of the act
 
 | Property                | Description                                                                                            |
 |-------------------------|--------------------------------------------------------------------------------------------------------|
-| Loop                    | If the spawner should loop when it reaches the end of its duration.                                    |
-|                         | By default all spawners loop indefinitely, but can be set to only fire particles once and then stop.   |
-|                         |                                                                                                        |
-| Delay                   | The amount of time (minimum and maximum) the spawner has to delay when the particle system starts      |
-|                         | before it starts spawning particles.                                                                   |
-|                         |                                                                                                        |
-| Duration                | The duration for which this spawner is actively spawning particles.                                    |
-|                         | After this duration it deactivates if the Loop setting is set to One-shot.                             |
-|                         | It enters the Delay phase if the Loop is set to Looping, or it stays active indefinitely if the        |
-|                         | Loop is set to Looping, no delay.                                                                      |
-|                         |                                                                                                        |
-| Particles               | The amount of particles this spawner will try to spawn in the emitter every frame.                     |
-|                         | The value can also be a floating value, including less than 1, in which case a new particle will be    |
-|                         | spawned every few frames.                                                                              |
-|                         |                                                                                                        |
+| Loop                    | If the spawner should loop when it reaches the end of its duration. By default all spawners loop indefinitely, but can be set to only fire particles once and then stop.   |
+| Delay                   | The amount of time (minimum and maximum) the spawner has to delay when the particle system starts before it starts spawning particles.                                                                   |
+| Duration                | The duration for which this spawner is actively spawning particles. After this duration it deactivates if the Loop setting is set to One-shot. It enters the Delay phase if the Loop is set to Looping, or it stays active indefinitely if the Loop is set to Looping, no delay.                                                                      |
+| Particles               | The amount of particles this spawner will try to spawn in the emitter every frame. The value can also be a floating value, including less than 1, in which case a new particle will be spawned every few frames.                                                                              |
 | Framerate               | This is purely for estimation purposes only when the engine calculates the maximum number of particles.|
-|                         |                                                                                                        |
+
 
 

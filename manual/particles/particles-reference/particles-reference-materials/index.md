@@ -13,18 +13,10 @@ This material uses a translucent emissive color RGBA for the pixel shading. In H
 
 | Property            | Description                                                                                                     |
 |---------------------|-----------------------------------------------------------------------------------------------------------------|
-| Alpha-Add           | Translucent rendering supports alpha-blending, additive blending or anything in-between.                    |
-|                     | With this parameter you can control how much alpha-blended (0) or additive (1) the particles should be.         |
-|                     |                                                                                                                 |
-| Culling             | There are options for no culling, front face culling and back face culling.                                     |
-|                     | Camera-facing particles always have their front face towards the camera.                                         |
-|                     |                                                                                                                 |
-| Emissive            | The emissive RGBA color for the particle.                                                                       |
-|                     | Refer to the [Material Colors](../../../graphics/graphics-reference/materials-reference/material-colors.md) for a full description.       |
-|                     |                                                                                                                 |
-| UV coords           | For particles which use texture sampling uv coordinates animation can be specified.                             |
-|                     | The two currently existing types are specified below.                                                           |
-|                     |                                                                                                                 |
+| Alpha-Add           | Translucent rendering supports alpha-blending, additive blending or anything in-between. With this parameter you can control how much alpha-blended (0) or additive (1) the particles should be.         |
+| Culling             | There are options for no culling, front face culling and back face culling. Camera-facing particles always have their front face towards the camera.                                         |
+| Emissive            | The emissive RGBA color for the particle. Refer to the [Material Colors](../../../graphics/graphics-reference/materials-reference/material-colors.md) for a full description.       |
+| UV coords           | For particles which use texture sampling uv coordinates animation can be specified. The two currently existing types are specified below.                                                           |
 
 
 ### UV Coords - Flipbook
@@ -42,16 +34,9 @@ The flipbook animation has the following properties:
 | Property            | Description                                                                                                     |
 |---------------------|-----------------------------------------------------------------------------------------------------------------|
 | X divisions         | The number of columns to split the texture into.                                                                |
-|                     |                                                                                                                 |
 | Y divisions         | The number of rows to split the texture into.                                                                   |
-|                     |                                                                                                                 |
 | Starting frame      | The frame at which to start the animation. The top left frame is 0, increasing to the right before it goes down.|
-|                     |                                                                                                                 |
-| Animation speed     | The total number of frames to show over the particle's lifetime.                                                |
-|                     | If Speed = X x Y then the animation will show *all* frames over the particle's life.                            |
-|                     | The speed is relative - particles which have longer lifespan will have slower animation.                        |
-|                     |                                                                                                                 |
-
+| Animation speed     | The total number of frames to show over the particle's lifetime. If Speed = X x Y then the animation will show *all* frames over the particle's life. The speed is relative - particles which have longer lifespan will have slower animation.                        |
 
 
 
@@ -69,7 +54,5 @@ The scrolling animation has the following properties:
 | Property            | Description                                                                                                     |
 |---------------------|-----------------------------------------------------------------------------------------------------------------|
 | Start frame         | The initial rectangle for texture sampling when the particle is first spawned.                                  |
-|                     |                                                                                                                 |
 | End frame           | The last rectangle for texture sampling when the particle disappears.                                           |
-|                     |                                                                                                                 |
 

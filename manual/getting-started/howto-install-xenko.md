@@ -10,7 +10,7 @@ Head to the [Xenko download page](http://paradox3d.net/download)  and download t
 
 # Install
 
-Double-click on ParadoxSetup.exe to start the installation.
+Double-click on XenkoSetup.exe to start the installation.
 
 The installer will automatically download the dependencies and install Xenko.
 

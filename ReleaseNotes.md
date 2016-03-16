@@ -1,238 +1,198 @@
-# Version 1.5-beta - Highlights
+# Version 1.6-beta - Highlights
 
-## Skeleton asset
+## Prefabs
 
-A new Skeleton asset (*.xkskel) has been introduced. Both models and animations now hold a reference to a skeleton. This allows to reuse the same skeleton definition in multiple assets and to retarget models and animations to different skeletons.
+Prefabs allow you to assemble entities into building blocks and easily reuse them in any of your scenes. Changes to your prefabs will be reflected on all instances (as long as properties are not overridden).
 
-Skeletons can be created alongside other assets, when importing an FBX file or other model format.
+We even took the concept one step further to empower our users, by having prefabs within prefabs, as well as the possibility to use only part of a prefab when you instantiate it. And of course, removing or rearranging a few entities won’t break your prefab synchronization!
 
-<img src="http://doc.xenko.com/1.5/rn_images/SkeletonThumbnail.png" align="center" />
+<img src="http://doc.xenko.com/1.6/rn_images/prefabs.gif" align="center" />
 
-## Root motion support for models, cameras, lights, etc.
+## Archetypes
 
-Animations now apply root motion if they have no skeleton, or the ‘Root Motion’ property is enabled on the animation asset. The animation will then move the entity itself, instead of the skeleton’s root bone.
-This is especially useful to import animations of lights, cameras or unskinned models, without the need to bind them to the bones of a skeleton.
+You can now use any asset as an archetype for another asset. When you change a property of the archetype, the new value will be automatically propagated to all the derived assets, unless you specifically override them. Archetypes can be used with most asset types.
 
-The FBX importer will now also import animations of various camera parameters (near-plane, far-plane, field of view) and apply them to the CameraComponent of the animated entity. More properties may be supported in the future.
+<img src="http://doc.xenko.com/1.6/rn_images/assset-templating.gif" align="center" />
 
-<img src="http://doc.xenko.com/1.5/rn_images/RootMotionProperty.png" align="center" />
+## Particles
 
-## New animation update system
+You can now create and edit particle systems directly in the Xenko Game Studio. Particles are deeply integrated in the game engine and leverage the powerful effect system and its high level of customization.
 
-The animation system now internally uses a new UpdateEngine to update objects. This allows us to animate arbitrary properties of entities, while accessing them in a highly efficient way.
-It will be the foundation for a future animation curve editor inside the GameStudio.
+While there are still several features on the roadmap, the current implementation is sufficient for most games. The ability to customize almost all aspects of the particle engine allows you to add features tailored to your game’s specific needs.
 
-The new ‘Animated Properties’ sample demonstrates how to create animations of any property from a script.
+<img src="http://doc.xenko.com/1.6/rn_images/particle1.gif" align="center" />
 
+Feel free to visit our <a href="http://doc.xenko.com/1.6/manual/particles/index.html">particle documentation</a>.
 
-## Simple Profiling system
-It is now possible to visualize profiling information of all the game systems and custom profilers directly within your running games.
-To get started, use the Game Profiler built-in script, attach it to an entity and when the game is running press LCtrl-LShift-P.
+### Features
 
-<img src="http://doc.xenko.com/1.5/rn_images/profiler.png" align="center" />
+The particle engine supports many features out of the box:
 
-## Physic debug shapes at runtime
-It is now possible to enable the rendering of physics collider shapes during runtime.
-The debug shapes are normal entities and they must be enabled for each physics shape that requires it.
-The best way to start with this feature is to use the Physics Shapes Render built-in script and attach the script to any entity that has a Physics Component and when the game is running press LCtrl-LShift-P.
+- Render particles as different shapes like billboards, 3D oriented quads or your own custom implementation
+- Powerful force fields which offer more control than simple attractors and repulsors
+- Collisions
+- Animated attributes such as size, color, rotation
+- Flipbooks, UV animation and support for the Xenko Shading Language
 
-<img src="http://doc.xenko.com/1.5/rn_images/phys-debug.png" align="center" />
+### Modular system
 
-## Asset View
-The Asset view has been improved to help you better organize and manage your assets.
+All aspects of particle systems are broken down into individuals modules like spawners, initializers and updaters, and each of these modules is easily tweakable and customizable. Check out the samples and the Xenko documentation for a detailed walkthrough.
 
-### New ‘view options’ menu
-The view options are gathered in a single menu accessible from the asset view toolbar.
+### Curve Editor
 
-<img src="http://doc.xenko.com/1.5/rn_images/AssetViewOptions.png" align="center" />
+The Game Studio now also comes with a built-in curve editor. For now only the particle engine uses curve animation. In the future, it will also power our property animation system and our storyboard system.
 
-You can display all the assets in the current folder only, in the current folder and its sub-folder. The third option let you display the assets and the sub folders.
+<img src="http://doc.xenko.com/1.6/rn_images/particle2.gif" align="center" />
 
-You can also sort your assets by name, order, type or modification date. 
+## New Graphics Engine
 
-### New asset filter bar
-With the new asset filter bar, you can filter your assets by name, tag, type or a combination of those. Each ‘filter tag’ can be disabled by a single click or removed from the active filters.
-<img src="http://doc.xenko.com/1.5/rn_images/AssetFilterBar.png" align="center" />
+Most of our graphics pipeline, both low-, medium- and high-level, has been almost completely rewritten, and should be ready for the future.
 
+The low-level API has been changed to more closely resemble DirectX 12 and Vulkan. For a list of breaking changes, please see below.
 
-To add a filter, type in the filter bar and matching filters will be displayed. Click on the one you want to add it to the list of active filters.
-<img src="http://doc.xenko.com/1.5/rn_images/AddingAssetFilter.png" align="center" />
+The high-level pipeline has been completely reworked, to achieve the following goals, most of which we will tackle in the upcoming releases:
 
-Only the assets matching the active filters will be displayed in the asset view. Note that type filters are inclusive, while name and tag filters are exclusive.
+- Introduce a clean and extensible architecture to easily build new graphics features on (hoping to soon add a Forward+ renderer, IBL lightprobes, RLR, etc.)
+- New medium-level layer: lightweight RenderFeature, RenderStage, RenderObject, etc.
+- Easy for users to write small customizations (by implementing RenderFeatures)
+- Allow multi-threading of all parts of the pipeline
+- Make optimal use of next-gen graphics APIs
+- Reduce the amount of "magic" done by the effect system to increase performance
+- Minimize work by taking better advantage of different update frequencies (PerView, PerMaterial, PerLighting, etc.)
+- Take advantage of new API (first class support for Pipeline State Objects, Descriptor Sets, etc.)
 
-### Folder support in asset view
-If the ‘Assets and folder in selected folder’ options is selected, the first level of sub-folder will be displayed in the asset view. You can drag and drop assets inside them. You can also copy/paste complete folder structure.
-<img src="http://doc.xenko.com/1.5/rn_images/FolderSupport.png" align="center" />
+Stay tuned for technical details and performance evaluation in the near future!
 
-## Copy-paste assets with their dependencies
-You have now the ability to copy assets with their dependencies. To do that use the new entry ‘Copy with dependencies’ from the asset view context menu, or press Ctrl+Shift+C.
-<img src="http://doc.xenko.com/1.5/rn_images/CopyAssetWithDependencies.png" align="center" />
-For example, if you copy/paste a model with its dependencies, you will get a copy of this model along with a copy of all its dependencies (skeleton, materials, textures)
+## Direct3D 12
 
-## Border and Center support in sprite sheet editor
-For ‘Sprite2D’ sprites, you can move the position of the center by selecting the <img src="http://doc.xenko.com/1.5/rn_images/SpriteCenterIcon.png" style="display: inline"/> icon in the toolbar of the sprite editor. Grab and move the cross to the desired position.
+Direct3D 12 has been added as a new build target. While still experimental, it already supports all parts of our rendering pipeline.
 
-For ‘UI’ sprites, you can change the borders by selecting the <img src="http://doc.xenko.com/1.5/rn_images/SpriteBorderIcon.png" style="display: inline" /> icon in the toolbar of the sprite editor. You can then resize each border (left, top, right and bottom) separately in the same way as the texture region, by grabbing and moving one of them. Note that the <img src="http://doc.xenko.com/1.5/rn_images/SpriteBorderLockIcon.png" style="display: inline" /> icon lets you ‘lock’or ‘unlock’ the sprite borders while resizing the texture region.
+You can try it by changing the ‘Preferred Graphics Platform’ in the ‘Rendering Settings’ of your ‘Game Settings’ asset.
 
-## New built-in scripts
-We added a few more built-in scripts with this release such as an FPS camera script and First player controller script. To use them, just click on “New Asset”, “Script source code”, select the desired script and attach it to an adequate entity.
+## Better OpenGL support
 
-<img src="http://doc.xenko.com/1.5/rn_images/built-in_Scripts.png" />
+Our OpenGL renderer has been improved and should behave much better (shadows, PBR, etc.). Also, we now deliver OpenGL and OpenGL ES on Windows as build targets.
 
-## Precompiled Sprite Fonts
-Font rights are quite restrictive and it is quite common that only some persons of the project have access to the font files. This was preventing some people to build the game. 
-To solve this problem, we created a new type of asset, the precompiled sprite fonts. It is an asset taking as input an image and containing all the glyph information required to render the set of character specified. Inside your games you can used it exactly like a standard sprite font.
-To generate a precompiled sprite font, the owner of the original font file just have to right click on an existing static font and choose “Generate Precompiled Font”.
+You can also try them by changing the ‘Preferred Graphics Platform’ in the ‘Rendering Settings’ of your ‘Game Settings’ asset.
 
-<img src="http://doc.xenko.com/1.5/rn_images/PrecompiledSpriteFont.png" />
+## Scripts are now components
+
+So far, there could only be one component per type on an Entity. This was quite cumbersome, especially for scripts, which had to be stored inside the `ScriptComponent.Scripts` list. It also resulted in many special cases to make them work in the editor (i.e. references between scripts, assembly reloading, etc.).
+
+Now multiple components of a type are allowed. This affects scripts and physics components, and can be used for custom components for which more than one instance is sensible.
+
+We hope this makes your life easier!
 
 
-# Version 1.5.3-beta
-Release date: 2016/02/18
+## Event system
 
-## Issues fixed
-- Fix a problem in the package upgrade erasing the content of shader and effect files.
-- Fix a crash in the resolution of invalid relative pathes preventing to load the project in the editor.
-- Do not add pillar boxes when resizing the window of a landscape game under Windows 10 but readjust the size of the buffer.
-- Replace the `MS Mincho` font by an embeded free font in samples (The font is not available on every systems)
+We added a simple event system that will allow your script to easily communicate with each other.
+Check out the `EventKey<>` and `EventReceiver<>` classes.
+You can create an EventKey from your sender scripts and consume events using `EventReceiver` from other scripts.
 
-# Version 1.5.2-beta
-Release date: 2016/01/15
+## Game Settings overrides
 
-## Issues fixed
+The Game Settings asset has been improved: You can now have different settings depending on the platform or GPU.
 
-### Assets
+For example, you might want to set different off-screen resolutions for your game on Android depending on the GPU model. Or you could use one of our new Direct3D12, OpenGL or OpenGL ES renderers on Windows.
 
-- Added the missing XenkoDefaultFont required by the profiler system.
-- The convex hull generation is now working along with the new Skeleton Asset.
 
-### Engine
 
-- Fix problem occuring with debugging async functions (local variable gone, namespace ignored, step over broken).
-- Fix the issues preventing from passing Windows 10 store certification. 
-- Add support for proper resizing in Windows Universal Apps.
+# Version 1.6.0-beta
 
-### Game Studio
+Release date: 2016/03/15
 
-- Fix issues with the displayed values of rotations changing after validation.
+## How to upgrade
 
-### iOS
+Simply open your older projects with new version of GameStudio. It will probably fail to compile your assemblies since API changed little bit, but you can still continue.
 
-- The Connection Router script required to compile shaders on iOS devices has been fixed.
-
+Then, save back your project in GameStudio. You now can open your project with VIsual Studio and try to fix your game code with latest API changes.
 
 ## Enhancements
 
 ### Assets
 
-- Skybox compilation does not require a DX11 GPU anymore. We added DX10 support to ensure GameStudio works fine with less recent GPUs as well.
-
 ### Engine
 
-- Add support for OpenGLES devices that do not support packed depth-stencil-formats.
+- The KeyedSortedList now implements ICollection<T> instead of IList<T> annd is more consistent with CollectionDescriptor.
 
 ### Game Studio
 
-- Add the possibility to edit the 3 components of a vector simultaneously.
-
-# Version 1.5.1-beta
-Release date: 2015/12/22
-
-## Issues fixed
-
-### Engine
-
-- Fix LLVM AOT compilation in release configuration for iOS
-
-### Game Studio
-
-- Fix a possible crash when using types with no base type in scripts ([#342](https://github.com/SiliconStudio/paradox/issues/342))
-- Fix double-click on folder in asset picker window
-- Fix settings of default IDE reset to null when it shouldn't.
-- Fix the problem of the texture thumbnail not updating when modify the content of the source file.
-- Creating an asset with a template can be properly undone. ([#343](https://github.com/SiliconStudio/paradox/issues/343))
-
-
-# Version 1.5.0-beta
-Release date: 2015/12/17
-
-## Enhancements
-
-### Launcher
-
-- Add a ‘reconnect’ button, in case the launcher was started in offline mode.
-
-### Game Studio
-
-- The asset creation menu always displays all possible assets to create, and switches to a proper location when the currently selected location is invalid for the chosen asset type.
-- Improve animation thumbnail and preview. Automatically detect and use the corresponding model.
-- Improve asset filtering in the asset view. Filter tag can be added, disabled or removed at any time.
-- Folders are displayed in the asset view.
-- Assets can be sorted by last modification date.
-- Add ability to copy/paste assets with their dependencies.
-- Improve the sprite sheet editor. Resizing borders or moving the texture region behaves correctly, especially when reaching the borders of the image. Background outside of the selected texture region can be darkened.
-- Sprite sheet preview can be displayed while the sprite sheet is being edited.
-- Change message dialog style. Some confirmation dialogs (e.g. deleting an asset) can be disabled in the settings (under Interface/Ask confirmation…).
-
-### Games
-
-- Use the application icons as window icon on windows
-- Use AssamblyProductAttribute.Product as window title on windows
+- Support for prefabs, add a prefab editor
+- Create derived assets and support property inheritance
+- Added a curve editor to edit animation curve
+- Layout is saved on a solution basis. When reloading a project, Game Studio will try to present the same layout and reopen all assets that were edited (this include scenes, prefabs and sprite sheets).
+- Add a confirmation dialog to enable saving newly created script automatically.
+- Add a confirmation dialog to enable reloading modified assemblies automatically. This is necessary for the script to appear in the list of components that can be added to an entity.
+- Physics gizmos are shown by default.
+- Preview of an asset can be displayed even if this asset is being edited.
+- Project folder can be opened in Windows explorer from the launcher with right-clicking.
+- Properties of derived asset are displayed in gray, unless they are overridden. In this case they are displayed in bold.
+- Rework scene initialization in the scene editor: the scene will be available almost immediately, and content (model, etc.) will be streamed in as soon as they are (asynchronously) loaded.
+- The entity fixup wizard has been removed. Now when an entity is deleted, all references to it or to one of its component is reset to null.
+- The gizmo and camera menus are now displayed in the top-right corner.
+- Entity hierarchy is synchronized (automatically expanded) with the selected entity in the scene.
 
 ### Graphics
 
-- Add support for Gif load and jpeg save for Android
-- Add the possibility to load images and textures as sRGB
-- Add a static field in GraphicDevice to be able to get the current graphic platform
-- Add optimized native code in SpriteBatch
+- New D3D12 renderer (experimental)
+- New Windows OpenGL and OpenGL ES renderers (experimental)
+- Rewrote most of the low- and high-level graphics code to have better performance and better take advantage of new graphics APIs
+- Properly separated rendering in 4 phases: Collect (collect & cull), Extract (copy data from scene to renderers), Prepare (prepare cbuffer data & heavy computations), Draw (emit draw calls)
+- Introduced concepts of RenderFeature (entry point for extending rendering), RenderStage (effect selection), RenderView and RenderObject
+- Render sorting logic can now be customized (culling will be soon too)
+- Low-level API has been rewritten to match better new API: CommandList, DescriptorSet, DescriptorHeap, PipelineState, etc.
+- Introduced concept of RendererProcessor which are responsible for pushing component data to rendering
+- Many other changes, that will soon be covered in documentation
 
-### Engine
+### Input
 
-- Use Color4 instead of Color in sprite components.
-- Add support for toot motion on the TransformComponent
-- Expose AnimationComponent.PlayingAnimations to the editor to be able to set entity initial animation easily.
-- Make connection to editor for shader compilation fail if there is no connection back within 5 seconds
-
-### UI
-
-- Add a tint color to the UI ImageElement.
+- Improved GamePad event management to resemble the keyboard API.
 
 ## Issues fixed
 
-### Assets
-
-- Fix compiler regression that was taking more than 5s to complete compilation of assets
-- Fix the log message displaying the name of missing referenced assets during asset compilation
-- Fix crash in the asset compilation when Xenko installation path contains a '#' character.
-- Fix shadow asset remaining after resolving asset naming collision.
-
-### Engine
-
-- Prevent an exception to be thrown at each frame when the Model property of a ModelComponent is null.
-- Use the ShaderProfile from GameSettings instead of the graphic device level as it is likely the profile used to compile shaders at build time.
-
 ### Game Studio
 
-- Fix a crash when trying to fetch the target asset of a reference that is null.
-- Fix a bug in the edition of SpriteFont properties that was preventing to properly use system font
-- Fix thumbnails of SpriteFont when using system font.
-- Fix a crash when duplicating an entity in the scene editor.
-- Fix renaming issue when duplicating an entity in the scene editor.
-- Fix the problem dark thumbnails for textures in HDR mode.
-- Fix gizmo settings not saved/reloaded properly.
-- Fix copy/paste of folders in the solution explorer.
-- Fix a crash in the sprite sheet editor when a source image was modified in an external editor.
-- Fix a potential crash when the texture region is outside of the image.
-- Fix a bug preventing to create a frame in the sprite editor when dropping a file.
-- Fix a bug preventing to drop asset in an empty folder.
-- Fix error when attempting to import animation from a model that doesn’t have any.
-- Fix incorrect size of full screen window when screen resolution has changed.
-- Fix package dependency issue when removing a dependent package.
+- Fix Scripts thumbnail generation during project launch.
+- Fix Settings window sharing columns layout with property grid ([#341](https://github.com/SiliconStudio/xenko/issues/341)).
+- Fix default IDE settings incorrectly reset to null.
+- Fix a crash occurring when duplicating an object quickly after selecting it.
+- Fix an issue with the message box incorrectly resizing.
+- Tooltips are always visible even if the control (menu, button…) is disabled.
+- Fix several issues with undo/redo.
+- Fix drag and drop of components into properties
+- Sometimes the Game Studio was not asking to save when closed with some changes in a project.
+- Fix some issues related to folders in scene editor.
+- Redo does not re-open asset picker anymore.
 
-### Rendering
+### Graphics
 
-- Fixed disappearing shadows due to wrong cascade distance calculation
+- Tangents generation was invalid and might have resulted in various swaps
+
+### Physics
+
+- Improved collision detection reliability
+- Fixed collision filter groups
+- Fixed enable/disable component behavior
+
+## Breaking changes
+
+### Graphics
+
+- Extending rendering is quite different from before. Please check SpaceEscape and other samples to have a better idea while we prepare documentation.
+- Many methods of GraphicsDevice have been split off into a second class: CommandList
+- Added objects such as PipelineState, DescriptorSet and DescriptorHeap to better match new graphics API
+- Game now contains a GraphicsContext which gives access to the current CommandList
+- GraphicsDevice.BackBuffer and GraphicsDevice.DepthStencilBuffer are gone. Use GraphicsDevice.Presenter.BackBuffer to access the actual backbuffer.
+- In addition to RenderContext, there is now a RenderDrawContext. Some methods have been changed to expect the latter.
+- ParameterCollection has been rewritten to be much more memory and performance efficient (data is now stored directly in buffers).
+- Transferring values from application to shaders and computation of effect permutations used to be done through various inefficient ParameterCollection overrides. This should now be done using RenderFeatures.
+
+### Physics
+
+- PhysicsComponents are now split into 3 different types (Rigidbody, Character, StaticCollider) which can be added multiple times in an entity.
+- PhysicsElements are now removed, including the Collider, Rigidbody and Character classes. They now are merged into the new components.
 
 # Known Issues
-
-- iOS has an outstanding crash issue after a few second on ARM64 iPhones. This is currently under investigation.
+- iOS on ARM64 iPhones encounters crashes after a few second. We are currently investigating this.
+- Sometimes duplicate contacts are detected by the physics engine

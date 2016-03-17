@@ -39,10 +39,10 @@ Properties that defines a point light:
 | Filter              | Filtering allows to produce **soft shadows** instead of **hard shadows**. Currently, the implemented technique is PCF (Percentage Closer Filtering) |
 |                     |                                                                                                                                                     |
 |                     | *Note: Other techniques will be added*                                                                                                              |
-| Size                | The size of the shadow map texture. Values are **large**, **medium** and **small**.                                                                 |
-| Importance          | The visual importance of this shadow map. Values are **high**, **medium** and **low**. See shadow map atlas size calculation for details.           |
+| Size                | The size of the shadow map texture. Values are **extra large**, **large**, **medium**, **small** and **extra small**.                               |
+|                     | See [shadow map atlas size calculation](shadows-optimizations.md) for details.                                                                      |
 |                     |                                                                                                                                                     |
-|                     |  *For a point light, this value is by default to **low**.*                                                                                          |
+|                     |  *For a point light, this value is by default to **small**.*                                                                                        |
 | Bias Parameters     | These parameters are used to avoid some artifacts of the shadow map technique                                                                       |
 | Depth Bias          | The amount of depth to add to the sampling depth to avoid the phenomenon of shadow acne.                                                            |
 | Normal Offset Scale | A factor multiplied by the depth bias toward the normal                                                                                             |

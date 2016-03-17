@@ -1,4 +1,4 @@
-# Post-Effects Reference
+# Post-Effects
 
 Post-effects are usually applied after your game has completed the rendering of a frame, but before the UI is drawn. 
 

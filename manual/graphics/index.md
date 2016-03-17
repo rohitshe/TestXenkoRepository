@@ -1,14 +1,16 @@
 # Graphics
 
+In this section you will find details about how to use the editor and API related to Graphics and Rendering.
+
 # Shaders
 
-**[Shaders](graphics-reference/effects-and-shaders-reference/shading-language/index.md)** in Xenko are extended shaders derived from `HLSL`.
+**[Shaders](effects-and-shaders/shading-language/index.md)** in Xenko are extended shaders derived from `HLSL`.
 
-They provide true **composition** of modular shaders through the use of **[inheritance](graphics-reference/effects-and-shaders-reference/shading-language/classes-mixins-and-inheritance.md)**, shader **[mixins](graphics-reference/effects-and-shaders-reference/shading-language/composition.md)** and **[automatic weaving of shader in-out attributes](graphics-reference/effects-and-shaders-reference/shading-language/automatic-shader-stage-input-output.md)**.
+They provide true **composition** of modular shaders through the use of **[inheritance](effects-and-shaders/shading-language/classes-mixins-and-inheritance.md)**, shader **[mixins](effects-and-shaders/shading-language/composition.md)** and **[automatic weaving of shader in-out attributes](effects-and-shaders/shading-language/automatic-shader-stage-input-output.md)**.
 
 # Effects
 
-**[Effects](graphics-reference/effects-and-shaders-reference/effect-system/index.md)** in Xenko combines shaders into a full shader. They provide conditional **[composition](graphics-reference/effects-and-shaders-reference/effect-system/effect-language.md)** of shaders and **[effect permutations](graphics-reference/effects-and-shaders-reference/effect-system/effect-permutations.md).**
+**[Effects](effects-and-shaders/effect-system/index.md)** in Xenko combines shaders into a full shader. They provide conditional **[composition](effects-and-shaders/effect-system/effect-language.md)** of shaders and **[effect permutations](effects-and-shaders/effect-system/effect-permutations.md).**
 
 # Target everything
 
@@ -24,12 +26,11 @@ A basic prior knowledge of the rendering pipeline is expected from the user.
 
 ## Topics
 
-- [Graphics Device Reference](graphics-reference/graphics-device-reference/index.md)
-- [Render states](graphics-reference/graphics-device-reference/render-states.md)
-- [Textures and render targets](graphics-reference/graphics-device-reference/textures-and-render-targets.md)
-- [Displaying a texture](graphics-reference/graphics-device-reference/draw-a-texture.md) on an off screen
-- [Draw vertices](graphics-reference/graphics-device-reference/draw-vertices.md)
-- Displaying multiple sprites: [SpriteBatch](graphics-reference/graphics-device-reference/spritebatch.md)
-- Displaying text: [SpriteFont](graphics-reference/graphics-device-reference/spritefont.md)
-- Using [shaders and effects](graphics-reference/effects-and-shaders-reference/index.md)
-
+- [Lighting and Shadows](lighting-and-shadows/index.md)
+- [Graphics Compositor](graphics-compositor/index.md)
+- [Materials](materials/index.md)
+- [Post-Effects](post-effects/index.md)
+- [Rendering pipeling](rendering-pipeline/index.md)
+- [Low-level API](low-level-api/index.md)
+- [Effects and Shaders](effects-and-shaders/index.md)
+- [HOWTOs](howtos/index.md)

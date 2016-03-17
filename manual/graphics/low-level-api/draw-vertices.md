@@ -30,7 +30,7 @@ myCube.Draw();
 ```
 
 
-There is no effect associated to them so the user has to manually set one. For example he can use the built-in @'SiliconStudio.Xenko.Graphics.SimpleEffect' one. Here is a page with information about [effects and shaders](../effects-and-shaders-reference/index.md).
+There is no effect associated to them so the user has to manually set one. For example he can use the built-in @'SiliconStudio.Xenko.Graphics.SimpleEffect' one. Here is a page with information about [effects and shaders](../effects-and-shaders/index.md).
 
 # Custom drawing
 

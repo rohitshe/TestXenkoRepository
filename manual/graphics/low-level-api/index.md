@@ -1,4 +1,4 @@
-# Graphics Device Reference
+# Low-level API
 
 The @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class is the most important class to display the application on screen.
 

@@ -1,4 +1,4 @@
-# Graphics Compositor Reference
+# Graphics Compositor
 
 The scene graphics compositor is responsible to render a scene to one or multiple render targets.
 
@@ -11,7 +11,7 @@ You can find more details about the graphics compositor in the following pages:
 
 
 
-- [Graphics Compositor Overview](graphics-compositor-overview.md)
+- [Overview](overview.md)
 - [Scene Renderers](scene-renderers/index.md)
 - [Graphics Compositor For Developers](graphics-compositor-for-developers/index.md)
 

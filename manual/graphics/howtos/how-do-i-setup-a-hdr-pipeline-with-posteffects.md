@@ -1,6 +1,6 @@
 # How do I setup a HDR pipeline with posteffects?
 
-Assuming that you are already familiar with the  [Scene Graphics Compositor](../graphics-reference/graphics-compositor-reference/index.md), we would like to setup a High Dynamic Range rendering pipeline.
+Assuming that you are already familiar with the  [Scene Graphics Compositor](../graphics-compositor/index.md), we would like to setup a High Dynamic Range rendering pipeline.
 
 The principle of HDR rendering is to render to a scene to a HDR render target and then apply a Tone Mapping to convert HDR to a LDR render target to display it on the screen.
 

@@ -1,4 +1,4 @@
-# Effects and Shaders Reference
+# Effects and Shaders
 
 # Custom shader and effect
 

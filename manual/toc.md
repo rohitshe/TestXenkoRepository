@@ -66,7 +66,6 @@
 ### [Render stages](graphics/rendering-pipeline/render-stages.md)
 ## [Low-level API](graphics/low-level-api/index.md)
 ### [Textures and render targets](graphics/low-level-api/textures-and-render-targets.md)
-### [Draw a texture](graphics/low-level-api/draw-a-texture.md)
 ### [Draw vertices](graphics/low-level-api/draw-vertices.md)
 ### [Render states](graphics/low-level-api/render-states.md)
 ### [SpriteBatch](graphics/low-level-api/spritebatch.md)

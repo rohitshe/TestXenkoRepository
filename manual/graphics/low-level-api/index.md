@@ -9,7 +9,6 @@ The @'SiliconStudio.Xenko.Graphics.GraphicsDevice' class contains the set of me
 - set buffers as render targets and clear them, see the [render target documentation](textures-and-render-targets.md)
 - set various states (depth, stencil, blend, rasterizer, viewport, scissor), see the [render states documentation](render-states.md)
 - set effect
-- [display a texture](draw-a-texture.md) fullscreen
 - [draw any sets of vertices](draw-vertices.md): primitives or custom vertex array objects
 
  

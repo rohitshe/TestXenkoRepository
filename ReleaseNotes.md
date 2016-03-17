@@ -22,7 +22,7 @@ While there are still several features on the roadmap, the current implementatio
 
 <img src="http://doc.xenko.com/1.6/rn_images/particle1.gif" align="center" />
 
-Feel free to visit our <a href="http://doc.xenko.com/1.6/manual/particles/index.html">particle documentation</a>.
+Feel free to visit our [particle documentation](http://doc.xenko.com/1.6/manual/particles/index.html).
 
 ### Features
 

@@ -117,38 +117,3 @@ GraphicsDevice.SetBlendState(blendState);
 GraphicsDevice.SetBlendState(blendState, Color4.White, 2);
 ```
 
-
-# Viewport states
-
-When the user sets a render target or a depth buffer, the viewport is reset to its full size. However, the user might want to use a custom viewport. To achieve this, Xenko provides a method which, as a result, should be called **after** the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetRenderTarget' method.
-
-The user can set the viewport thanks to the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetViewport' methods and the @'SiliconStudio.Xenko.Graphics.Viewport' class. The origin of a viewport is at the top left of the screen. The user can also specify which viewport to update.
-
-**Code:** Setting the viewports
-
-```cs
-// example of a full HD buffer
-GraphicsDevice.SetRenderTarget(GraphicsDevice.BackBuffer); // viewport automatically set at 1920*1080
- 
-// example of setting the viewport to have a 10 pixel border around the image in a full hd buffer (1920x1080)
-var viewport = new Viewport(10, 10, 1900, 1060);
-GraphicsDevice.SetViewport(viewport);
-GraphicsDevice.SetViewport(0, viewport);
-```
-
-
-# Scissor states
-
-The @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetScissorRectangles' method is available to set the scissor. Contrary to the viewport, the user must provide the coordinates of the location of the vertices defining the scissor instead of its size. The method can be invocked with a @'SiliconStudio.Core.Mathematics.Rectangle' object in order to support multiple scissors.
-
-**Code:** Setting the scissor
-
-```cs
-// example of setting the scissor to crop the image by 10 pixel around it in a full hd buffer (1920x1080)
-GraphicsDevice.SetScissorRectangles(10, 10, 1910, 1070);
- 
-var rectangles = new[] { new Rectangle(10, 10, 1900, 1060), new Rectangle(0, 0, 256, 256) };
-GraphicsDevice.SetScissorRectangles(rectangles);
-```
-
-

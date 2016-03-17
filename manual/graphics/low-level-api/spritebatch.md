@@ -32,7 +32,7 @@ The @'SiliconStudio.Xenko.Graphics.SpriteBatch' class has multiple draw methods
 
 ```cs
 // begin the sprite batch operations
-spriteBatch.Begin(SpriteSortMode.Immediate);
+spriteBatch.Begin(GraphicsContext, SpriteSortMode.Immediate);
  
 // draw the sprite immediately
 spriteBatch.Draw(myTexture, new Vector2(10, 20));
@@ -56,7 +56,7 @@ To set the mode, the user should specify it in the @'SiliconStudio.Xenko.Graphic
 
 ```cs
 // begin the sprite batch operations
-spriteBatch.Begin(); // same as spriteBatch.Begin(SpriteSortMode.Deferred);
+spriteBatch.Begin(GraphicsContext); // same as spriteBatch.Begin(GraphicsContext, SpriteSortMode.Deferred);
 
 // store the modification of the sprite
 spriteBatch.Draw(myTexture, new Vector2(10, 20));
@@ -81,7 +81,7 @@ For a comprehensive list, please refer to the @'SiliconStudio.Xenko.Graphics.Spr
 
 ```cs
 // begin the sprite batch operations
-spriteBatch.Begin();
+spriteBatch.Begin(GraphicsContext);
 const int gridCount = 10;
 var textureOffset = new Vector2((float)graphicsDevice.BackBuffer.Width/gridCount, (float)graphicsDevice.BackBuffer.Height/gridCount);
 var textureOrigin = new Vector2(myTexture.Width/2.0f, myTexture.Height/2.0f);

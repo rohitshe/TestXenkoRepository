@@ -1,6 +1,6 @@
 # Textures and render targets
 
-Xenko uses the @'SiliconStudio.Xenko.Graphics.Texture' class to interacts with texture objects in the code.
+Xenko uses the @'SiliconStudio.Xenko.Graphics.Texture' class to interact with texture objects in code.
 
 # Loading a Texture
 
@@ -10,7 +10,7 @@ To load a texture from an asset in Xenko, simply calls this function:
 
 ```cs
 // loads the texture called duck.dds (or .png etc.)
-var myTexture = Content.Load<Texture2D>("duck");
+var myTexture = Content.Load<Texture>("duck");
 ```
 
 
@@ -44,7 +44,7 @@ var myDepthBuffer = Texture.New2D(GraphicsDevice, 512, 512, false, PixelFormat.D
 ```
 
 
-Do not forget the flag TextureFlags.RenderTarget to enable the render target behavior.
+Do not forget the flag @'SiliconStudio.Xenko.Graphics.TextureFlags.RenderTarget' to enable the render target behavior.
 
 Make sure that the PixelFormat is correct, especially for the depth buffer. Be also careful of the available formats on the target platform!
 
@@ -62,17 +62,15 @@ CommandList.SetRenderTargetAndViewport(myDepthBuffer, myRenderTarget);
 CommandList.SetRenderTargetAndViewport(GraphicsDevice.Presenter.DepthStencilBuffer, GraphicsDevice.Presenter.BackBuffer);
 ```
 
-This will also adjust the current viewport to the full size of the render target. If you want to only render to a subset of the texture, you can set render target and viewport separately using @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargets' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewport'.
-
 Also make sure that both the render target and the depth buffer have the same size. Otherwise, the depth buffer will not be used.
 
-It is possible to set multiple render targets at the same time. See the overloads of @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargets' and @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargetsAndViewport' method.
+It is possible to set multiple render targets at the same time. See the overloads of @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargets(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture[])' and @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargetsAndViewport(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture[])' method.
 
 Note that only the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.BackBuffer' is displayed on screen, so rendering in it is mandatory to display something.
 
 ## Clearing a render target
 
-To clear a render target, call the @'SiliconStudio.Xenko.Graphics.CommandList.Clear' method.
+To clear render targets, call the @'SiliconStudio.Xenko.Graphics.CommandList.Clear(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Core.Mathematics.Color4)' and @'SiliconStudio.Xenko.Graphics.CommandList.Clear(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.DepthStencilClearOptions,System.Single,System.Byte)' methods.
 
 **Code:** Clearing the targets
 
@@ -82,15 +80,16 @@ CommandList.Clear(GraphicsDevice.Presenter.DepthStencilBuffer, DepthStencilClear
 ```
 
 
-Do not forget to clear the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.Backbuffer' and the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' each frame, because it can result in unexpected behavior depending on the device. If you want to keep the contents of a frame, you should use an intermediate render target.
+Don't forget to clear the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.BackBuffer' and the @'SiliconStudio.Xenko.Graphics.GraphicsPresenter.DepthStencilBuffer' each frame, because it can result in unexpected behavior depending on the device. If you want to keep the contents of a frame, you should use an intermediate render target.
 
 
 
-# Viewport states
+# Viewport
 
-@'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargetsAndViewport' will adjust the current @'SiliconStudio.Xenko.Graphics.Viewport' to the full size of the render target. If you want to render only to a subset of the texture, you can set render target and viewport separately using @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargets' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewport'.
+@'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTargetAndViewport(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture)' will adjust the current @'SiliconStudio.Xenko.Graphics.Viewport' to the full size of the render target.
+If you want to render only to a subset of the texture, you can set render target and viewport separately using @'SiliconStudio.Xenko.Graphics.CommandList.SetRenderTarget(SiliconStudio.Xenko.Graphics.Texture,SiliconStudio.Xenko.Graphics.Texture)' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewport(SiliconStudio.Xenko.Graphics.Viewport)'.
 
-Multiple viewports can be bound using @'SiliconStudio.Xenko.Graphics.CommandList.SetViewport' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewport' overloads for use with a geometry shader.
+Multiple viewports can be bound using @'SiliconStudio.Xenko.Graphics.CommandList.SetViewports(SiliconStudio.Xenko.Graphics.Viewport[])' and @'SiliconStudio.Xenko.Graphics.CommandList.SetViewport(System.Int32,SiliconStudio.Xenko.Graphics.Viewport)' overloads for use with a geometry shader.
 
 **Code:** Setting the viewports
 
@@ -105,9 +104,9 @@ CommandList.SetViewport(0, viewport);
 ```
 
 
-# Scissor states
+# Scissor
 
-The @'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangles' method is available to set the scissor. Contrary to the viewport, the user must provide the coordinates of the location of the vertices defining the scissor instead of its size. The method can be invocked with a @'SiliconStudio.Core.Mathematics.Rectangle' object in order to support multiple scissors.
+The @'SiliconStudio.Xenko.Graphics.CommandList.SetScissorRectangles(System.Int32,System.Int32,System.Int32,System.Int32)' method is available to set the scissor. Contrary to the viewport, the user must provide the coordinates of the location of the vertices defining the scissor instead of its size. The method can be invocked with an array @'SiliconStudio.Core.Mathematics.Rectangle's in order to support multiple scissors.
 
 **Code:** Setting the scissor
 

@@ -22,7 +22,7 @@ var spriteBatch = new SpriteBatch(GraphicsDevice, 2000);
 ```
 
 
-It is also possible to set various states like the ones discussed in the [state documentation page](render-states.md).
+It is also possible to set various states like the ones discussed in the [pipeline state](pipeline-state.md) documentation page.
 
 # Drawing a sprite batch
 

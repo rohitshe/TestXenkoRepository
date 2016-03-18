@@ -5,10 +5,9 @@ Xenko offers total control over the graphics pipeline state. This includes:
 - Rasterizer state
 - Depth and stencil state
 - Blend state
-- Shaders
-- Root signature
-- Input layout description
-- Output target description
+- Effects
+- Input layout
+- Output description
 
 State is compiled into immutable @'SiliconStudio.Xenko.Graphics.PipelineState' objects, which describe the whole pipline.
 They are then bound using a @'SiliconStudio.Xenko.Graphics.CommandList'.
@@ -155,3 +154,57 @@ The blend factor is not part of the @'SiliconStudio.Xenko.Graphics.PipelineState
 CommandList.SetBlendFactor(Color4.White);
 ```
 
+# Effects
+
+The pipeline state also includes the shaders that you want to use for drawing.
+To bind an @'SiliconStudio.Xenko.Graphics.Effect' to the pipeline, simply set the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.EffectBytecode'
+and @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.RootSignature' properties of the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription' to the matching values of the effect.
+
+An @'SiliconStudio.Xenko.Shaders.EffectBytecode' contains the actual shader programs. For more information on effect, please refer to [Effects and Shaders](../effects-and-shaders/index.md).
+
+The @'SiliconStudio.Xenko.Graphics.RootSignature' describes the number and kind of resources that are expected by the effect. The next chapter covers how to [bind resources](resources.md) to the pipeline.
+
+**Code:** Binding an effect
+
+```cs
+var effect = EffectSystem.LoadEffect("MyEffect").WaitForResult();
+pipelineStateDescription.EffectBytecode = effect.Bytecode;
+pipelineStateDescription.RootSignature = effect.RootSignature;
+```
+
+# Input layout
+
+The pipeline state describes the layout in which vertices are sent to the device through the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.InputElements' and @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.PrimitiveType' properties.
+
+The chapter on [drawing vertices](draw-vertices.md) describes how to create custom vertex buffers and their @'SiliconStudio.Xenko.Graphics.VertexDeclaration' in more detail.
+
+**Code:** Setting an input layout
+
+```cs
+VertexDeclaration vertexDeclaration = ...
+pipelineStateDescription.InputElements = vertexDeclaration.CreateInputElements();
+pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
+```
+
+# Output description
+
+Finally, the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription.Output' property of the @'SiliconStudio.Xenko.Graphics.PipelineStateDescription' defines the number and @'SiliconStudio.Xenko.Graphics.PixelFormat' of all bound render targets.
+
+Please refer to [Textures and render targets](textures-and-render-targets.md) for details on how to actually bind render targets to the pipeline.
+
+**Code:** Creating an output description
+
+```cs
+var renderOutputDescription = new RenderOutputDescription(GraphicsDevice.Presenter.BackBuffer.Format, GraphicsDevice.Presenter.DepthStencilBuffer.Format);
+pipelineStateDescription.Output = renderOutputDescription;
+```
+
+For convenience, the @'SiliconStudio.Xenko.Graphics.RenderOutputDescription.CaptureState(SiliconStudio.Xenko.Graphics.CommandList)' method can be used to retrieve the output description, that was last set on a @'SiliconStudio.Xenko.Graphics.CommandList'.
+This is especially useful in combination with @'SiliconStudio.Xenko.Graphics.MutablePipelineState', when the render target might not be known up front.
+
+**Code:** Capturing output desciption
+
+```cs
+mutablePipelineState.State.Output.CaptureState(CommandList);
+mutablePipelineState.Update();
+```

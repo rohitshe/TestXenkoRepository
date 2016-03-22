@@ -1,22 +1,28 @@
 # Effect Language
 
-# Create shader in C#
+# Create shaders in C&#35;
 
-You can create a shader at runtime with children of the @'SiliconStudio.Xenko.Shaders.ShaderSource' class. There are 3 of them:
+You can create a shader at runtime with @'SiliconStudio.Xenko.Shaders.ShaderSource' objects. They come in three veriations:
 
 - @'SiliconStudio.Xenko.Shaders.ShaderClassSource': corresponding to a unique class
 - @'SiliconStudio.Xenko.Shaders.ShaderMixinSource': mix several @'SiliconStudio.Xenko.Shaders.ShaderSource', setting preprocessor values, defining compositions
 - @'SiliconStudio.Xenko.Shaders.ShaderArraySource': used for arrays of compositions
 
-This method will produce shaders at runtime. However, many platforms do not support HLSL and do not have the ability to compile shaders at runtime. Futhermore, this approach do not benefit from the reusability of the mixins. 
+This method will produce shaders at runtime. However, many platforms do not support HLSL and do not have the ability to compile shaders at runtime. Futhermore, this approach does not benefit from the reusability of mixins. 
 
-# Xenko Effect (XKFX)
+# Xenko Effects (XKFX)
 
-Many shaders are small variations of pre-existing ones. For example, some meshes will cast shadows, some will receive them, some will need skinning etc. It can be useful to have a simple way to describe how to modify a shader from simple flags such as "I need skinning". In many projects, über shaders are the rule. Given a small set of preprocessor parameters, they will produce a unique shader. We wanted to offer the same kind of control. Since XKSL is built around the idea of simple blocks of code to mix with another ones, you just want to add the mixins that will handle the expected variation, the whole mix work being handled by the shader mixer. This feature is offered through Xenko Effect (.XKFX) files.
+Many shaders are variations or combinations of pre-existing ones. For example, some meshes cast shadows, others receive them, still others need skinning.
+To reuse code, it is desireable to select which parts to use through conditions, such as "Skinning required".
+
+This is often solved by "über shaders": Monolithic shaders, which are configured by a set of preprocessor parameters.
+
+Our goal is to achieve the same kind of control, while keeping extensibility and reusability in mind.
+Therefore, the simple code blocks defined by XKSL classes, can be mixed together by a shader mixer. This mixing process can use more complex logic, which is described in Xenko Effect (*.XKFX) files.
 
 ## General syntax
 
-A XKFX file is a small program used to generate a shader. It will take a set of parameters (key and value in a collection) and produce a `ShaderMixinSource` ready to compile.
+A *.XKFX file is a small program used to generate shader permutations. It takes a set of parameters (key and value in a collection) and produce a `ShaderMixinSource` ready to be compiled.
 
 **Code:** Example of XKFX file
 
@@ -29,6 +35,7 @@ namespace ParadoxEffects
 	{
 		bool EnableSpecular = true;
 	};
+	
 	shader BasicEffect
 	{
 		using params MaterialParameters;
@@ -62,11 +69,11 @@ namespace ParadoxEffects
 
 ## Adding mixins
 
- To add a mixin, simply use `mixin <mixin_name>`.
+To add a mixin, simply use `mixin <mixin_name>`.
 
 ## Using parameters
 
-The syntax is similar to C# syntax. The following rules are added:
+The syntax is similar to C#. The following rules are added:
 
 - when you use parameter keys, don't forget to add the using `params <class_name>`. Otherwise, keys will be treated as variables.
 - no need to tell the program where to check the values behind the keys. Just use the key.
@@ -83,7 +90,7 @@ if (MaterialParameters.AlbedoDiffuse != null)
 ```
 
 
-The parameters behave like any variable, you can read and write their value. They can be used to perform test, to set template values. Since some parameters store mixins, key can be used for compositions and inheritance too.
+The parameters behave like any variable. You can read and write their value, compare their values and set template parameters. Since some parameters store mixins, they can be used for composition and inheritance, too.
 
 ## Custom parameters
 

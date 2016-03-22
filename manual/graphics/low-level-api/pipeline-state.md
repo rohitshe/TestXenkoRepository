@@ -167,9 +167,9 @@ The @'SiliconStudio.Xenko.Graphics.RootSignature' describes the number and kind 
 **Code:** Binding an effect
 
 ```cs
-var effect = EffectSystem.LoadEffect("MyEffect").WaitForResult();
-pipelineStateDescription.EffectBytecode = effect.Bytecode;
-pipelineStateDescription.RootSignature = effect.RootSignature;
+var effectInstance = new EffectInstance(EffectSystem.LoadEffect("MyEffect").WaitForResult());
+pipelineStateDescription.EffectBytecode = effectInstance.Effect.Bytecode;
+pipelineStateDescription.RootSignature = effectInstance.RootSignature;
 ```
 
 # Input layout

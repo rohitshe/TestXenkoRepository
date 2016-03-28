@@ -114,6 +114,8 @@
 ### [Simple Particles Sample](particles/particles-samples/particles-samples-simple/index.md)
 ### [Custom Particles Sample](particles/particles-samples/particles-samples-custom/index.md)
 ### [Particle Materials Sample](particles/particles-samples/particles-samples-material/index.md)
+## [Particles Tutorials](particles/particles-tutorials/index.md)
+### [Ribbons](particles/particles-tutorials/particles-tutorials-ribbons/index.md)
 # [Physics](physics/index.md)
 ## [Colliders Creation](physics/colliders-creation.md)
 ## [Colliders Manipulation](physics/colliders-manipulation.md)

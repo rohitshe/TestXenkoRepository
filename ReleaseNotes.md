@@ -96,7 +96,31 @@ The Game Settings asset has been improved: You can now have different settings d
 
 For example, you might want to set different off-screen resolutions for your game on Android depending on the GPU model. Or you could use one of our new Direct3D12, OpenGL or OpenGL ES renderers on Windows.
 
+# Version 1.6.1-beta
 
+Release date: 2016/03/30
+
+## Features
+
+### Particles
+
+## Issues fixed
+
+### Game Studio
+
+- Fixed memory leaks happening when opening and closing scene editor repeatedly
+- Fixed frequent crash on GameStudio startup because of a thread race condition when setting up file systems
+
+### Graphics
+
+- Structs can now be used in shaders. Switched light shaders to use them
+- Improved `EffectReflection` API
+
+### Engine
+
+- Various memory leaks fixed
+- Remote effect compilation was broken when done with another computer the game was built with
+- Used effect notification was failing when shaders were using custom permutation keys
 
 # Version 1.6.0-beta
 

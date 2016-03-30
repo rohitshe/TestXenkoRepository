@@ -115,6 +115,15 @@ Release date: 2016/03/30
 - To ease edition of a vector compute curve in the curve editor, other components are also displayed.
 - Textboxes in property grid display their content in tooltip.
 
+### Physics
+
+- Added proper entity offset in CharacterComponent Teleport.
+- Added utility method Ended in Collision, to avoid writing do/while constructs.
+
+### Launcher
+
+- Added crash reporter in the Xenko launcher as well.
+
 ## Issues fixed
 
 ### Game Studio
@@ -148,13 +157,7 @@ Release date: 2016/03/30
 
 ### Physics
 
-- Added proper entity offset in CharacterComponent Teleport.
-- Added utility method Ended in Collision, to avoid writing do/while constructs.
 - Fixed CylinderColliderShape issues with Scaling.
-
-### Launcher
-
-- Added crash reporter in the Xenko launcher as well.
 
 # Version 1.6.0-beta
 

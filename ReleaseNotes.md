@@ -111,6 +111,7 @@ Release date: 2016/03/30
 
 - Add statistics on asset usage in the references panel.
 - Edition of a string key (e.g. animation key name) can be done inline.
+- Improve performance of the curve editor.
 - To ease edition of a vector compute curve in the curve editor, other components are also displayed.
 - Textboxes in property grid display their content in tooltip.
 

@@ -33,6 +33,7 @@ The particle engine supports many features out of the box:
 - Collisions
 - Animated attributes such as size, color, rotation
 - Flipbooks, UV animation and support for the Xenko Shading Language
+- Ribbons and trails renderers added to the engine. Check out our [tutorial](http://doc.xenko.com/1.6/manual/particles/particles-tutorials/particles-tutorials-ribbons/index.html) for more details.
 
 ### Modular system
 
@@ -100,11 +101,18 @@ For example, you might want to set different off-screen resolutions for your gam
 
 Release date: 2016/03/30
 
-## Features
+## Enhancements
 
 ### Particles
 
 - Ribbons and trails renderers added to the engine. Check out our [tutorial](http://doc.xenko.com/1.6/manual/particles/particles-tutorials/particles-tutorials-ribbons/index.html) for more details.
+
+### Game Studio
+
+- Add statistics on asset usage in the references panel.
+- Edition of a string key (e.g. animation key name) can be done inline.
+- To ease edition of a vector compute curve in the curve editor, other components are also displayed.
+- Textboxes in property grid display their content in tooltip.
 
 ## Issues fixed
 
@@ -127,15 +135,6 @@ Release date: 2016/03/30
 - Various memory leaks fixed
 - Remote effect compilation was broken when done with another computer the game was built with
 - Used effect notification was failing when shaders were using custom permutation keys
-
-## Enhancements
-
-### Game Studio
-
-- Add statistics on asset usage in the references panel.
-- Edition of a string key (e.g. animation key name) can be done inline.
-- To ease edition of a vector compute curve in the curve editor, other components are also displayed.
-- Textboxes in property grid display their content in tooltip.
 
 # Version 1.6.0-beta
 

@@ -4,19 +4,17 @@ In this section you will find details about how to use the editor and API relate
 
 # Shaders
 
-**[Shaders](effects-and-shaders/shading-language/index.md)** in Xenko are extended shaders derived from `HLSL`.
+Shaders are authored in the [Xenko's shading language](effects-and-shaders/shading-language/index.md), which is an extension of `HLSL`.
 
-They provide true **composition** of modular shaders through the use of **[inheritance](effects-and-shaders/shading-language/classes-mixins-and-inheritance.md)**, shader **[mixins](effects-and-shaders/shading-language/composition.md)** and **[automatic weaving of shader in-out attributes](effects-and-shaders/shading-language/automatic-shader-stage-input-output.md)**.
+They provide true **composition** of modular shaders through the use of [inheritance](effects-and-shaders/shading-language/classes-mixins-and-inheritance.md), shader [mixins](effects-and-shaders/shading-language/composition.md) and [automatic weaving of shader in-out attributes](effects-and-shaders/shading-language/automatic-shader-stage-input-output.md).
 
 # Effects
 
-**[Effects](effects-and-shaders/effect-system/index.md)** in Xenko combines shaders into a full shader. They provide conditional **[composition](effects-and-shaders/effect-system/effect-language.md)** of shaders and **[effect permutations](effects-and-shaders/effect-system/effect-permutations.md).**
+[Effects](effects-and-shaders/effect-language.md) in Xenko use C#-like syntax to further combine shaders. They provide **conditional composition** of shaders to generate **effect permutations**.
 
 # Target everything
 
-Xenko shaders are converted automatically to the target graphics platform, either plain HLSL or GLSL output shader files.
-
-For mobile platforms, shaders are optimized by a GLSL optimizer in order to improve performance on these devices.
+Xenko shaders are converted automatically to the target graphics platform, either plain HLSL for Direct3D, `GLSL` for OpenGL, or `SPIR-V` for Vulkan platforms.
 
 # Advanced Graphics
 

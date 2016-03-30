@@ -12,7 +12,7 @@ Xenko Shading Language is automatically transformed to an existing shading langu
 
 # Concepts
 
-This part will introduce PDXSL, a shading language extending HLSL. Its core concepts are:
+This part will introduce XKSL, a shading language extending HLSL. Its core concepts are:
 
 - [class inheritance](classes-mixins-and-inheritance.md)
 - [composition](composition.md)

@@ -1,51 +1,34 @@
 # Effects and Shaders
 
-# Custom shader and effect
+# Custom shaders and effects
 
-Xenko uses a programmable shading pipeline. The user can write a custom shader, create an associate effect and use it. This section will only cover how to use such effect. To learn how to create an effect from a shader, the user should learn the Xenko extensions of HLSL used in to write a shader. Please refer to the documentation.
-
-The @'SiliconStudio.Xenko.Effects.EffectSystem' class provides an easy way to load an effect. It creates an instance of the @'SiliconStudio.Xenko.Graphics.Effect' class.
+Xenko uses a programmable shading pipeline. The user can write custom shaders, create @'SiliconStudio.Xenko.Graphics.Effect's from them and use them for drawing.
+The @'SiliconStudio.Xenko.Rendering.EffectSystem' class provides an easy way to load an effect.
 
 **Code:** Load an effect
 
 ```cs
-var myEffect = EffectSystem.LoadEffect("MyEffect");
+var myEffect = EffectSystem.LoadEffect("MyEffect").WaitForResult();
 ```
 
+You can then bind the effect as [pipeline state](../low-level-api/pipeline-state.md).
 
-Then the user can apply it on any mesh or drawable entity:
+An effect also often defines a set of parameters. To set these, you will need to [bind resources](../low-level-api/resources.md) before drawing.
 
-**Code:** Apply an effect
+# Shaders
 
-```cs
-// set the effect as active
-myEffect.Apply();
- 
-// draw calls
-// (...)
-```
+Shaders are authored in the [Xenko's shading language](shading-language/index.md), which is an extension of `HLSL`.
 
+They provide true **composition** of modular shaders through the use of [inheritance](shading-language/classes-mixins-and-inheritance.md), shader [mixins](shading-language/composition.md) and [automatic weaving of shader in-out attributes](shading-language/automatic-shader-stage-input-output.md).
 
-An effect often has a set of parameters. To learn how to set them, please refer to the documentation of the @'SiliconStudio.Xenko.Graphics.Effect' class.
+# Effects
 
-# Simple effect shader
+[Effects](effect-language.md) in Xenko use C#-like syntax to further combine shaders. They provide **conditional composition** of shaders to generate **effect permutations**.
 
-Xenko is bundled with a basic built-in shader: SimpleEffect. To use it, simply create an instance of the @'SiliconStudio.Xenko.Graphics.SimpleEffect' class. Please refer to the @'SiliconStudio.Xenko.Graphics.SimpleEffect' class reference to know all the available options. These options include:
+Since some platform can't compile shaders at runtime (iOS, Android, etc...), effect permutation files (.xkeffectlog) are used to enumerate all permutations ahead-of-time.
 
-- a tint color
-- a transformation matrix
-- a texture
-- a texture sampler
+# Target everything
 
-**Code:** SimpleEffect shader
+Xenko shaders are converted automatically to the target graphics platform, either plain HLSL for Direct3D, `GLSL` for OpenGL, or `SPIR-V` for Vulkan platforms.
 
-```cs
-var simpleEffect = new SimpleEffect(GraphicsDevice);
-simpleEffect.Texture = myTexture; // set a custom texture
- 
-// use it on a primitive
-simpleEffect.Apply();
-myTorus.Draw();
-```
-
-
+For mobile platforms, shaders are optimized by a GLSL optimizer in order to improve performance on these devices.

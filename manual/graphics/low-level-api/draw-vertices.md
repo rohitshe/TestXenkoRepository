@@ -1,20 +1,20 @@
-# Draw vertices
+# Drawing vertices
 
-When loading a scene, Xenko handles automatically the draw calls to display the scene through the entity system. In this page, only the manual draw calls will be introduced.
+When loading a scene, Xenko automatically handles the draw calls to display the scene throughout the entity system. In this page, manual drawing will be introduced.
 
 # Primitives
 
-The Xenko engine provides the user a set of built-in primitives:
+The engine provides the following set of built-in primitives:
 
-- plane
-- cube
-- sphere
-- geosphere
-- cylinder
-- torus
-- teapot
+- Plane
+- Cube
+- Sphere
+- Geosphere
+- Cylinder
+- Torus
+- Teapot
 
-These are not automatically created with the @'SiliconStudio.Xenko.Graphics.GraphicsDevice' so the user has to manually ask for their creation. This is really simple since they are part of the engine through the @'SiliconStudio.Xenko.Graphics.GeometricPrimitive' class.
+They are not automatically created along with the @'SiliconStudio.Xenko.Graphics.GraphicsDevice' so they have to be instantiated by the user. This is possible through the @'SiliconStudio.Xenko.Graphics.GeometricPrimitives.GeometricPrimitive' class.
 
 **Code:** Creating and using a primitive
 
@@ -23,39 +23,73 @@ These are not automatically created with the @'SiliconStudio.Xenko.Graphics.Grap
 var myCube = GeometricPrimitive.Cube.New(GraphicsDevice);
 var myTorus = GeometricPrimitive.Torus.New(GraphicsDevice);
  
-// (...)
+// ...
  
 // draw one on screen
-myCube.Draw();
+myCube.Draw(CommandList, EffectInstance);
 ```
 
-
-There is no effect associated to them so the user has to manually set one. For example he can use the built-in @'SiliconStudio.Xenko.Graphics.SimpleEffect' one. Here is a page with information about [effects and shaders](../effects-and-shaders/index.md).
+They have no effect associated with them, so the user has to provide an @'SiliconStudio.Xenko.Rendering.EffectInstance' when drawing. For information on loading effects, please see [Effects and shaders](../effects-and-shaders/index.md).
 
 # Custom drawing
 
-Outside of these primitives, the user can draw any set of vertices. There are many functions to draw vertex array objects based on the way the vertices are indexed, the type of primitive etc. To know how to create vertex array object, refer to the @'SiliconStudio.Xenko.Graphics.VertexArrayObject' class documentation.
+Outside of built-in primitives, any geometry can be drawn by creating custom vertex buffers. To create a vertex buffer, first a @'SiliconStudio.Xenko.Graphics.VertexDeclaration' has to be defined. A vertex declaration describes the elements of each vertex and their layout.
+For details, see the @'SiliconStudio.Xenko.Graphics.VertexElement' reference page.
 
-The user should first specify the vertex array object he wants to draw. This is done through the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.SetVertexArrayObject' method. Then he can call the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.Draw' method. He needs to specify various parameters including the primitive type. Please refer to the @'SiliconStudio.Xenko.Graphics.GraphicsDevice.Draw' method and its derived methods documentation (for example @'SiliconStudio.Xenko.Graphics.GraphicsDevice.DrawIndexed', @'SiliconStudio.Xenko.Graphics.GraphicsDevice.DrawInstanced' etc.).
+Next, a vertex buffer can be created from an array of vertices. The vertex data type has to match the @'SiliconStudio.Xenko.Graphics.VertexDeclaration'.
 
-**Code:** Drawing a VAO
+Given vertex buffer and declaration, a @'SiliconStudio.Xenko.Graphics.VertexBufferBinding' can be created. 
+
+**Code:** Creating a vertex buffer
 
 ```cs
-// create the VAO
-var myVao = VertexArrayObject.New(GraphicsDevice, ...);
+// Create a vertex layout with position and texture coordinate
+var layout = new VertexDeclaration(VertexElement.Position<Vector3>(), VertexElement.TextureCoordinate<Vector2>()) 
  
-// set an effect
-myEffect.Apply();
+// Create the vertex buffer from an array of vertices
+var vertices = new VertexPositionTexture[vertexCount];
+var vertexBuffer = Buffer.Vertex.New(GraphicsDevice, vertices);
  
-// set the VAO
-GraphicsDevice.SetVertexArrayObject(myVao);
- 
-// draw 100 triangles
-GraphicsDevice.Draw(PrimitiveType.TriangleList, 300);
+// Create a vertex buffer binding
+var vertexBufferBinding = new VertexBufferBinding(vertexBuffer, layout, vertexCount);
 ```
 
+To draw the newly created vertex buffer, it has to be bound to the pipeline. The vertex layout and the @'SiliconStudio.Xenko.Graphics.PrimitiveType' to draw have to be included in the [pipeline state](pipeline-state.md) object. The buffer itself can be set dynamically.
 
-The list of the supported primitive types can be found in the @'SiliconStudio.Xenko.Graphics.PrimitiveType' enum documentation.
+Afterwards, the vertices are ready to be rendered using @'SiliconStudio.Xenko.Graphics.CommandList.Draw(System.Int32,System.Int32)'.
 
+**Code:** Binding and drawing vertex buffers
+
+```cs
+// Set the pipeline state
+pipelineStateDescription.InputElements = vertexBufferBinding.Layout.CreateInputElements();
+pipelineStateDescription.PrimitiveType = PrimitiveType.TriangleStrip;
  
+// Create and set a PipelineState object
+// ...
+
+// Bind the vertex buffer to the pipeline
+commandList.SetVertexBuffers(0, vertexBuffer, 0, vertexBufferBinding.Stride);
+ 
+// Draw the vertices
+commandList.Draw(vertexCount);
+```
+
+It is also possible to draw indexed geometry. To use an index buffer, first create it similarily to the vertex buffer and bind it to the pipeline.
+It can then be used for drawing using @'SiliconStudio.Xenko.Graphics.CommandList.DrawIndexed(System.Int32,System.Int32,System.Int32)'.
+
+**Code:** Drawing indexed vertices
+
+```cs
+// Create the index buffer
+var indices = new short[indexCount];
+var is32Bits = false;
+var indexBuffer = Buffer.Index.New(GraphicsDevice, indices);
+ 
+// set the VAO
+commandList.SetIndexBuffer(indexBuffer, 0, is32Bits);
+
+// Draw indexed vertices
+commandList.DrawIndexed(indexBuffer.ElementCount);
+```
 

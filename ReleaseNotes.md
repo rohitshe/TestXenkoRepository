@@ -100,15 +100,31 @@ For example, you might want to set different off-screen resolutions for your gam
 
 Release date: 2016/03/30
 
-## Issues Fixed
+## Features
+
+### Particles
+
+## Issues fixed
 
 ### Game Studio
 
+- Fix memory leaks happening when opening and closing scene editor repeatedly
+- Fix frequent crash on GameStudio startup because of a thread race condition when setting up file systems
 - Fix issue on tree views that sometimes selected the same item more that once, resulting in incorrect property display on property grid.
 - Fix issue with maximized window size on multi-monitor system ([#361](https://github.com/SiliconStudio/xenko/issues/361))
 - Fix resetting value of a rotation in the property grid.
 - Fix save, undo and redo not working on curve editor when the window is in floating mode (was already working when docked).
 - Fix zooming issue in curve editor.
+
+### Graphics
+
+- Structs can now be used in shaders. Switched light shaders to use them
+- Improve `EffectReflection` API
+
+### Engine
+- Various memory leaks fixed
+- Remote effect compilation was broken when done with another computer the game was built with
+- Used effect notification was failing when shaders were using custom permutation keys
 
 ## Enhancements
 

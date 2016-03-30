@@ -114,15 +114,13 @@ Release date: 2016/03/30
 - Improve performance of the curve editor.
 - To ease edition of a vector compute curve in the curve editor, other components are also displayed.
 - Textboxes in property grid display their content in tooltip.
-
+- Allow to see the property of an asset while it is open in its editor
+- Samples and new games now have resource files in an "Resources" folder instead of "RawAssets"
+ 
 ### Physics
 
 - Added proper entity offset in CharacterComponent Teleport.
 - Added utility method Ended in Collision, to avoid writing do/while constructs.
-
-### Launcher
-
-- Added crash reporter in the Xenko launcher as well.
 
 ## Issues fixed
 
@@ -140,7 +138,9 @@ Release date: 2016/03/30
 - Fix disappearing Physics Gizmos
 - Fix missing settings in NewGame
 - Restored different color for trigger collider shapes in debug renderer.
-- Crash report exceptions are now all reported in english.
+- Fix a crash occurring when closing a scene or prefab editor, or closing the GameStudio itself
+- Fix an issue when modifying members of structures in the property grid
+- Prevent the property grid to be cleared when switching from a selection of asset to a selection of entities
 
 ### Graphics
 

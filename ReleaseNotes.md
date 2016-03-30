@@ -96,7 +96,28 @@ The Game Settings asset has been improved: You can now have different settings d
 
 For example, you might want to set different off-screen resolutions for your game on Android depending on the GPU model. Or you could use one of our new Direct3D12, OpenGL or OpenGL ES renderers on Windows.
 
+# Version 1.6.1-beta
 
+Release date: 2016/03/30
+
+## Issues Fixed
+
+### Game Studio
+
+- Fix issue on tree views that sometimes selected the same item more that once, resulting in incorrect property display on property grid.
+- Fix issue with maximized window size on multi-monitor system ([#361](https://github.com/SiliconStudio/xenko/issues/361))
+- Fix resetting value of a rotation in the property grid.
+- Fix save, undo and redo not working on curve editor when the window is in floating mode (was already working when docked).
+- Fix zooming issue in curve editor.
+
+## Enhancements
+
+### Game Studio
+
+- Add statistics on asset usage in the references panel.
+- Edition of a string key (e.g. animation key name) can be done inline.
+- To ease edition of a vector compute curve in the curve editor, other components are also displayed.
+- Textboxes in property grid display their content in tooltip.
 
 # Version 1.6.0-beta
 

@@ -147,6 +147,8 @@ Release date: 2016/03/30
 - Structs can now be used in shaders. Switched light shaders to use them
 - Improve `EffectReflection` API
 - Fix many issues related to fullscreen switching and alt-enter is now fully supported.
+- Fix reflection of array texture types ([#369](https://github.com/SiliconStudio/xenko/issues/369))
+- Add missing CommandList.SetBlendFactor() method
 
 ### Engine
 

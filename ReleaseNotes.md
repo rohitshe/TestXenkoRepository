@@ -104,6 +104,8 @@ Release date: 2016/03/30
 
 ### Particles
 
+- Ribbons and trails renderers added to the engine. Check out our [tutorial](http://doc.xenko.com/1.6/manual/particles/particles-tutorials/particles-tutorials-ribbons/index.html) for more details.
+
 ## Issues fixed
 
 ### Game Studio

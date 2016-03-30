@@ -126,16 +126,35 @@ Release date: 2016/03/30
 - Fix resetting value of a rotation in the property grid.
 - Fix save, undo and redo not working on curve editor when the window is in floating mode (was already working when docked).
 - Fix zooming issue in curve editor.
+- Fix particles not being rendered in thumbnails and asset preview.
+- Fix shaders not being reloaded dynamically on shader code file save.
+- Fix disappearing Physics Gizmos
+- Fix missing settings in NewGame
+- Restored different color for trigger collider shapes in debug renderer.
+- Crash report exceptions are now all reported in english.
 
 ### Graphics
 
 - Structs can now be used in shaders. Switched light shaders to use them
 - Improve `EffectReflection` API
+- Fix many issues related to fullscreen switching and alt-enter is now fully supported.
 
 ### Engine
+
 - Various memory leaks fixed
 - Remote effect compilation was broken when done with another computer the game was built with
 - Used effect notification was failing when shaders were using custom permutation keys
+- Fix Entity.EnableAll ignored argument, you can now use this method properly.
+
+### Physics
+
+- Added proper entity offset in CharacterComponent Teleport.
+- Added utility method Ended in Collision, to avoid writing do/while constructs.
+- Fixed CylinderColliderShape issues with Scaling.
+
+### Launcher
+
+- Added crash reporter in the Xenko launcher as well.
 
 # Version 1.6.0-beta
 

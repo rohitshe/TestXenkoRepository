@@ -112,6 +112,7 @@
 ### [Particle Materials Sample](particles/particles-samples/particles-samples-material/index.md)
 ## [Particles Tutorials](particles/particles-tutorials/index.md)
 ### [Ribbons](particles/particles-tutorials/particles-tutorials-ribbons/index.md)
+### [Inheritance](particles/particles-tutorials/particles-tutorials-inheritance/index.md)
 # [Physics](physics/index.md)
 ## [Colliders Creation](physics/colliders-creation.md)
 ## [Colliders Manipulation](physics/colliders-manipulation.md)

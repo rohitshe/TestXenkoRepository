@@ -20,3 +20,4 @@
 ## Tutorials
 
 - [Ribbons](particles-tutorials/particles-tutorials-ribbons/index.md)
+- [Inheritance](particles-tutorials/particles-tutorials-inheritance/index.md)

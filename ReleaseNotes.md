@@ -273,5 +273,4 @@ Then, save back your project in GameStudio. You now can open your project with V
 - PhysicsElements are now removed, including the Collider, Rigidbody and Character classes. They now are merged into the new components.
 
 # Known Issues
-- iOS on ARM64 iPhones encounters crashes after a few second. We are currently investigating this.
 - Sometimes duplicate contacts are detected by the physics engine

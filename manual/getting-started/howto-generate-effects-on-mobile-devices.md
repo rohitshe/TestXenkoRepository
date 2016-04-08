@@ -62,7 +62,9 @@ Since iOS is done with Xamarin Studio through a remote MacOSX host, a connection
 
 As a result, you will need to run a script that can relay iOS connections back to developer computer.
 
-Go into `%SiliconStudioParadoxDir%\GamePackages\Xenko.1.1.3-beta\Bin\Windows-Direct3D11` and copy `ios-tcprelay` folder to your MacOSX host.
+Go into `%SiliconStudioXenkoDir%\GamePackages\<XenkoVersionDir>\Bin\Windows-Direct3D11` and copy `ios-tcprelay` folder to your MacOSX host.
+
+Alternatively, you can download latest version from this link: [ios-tcprelay.zip](../../download/ios-tcprelay.zip).
 
 Run it with your developer host/IP:
 

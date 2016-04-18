@@ -44,7 +44,7 @@
     "resource": [
       {
         "files": [
-          "download/**", "manual/**/images/**", "rn_images/**",
+          "download/**", "manual/**/images/**", "images/**",
         ],
         "case": false,
         "noNegate": false,

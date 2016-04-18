@@ -52,7 +52,12 @@
            <span class="icon-bar"></span>
          </button>
        </div>
-       <div id="navbar" class="collapse navbar-collapse">
-       </div><!--/.nav-collapse -->
+       <div class="collapse navbar-collapse" id="navbar">
+         <form class="navbar-form navbar-right" role="search" id="search">
+           <div class="form-group">
+             <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+           </div>
+         </form>
+       </div>
      </div>
    </nav>

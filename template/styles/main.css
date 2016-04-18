@@ -17,18 +17,27 @@ th, td {
 	vertical-align: top;
 }
 
-.article {
-    margin-top: 160px;
+.article, #search-results {
+    margin-top: 180px;
 }
 
 @media only screen and (max-width: 768px) {
   .toc-toggle {
-      display: inherit;
+    display: inherit;
+  }
+  
+  /* Our site.css override btn.display */
+  .mobile-hide {
+    display: none !important;
+  }
+  
+  .article {
+    margin-top: 30px !important;
   }
 }
 
 @media only screen and (max-width: 1199px) {
-  .article {
+  .article, #search-results {
     margin-top:230px
   }
   .sidetoc {
@@ -61,11 +70,20 @@ th, td {
     font-size: 12px;
 }
 
+/* Already defined on navbar, but since we have conflict with current Xenko navbar we redefine them on breadcrumb */
 .breadcrumb {
+    margin-top: 0px;
     margin-bottom: 0px;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    border-color: #e7e7e7;
 }
 
 h1, h2, h3, h4, h5, h6, span.xref {
     word-wrap: normal;
     word-break: normal;
+}
+
+#search {
+    margin-top: 8px !important;
 }

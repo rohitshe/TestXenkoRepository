@@ -55,7 +55,8 @@
       }
     ],
     "globalMetadata": {
-      "_appTitle": "Xenko"
+      "_appTitle": "Xenko",
+      "_enableSearch": true
     },
     "dest": "_site",
     "template": [

@@ -2,8 +2,12 @@ body {
     padding-bottom: 0px;
 }
 
-.sidetoc {
+.sidefilter {
     top: 180px;
+}
+
+.sidetoc {
+    top: 240px;
 }
 
 .row {
@@ -40,8 +44,11 @@ th, td {
   .article, #search-results {
     margin-top:230px
   }
-  .sidetoc {
+  .sidefilter {
     top: 250px;
+  }
+  .sidetoc {
+    top: 310px;
   }
 }
 

@@ -10,11 +10,11 @@ This is why after all our post-effects have been applied, we must apply [Gamma c
 
 A buffer in the sRGB space will be be displayed correctly on a monitor or a TV screen.
 
-![images/gamma-correction-1.png](images/gamma-correction-1.png) 
+![media/gamma-correction-1.png](media/gamma-correction-1.png) 
 
 *Non-gamma-corrected images have their dark areas appear darker than they're supposed to.*
 
-![images/gamma-correction-2.png](images/gamma-correction-2.png) 
+![media/gamma-correction-2.png](media/gamma-correction-2.png) 
 
 # Properties
 

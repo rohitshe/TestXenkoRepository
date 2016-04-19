@@ -4,7 +4,7 @@ Material layers gives a powerful way to combine multiple materials to build more
 
  
 
-![images/material-layers-1.png](images/material-layers-1.png) 
+![media/material-layers-1.png](media/material-layers-1.png) 
 
  
 
@@ -12,13 +12,13 @@ Material layers gives a powerful way to combine multiple materials to build more
 
 The following screenshot shows the blending of a rust material with a gold material.
 
-![images/material-layers-2.png](images/material-layers-2.png) 
+![media/material-layers-2.png](media/material-layers-2.png) 
 
  
 
 The following diagram shows the definition of a material blend above:
 
-![images/material-layers-3.png](images/material-layers-3.png) 
+![media/material-layers-3.png](media/material-layers-3.png) 
 
 | Property        | Description                                                                                                                              |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,6 +1,6 @@
 # Particle Initializers
 
-![images/particles-reference-initializers-0.png](images/particles-reference-initializers-0.png) 
+![media/particles-reference-initializers-0.png](media/particles-reference-initializers-0.png) 
 
 The initializers manage the initial values for all particle fields when they first spawn. They have no function on particles which have been spawned on previous frames.
 
@@ -12,7 +12,7 @@ Similarly, initializers which operate on the same field are exclusive and only t
 
 There are several properties common for many initializers. Depending on the initializer some or all of them may be missing, if they are irrelevant. The common properties are explained below:
 
-![images/particles-reference-initializers-1.png](images/particles-reference-initializers-1.png) 
+![media/particles-reference-initializers-1.png](media/particles-reference-initializers-1.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ A size initializer on the other hand can't change based on the parent's rotation
 
 Particles are spawned in an axis-aligned bounding box, defined by its left lower back corner and its right upper front corner.
 
-![images/particles-reference-initializers-2.png](images/particles-reference-initializers-2.png) 
+![media/particles-reference-initializers-2.png](media/particles-reference-initializers-2.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
@@ -43,14 +43,14 @@ Particles are spawned in an axis-aligned bounding box, defined by its left lower
 <br>
 This image shows the bounding box where particles initially appear for this emitter. In addition to the corners (-1, 0.8, -1) ~ (1, 1, 1), the box is further rotated by 45 degrees as seen from the offset rotation.
 
-![images/particles-reference-initializers-3.png](images/particles-reference-initializers-3.png) 
+![media/particles-reference-initializers-3.png](media/particles-reference-initializers-3.png) 
 
 
 ## Initial Velocity
 
 Particles are spawned with initial velocity which ranges between the defined values. The velocity is independant in all three directions between X, Y and Z.
 
-![images/particles-reference-initializers-4.png](images/particles-reference-initializers-4.png) 
+![media/particles-reference-initializers-4.png](media/particles-reference-initializers-4.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ Particles are spawned with initial velocity which ranges between the defined val
 
 Initial size sets the particle's uniform size when it's spawned for the first time. A size of 1 will result in a 1 meter by 1 meter billboard or quad when rendered.
 
-![images/particles-reference-initializers-5.png](images/particles-reference-initializers-5.png) 
+![media/particles-reference-initializers-5.png](media/particles-reference-initializers-5.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
@@ -73,7 +73,7 @@ Initial size sets the particle's uniform size when it's spawned for the first ti
 
 Initial rotation sets the particle's angular rotation when facing the camera. Positive values are clockwise rotations. The field only has meaning for camera-facing particles, such as billboards. It has no effect on oriented quads and models.
 
-![images/particles-reference-initializers-6.png](images/particles-reference-initializers-6.png) 
+![media/particles-reference-initializers-6.png](media/particles-reference-initializers-6.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
@@ -85,7 +85,7 @@ Initial rotation sets the particle's angular rotation when facing the camera. Po
 
 Initial color sets the particle's initial color at spawn time. It goes into the vertex buffer when building the particles and can be used by the material, but might not if the option is not set in the material itself. If setting the color has no effect please refer to the [Material](../particles-reference-materials/index.md) page for further discussion.
 
-![images/particles-reference-initializers-7.png](images/particles-reference-initializers-7.png) 
+![media/particles-reference-initializers-7.png](media/particles-reference-initializers-7.png) 
 
 
 | Property                    | Description                                                                                             |
@@ -100,7 +100,7 @@ Initial color sets the particle's initial color at spawn time. It goes into the 
 
 Initial 3D orientation sets the orientation for 3d aware particles when they first spawn. The editable fields use euclidian rotation which is packed into a quaternion orientation by the engine. The interpolated value is on the shortest path  between the two orientations, rather than interpolating each value separately.
 
-![images/particles-reference-initializers-8.png](images/particles-reference-initializers-8.png) 
+![media/particles-reference-initializers-8.png](media/particles-reference-initializers-8.png) 
 
 
 | Property                    | Description                                                                                             |

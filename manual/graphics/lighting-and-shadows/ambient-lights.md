@@ -4,13 +4,13 @@
 
 An ambient light is a uniform light with no direction.
 
-![images/AmbientLightOverview.png](images/AmbientLightOverview.png) 
+![media/AmbientLightOverview.png](media/AmbientLightOverview.png) 
 
 An object is lit uniformly:
 
 | Ambient Lighting                                     |
 | ---------------------------------------------------- |
-| ![images/AmbientLight.png](images/AmbientLight.png)  |
+| ![media/AmbientLight.png](media/AmbientLight.png)  |
 |                                                      |
 | Material Pure Diffuse                                |
 
@@ -19,7 +19,7 @@ An object is lit uniformly:
 
 Properties that defines a ambient light:
 
-![images/AmbientLightProperties.png](images/AmbientLightProperties.png) 
+![media/AmbientLightProperties.png](media/AmbientLightProperties.png) 
 
  
 

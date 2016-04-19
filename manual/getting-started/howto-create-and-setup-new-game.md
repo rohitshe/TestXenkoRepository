@@ -6,7 +6,7 @@ After installing Xenko, click on the **Start** button of the launcher to start t
 
 A window opens where you can choose a template to start with.
 
-![images/howto-create-and-setup-new-game-1.png](images/howto-create-and-setup-new-game-1.png) 
+![media/howto-create-and-setup-new-game-1.png](media/howto-create-and-setup-new-game-1.png) 
 
 Note that Xenko is shipped with many samples introducing various features of the engine, including graphics, audio, physics, UI... Two game samples are also available: JumpyJet, a 2D scrolling game, and SpaceEscape, a 3D runner game. Feel free to check these samples to learn how to work with Xenko!
 
@@ -16,7 +16,7 @@ Also notice the **New package** template. This option allows you to create game 
 
 After validating, you are invited to select the configuration of your game.
 
-![images/howto-create-and-setup-new-game-2.png](images/howto-create-and-setup-new-game-2.png) 
+![media/howto-create-and-setup-new-game-2.png](media/howto-create-and-setup-new-game-2.png) 
 
 First are the **platforms** you'd like to target. If you do not have requirements needed for a platform a warning message is dispayed.
 
@@ -32,7 +32,7 @@ The created project contains all the necessary for a very basic game. In the cen
 
  
 
-![images/howto-create-and-setup-new-game-3.png](images/howto-create-and-setup-new-game-3.png) 
+![media/howto-create-and-setup-new-game-3.png](media/howto-create-and-setup-new-game-3.png) 
 
 On the bottom of the screen, you can see the **Solution explorer**, where you can see the hierarchy of your project. Currently you should have a solution with the name of your game, containing a single game with the same name. Three directories are displayed inside: The **Assets** folder, root of you asset hierarchy, The **Code** folder, listing the C# libraries and executables contained in your project, and the **Dependencies** of your project, which contains a reference to the Xenko package. This special package, accessible in the **External Packages** category, represents the Xenko engine itself. Some assets from this package are accessible to your project, especially effect shaders. More information on shaders and the rendering pipeline is available in the next tutorials. The **central part** displays the assets contained in the **selected** directory.
 
@@ -40,11 +40,11 @@ The right part of the screen contains the **property grid**, displaying the prop
 
 As will we start to fill the scene in the following tutorials, let's first check a few things on the project itself. By clicking the Package properties button in the solution explorer, you can display the global properties of your game.
 
-![images/howto-create-and-setup-new-game-4.png](images/howto-create-and-setup-new-game-4.png) 
+![media/howto-create-and-setup-new-game-4.png](media/howto-create-and-setup-new-game-4.png) 
 
 Here you can select the **screen resolution** of your game. Note that on mobile devices, this resolution might be stretched to fit the screen resolution. The default graphics profile describes the level of rendering feature you want to use for your game. The higher you choose, the more fancy rendering you can do, but the higher the hardware requirement will be to play your game. Then you can also change the **default scene** of your game. A game always need to have a default scene to load, even if it is empty. You can add (statically or dynamically) scenes into other scenes using entities and components. Finally are the parameters for **Effect compilation**. This dictates how the engine should behave at run-time when he encounter an effect that is not compiled. Local means that the game compile the effect itself (available on Windows only). Remove means that it connects to the editor server that compile the effect for him. None means that all the effect should be compiled at build-time only. For more details about effect compilation see [here](howto-generate-effects-on-mobile-devices.md).
 
-![images/howto-create-and-setup-new-game-5.png](images/howto-create-and-setup-new-game-5.png) 
+![media/howto-create-and-setup-new-game-5.png](media/howto-create-and-setup-new-game-5.png) 
 
  
 

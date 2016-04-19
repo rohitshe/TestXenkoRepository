@@ -6,7 +6,7 @@ By default, the rendering of a game engine produces a very sharp image, which ca
 
 In movies it is common to have the camera focus a specific object of the scene, leaving the background blurred and making very-close objects appear blurry and out-of-focus as well.
 
-![images/realworld_dof_agave_flowers.jpg](images/realworld_dof_agave_flowers.jpg) 
+![media/realworld_dof_agave_flowers.jpg](media/realworld_dof_agave_flowers.jpg) 
 
 The "depth of field effect" is designed to produce such images.
 
@@ -16,7 +16,7 @@ The more layers are used, the better the quality is, but at some performance cos
 
  
 
-![images/depth-of-field-2.png](images/depth-of-field-2.png) 
+![media/depth-of-field-2.png](media/depth-of-field-2.png) 
 
 # Properties
 
@@ -38,13 +38,13 @@ The more layers are used, the better the quality is, but at some performance cos
 |            |                                                                                                                                                                        |
 |            | - **Circular Gaussian**: circular shape, fast, but unrealistic                                                                                                         |
 |            |                                                                                                                                                                        |
-|            |   ![images/depth-of-field-3.png](images/depth-of-field-3.png)                                                                                                          |
+|            |   ![media/depth-of-field-3.png](media/depth-of-field-3.png)                                                                                                          |
 |            | - **Hexagonal Triple Rhombi**: hexagonal shape, heavier than Gaussian                                                                                                  |
 |            |                                                                                                                                                                        |
-|            |   ![images/depth-of-field-4.png](images/depth-of-field-4.png)                                                                                                          |
+|            |   ![media/depth-of-field-4.png](media/depth-of-field-4.png)                                                                                                          |
 |            | - **Hexagonal McIntosh**: hexagonal shape, can be more expensive than **Hexagonal Triple Rhombi**                                                                      |
 |            |                                                                                                                                                                        |
-|            |   ![images/depth-of-field-5.png](images/depth-of-field-5.png)                                                                                                          |
+|            |   ![media/depth-of-field-5.png](media/depth-of-field-5.png)                                                                                                          |
 |            |                                                                                                                                                                        |
 |            |                                                                                                                                                                        |
 |            |                                                                                                                                                                        |

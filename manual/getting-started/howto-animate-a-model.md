@@ -10,25 +10,25 @@ Start by **opening your scene**.
 
 Then **select the entity** you want to add animations to (this entity should contain a model on which to apply the animation).
 
-![images/selectmodel.png](images/selectmodel.png) 
+![media/selectmodel.png](media/selectmodel.png) 
 
 **Add an animation component** to the entity.
 
-![images/howto-animate-a-model-2.png](images/howto-animate-a-model-2.png) 
+![media/howto-animate-a-model-2.png](media/howto-animate-a-model-2.png) 
 
 **Add a new entry** to the dictionary of animations.
 
 You are then prompted to add a key name, **enter the name you want to give to the animation**.
 
-![images/howto-animate-a-model-3.png](images/howto-animate-a-model-3.png) 
+![media/howto-animate-a-model-3.png](media/howto-animate-a-model-3.png) 
 
 Then **pick the animation asset** corresponding the name you just entered.
 
-![images/howto-animate-a-model-4.png](images/howto-animate-a-model-4.png) 
+![media/howto-animate-a-model-4.png](media/howto-animate-a-model-4.png) 
 
 Finally repeat the process until you have added all the animations that you want available at run-time.
 
-![images/howto-animate-a-model-5.png](images/howto-animate-a-model-5.png) 
+![media/howto-animate-a-model-5.png](media/howto-animate-a-model-5.png) 
 
  
 
@@ -38,7 +38,7 @@ When adding an animation on a model you should first check that the sub-nodes of
 
 For that, select your model asset in the asset view and check that the nodes in the property grid are correctly checked.
 
-![images/howto-animate-a-model-6.png](images/howto-animate-a-model-6.png) 
+![media/howto-animate-a-model-6.png](media/howto-animate-a-model-6.png) 
 
 If model nodes are not checked, the build system considers that the node information is not needed for the model and merges all the sub-meshes for performances reasons. In this case, animations cannot be properly applied and will be buggy or completely ignored.
 

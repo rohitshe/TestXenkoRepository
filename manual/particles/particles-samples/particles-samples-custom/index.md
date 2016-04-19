@@ -8,11 +8,11 @@ Please check the [Editing Particles](../../particles-reference/particles-referen
 
 This walkthrough will require some scripting. Make sure you have an IDE installed (the [Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) version of Visual Studio is free).
 
-![images/particles-samples-custom-0.png](images/particles-samples-custom-0.png) 
+![media/particles-samples-custom-0.png](media/particles-samples-custom-0.png) 
 
 Start by creating a new Custom Particles Sample from the New project menu. There are three entities in the scene graph named ConeEmitter15, ConeEmitter30 and ConeEmitter45. Select either one and navigate to its source particle system, expanding the emitter in it.
 
-![images/particles-samples-custom-1.png](images/particles-samples-custom-1.png) 
+![media/particles-samples-custom-1.png](media/particles-samples-custom-1.png) 
 
 There are four custom elements in this emitter which we will cover in depth.
 

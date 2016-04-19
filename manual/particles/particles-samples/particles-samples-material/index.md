@@ -9,13 +9,13 @@ Please check the [Editing Particles](../../particles-reference/particles-referen
 This walkthrough will require some scripting. Make sure you have an IDE installed (the [Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) version of Visual Studio is free).
 
 
-![images/particles-samples-material-0.png](images/particles-samples-material-0.png) 
+![media/particles-samples-material-0.png](media/particles-samples-material-0.png) 
 
 Start by creating a new Custom Particle Materials Sample from the New project menu. There are three entities in the scene graph named Rad Particle System, Radial Particle System and Two Textures Particle System. Select either one and navigate to its source particle system, expanding the emitter in it and its material.
 
 ## Overview
 
-![images/particles-samples-material-1.png](images/particles-samples-material-1.png) 
+![media/particles-samples-material-1.png](media/particles-samples-material-1.png) 
 
 The three custom shaders show different degrees of customization. We will go over them in order of increasing difficulty.
 
@@ -39,11 +39,11 @@ The only thing this shader does is return the red color for pixel shading every 
 
 Save the file and reload the scripts in the game studio. You should see the new shader added in your asset view. If it's not loaded automatically try relaunching the game studio.
 
-![images/particles-samples-material-2.png](images/particles-samples-material-2.png) 
+![media/particles-samples-material-2.png](media/particles-samples-material-2.png) 
 
 Once the shader is loaded you can access it through the Dynamic Emissive material for the particles. Choose a type of Shader and from the drop list select the shader you just added to the scene.
 
-![images/particles-samples-material-3.png](images/particles-samples-material-3.png) 
+![media/particles-samples-material-3.png](media/particles-samples-material-3.png) 
 
 Particles will appear red. With the game studio running edit and save the ComputeColorRed.xksl to make the color yellow.
 
@@ -93,7 +93,7 @@ The shader now inherits from the Texturing shader base class as well. This allow
 
 The input values float4 ColorCenter and float4 ColorEdge in our shader are permutations and when we load the shader they will appear in the property grid under the Generics dictionary.
 
-![images/particles-samples-material-4.png](images/particles-samples-material-4.png) 
+![media/particles-samples-material-4.png](media/particles-samples-material-4.png) 
 
 The values we set here will be used by the ComputeColorRadial shader for the particles. The rest of the shader simply calculates a gradient color based on the distance of the shaded pixel from the center of the billboard.
 

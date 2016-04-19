@@ -20,7 +20,7 @@ The Xenko launcher can manage the different versions of the Xenko SDK.
 
 It also propose shortcuts to all your recent projects and provides direct links to tutorials, news and help forums.
 
-![images/howto-install-xenko-1.png](images/howto-install-xenko-1.png) 
+![media/howto-install-xenko-1.png](media/howto-install-xenko-1.png) 
 
 The list on the left lists all the Xenko SDK versions available on the server. 
 

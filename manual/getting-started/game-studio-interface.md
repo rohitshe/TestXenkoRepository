@@ -4,7 +4,7 @@
 
 Once you've created or opened a project, the Game Studio shows the following interface:
 
-![images/Editor.jpg](images/Editor.jpg) 
+![media/Editor.jpg](media/Editor.jpg) 
 
 # Main interface
 
@@ -14,7 +14,7 @@ This interface is split into multiple sections explained here.
 
 The solution explorer displays the hierarchy of your game. For more information about the project hierarchy, see the [Game project hierarchy](game-project-hierarchy.md) page.
 
-![images/Editor_explorer_thumb.jpg](images/Editor_explorer_thumb.jpg) 
+![media/Editor_explorer_thumb.jpg](media/Editor_explorer_thumb.jpg) 
 
 The packages are separated in two categories. **External packages** are packages that you downloaded from the internet, such as the default Xenko package.
 
@@ -36,25 +36,25 @@ The asset view displays all the assets contained in the folder currently selecte
 
 When you select one or multiple assets, you can view and edit a lot of information, as described in the following sections.
 
-![images/Editor2_assetview_thumb.jpg](images/Editor2_assetview_thumb.jpg) 
+![media/Editor2_assetview_thumb.jpg](media/Editor2_assetview_thumb.jpg) 
 
 ## Property Editor
 
 The property grid displays the property of the selected asset. If you selected multiple assets, the common properties will be displayed. Depending on the type of asset you selected, you can changes how the asset will be imported or how it will behave in the game.
 
-![images/EditorProperties_props_thumb.jpg](images/EditorProperties_props_thumb.jpg) 
+![media/EditorProperties_props_thumb.jpg](media/EditorProperties_props_thumb.jpg) 
 
 ## Asset preview
 
 This panel will display the asset as it will be rendered in the game. The preview depends on the type of asset you selected. For a model, it will display it with its material and allow to rotate the camera around. For animations and sounds, it is possible to playback and seek with a timeline. There is nothing to edit in the preview ; it is just a visualization tool.
 
-![images/EditorProperties_preview_thumb.jpg](images/EditorProperties_preview_thumb.jpg) 
+![media/EditorProperties_preview_thumb.jpg](media/EditorProperties_preview_thumb.jpg) 
 
 ## Dependencies
 
 This panel shows the connection between the different assets. There are two tabs, **Referencees** and **Referencers**. The first one will show all the assets required by the selected asset. For instance if you selected a model, you will see all the materials and textures it uses to be rendered. The second tab gives the opposite view: it lists all the assets that require the selected asset. If you selected a texture, you will get all the materials, and by extension all the models, entities, etc. that need this texture.
 
-![images/Editor_deps_thumb.jpg](images/Editor_deps_thumb.jpg) 
+![media/Editor_deps_thumb.jpg](media/Editor_deps_thumb.jpg) 
 
 ## Asset log/Build log
 

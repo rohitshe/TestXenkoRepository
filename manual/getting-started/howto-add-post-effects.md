@@ -16,7 +16,7 @@ You can switch the editor preview to HDR by clicking the **Root** of your scene,
 
  
 
-![images/editor-hdr2.png](images/editor-hdr2.png) 
+![media/editor-hdr2.png](media/editor-hdr2.png) 
 
 You can now unfold the new child **"Post Processing Effects"** to set-up the post-effects.
 
@@ -32,7 +32,7 @@ So first, let's remove the renderers for the back buffer.
 
 In the **Graphics Composition** of **Root**, remove the **Clear RenderFrame** and **Render Camera** renderers.
 
-![images/master-norender.png](images/master-norender.png) 
+![media/master-norender.png](media/master-norender.png) 
 
  
 
@@ -42,7 +42,7 @@ Then let's add a layer where our scene will be rendered.
 - Set the **Output** to **RenderFrame**, and in the descriptor set **Format** to **HDR**
 - Add back the renderers we had for Master by clicking on the **+ sign** next to **Renderers** and add a **Clear RenderFrame** and a **Render Camera**.
 
-![images/editor-rendertargetlayer.png](images/editor-rendertargetlayer.png) 
+![media/editor-rendertargetlayer.png](media/editor-rendertargetlayer.png) 
 
 Now let's set-up a post-processing renderer in Master which will use the result from this layer.
 
@@ -50,7 +50,7 @@ In Master, click on the **+ sign** on the right of **Renderers** and choose **Re
 
 In the **Effect** drop-down menu, select **Post-Processing Effects**.
 
-![images/master-posteffect.png](images/master-posteffect.png) 
+![media/master-posteffect.png](media/master-posteffect.png) 
 
 And that's it, you can now configure the post-effects in the **Post Processing Effects**, just like for the editor preview.
 
@@ -60,7 +60,7 @@ Several built-in post-effects are available, you can toggle each of them with th
 
 Very often, a post-effect has a simple quality settings between 0 and 1, so you can easily choose between performance and quality.
 
-![images/posteffect-overview.png](images/posteffect-overview.png) 
+![media/posteffect-overview.png](media/posteffect-overview.png) 
 
 Here is a quick overview of each post-effect.
 

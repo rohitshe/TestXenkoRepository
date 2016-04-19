@@ -2,7 +2,7 @@
 
 This effects adds noise at each frame to simulate the grain of films used in real-world cameras.
 
-![images/film-grain-1.png](images/film-grain-1.png) 
+![media/film-grain-1.png](media/film-grain-1.png) 
 
 The pattern is procedurally generated and changes at each frame. 
 
@@ -10,7 +10,7 @@ To simulate real film grain, the noise should be more visible in areas of medium
 
 The pattern locally modifies the luminance of the pixels affected.
 
-![images/film-grain-2.png](images/film-grain-2.png) 
+![media/film-grain-2.png](media/film-grain-2.png) 
 
 # Properties
 

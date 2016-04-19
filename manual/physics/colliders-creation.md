@@ -2,9 +2,9 @@
 
 First we create a Collider Shape Asset, this kind of asset can be compared to a model, where it actually describes a simplified shape describing what we are rendering to physics engine.
 
-![images/create-collider-shape.png](images/create-collider-shape.png) 
+![media/create-collider-shape.png](media/create-collider-shape.png) 
 
-![images/collider-shape-properties.png](images/collider-shape-properties.png) 
+![media/collider-shape-properties.png](media/collider-shape-properties.png) 
 
 # Collider Shape Types
 
@@ -45,7 +45,7 @@ A complex convex hull will take time to be computed and currently there is no fe
 
 Second we need to add the PhysicsComponent to the entity we want to have physics enabled.
 
-![images/pcomponent.png](images/pcomponent.png) 
+![media/pcomponent.png](media/pcomponent.png) 
 
  An entity's Physics Component can have multiple Elements, this is useful when the entity is actually representing a complex model like a character or a vehicle, where skinned meshes are used.
 

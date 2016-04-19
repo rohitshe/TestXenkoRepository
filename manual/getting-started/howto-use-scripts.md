@@ -16,7 +16,7 @@ To create a script, first you need to open your game package solution in **Visu
 
 Once you have opened the solution, create a new C# file in the Game project.
 
-![images/newfile.png](images/newfile.png) 
+![media/newfile.png](media/newfile.png) 
 
 Make your script ***public*** and inherit from @'SiliconStudio.Xenko.Engine.AsyncScript', @'SiliconStudio.Xenko.Engine.SyncScript' or simply @'SiliconStudio.Xenko.Engine.Script' depending on the type of script you need.
 
@@ -51,15 +51,15 @@ Then, open the project in the game studio (for the moment, you need to close and
 
 Open the scene if is it not already done. Select the entity you want to add the script to in the scene hierarchy.
 
-![images/selectentity.png](images/selectentity.png) 
+![media/selectentity.png](media/selectentity.png) 
 
 Add a **ScriptComponent** if one does already exists.
 
-![images/addscript.png](images/addscript.png) 
+![media/addscript.png](media/addscript.png) 
 
 Finally add a **new entry** in the script list and **select your script** in the unrolling list.
 
-![images/selectscript.png](images/selectscript.png) 
+![media/selectscript.png](media/selectscript.png) 
 
 # Implement your script
 
@@ -136,15 +136,15 @@ Now, go to the Studio and re-open the project (live update of script will be sup
 
 You should be able to see a new field that appeared under your script.
 
-![images/newfield.png](images/newfield.png) 
+![media/newfield.png](media/newfield.png) 
 
 Click on the asset picker (small hand), and set the light you want to alter.
 
-![images/setfield.png](images/setfield.png) 
+![media/setfield.png](media/setfield.png) 
 
 Now you should see it set in the property field, as bellow:
 
-![images/setfieldfinished.png](images/setfieldfinished.png) 
+![media/setfieldfinished.png](media/setfieldfinished.png) 
 
 Now try to execute the game. The field reference should automatically be set at run-time before entering in your script, and you should be able to see the modification on the light.
 

@@ -4,17 +4,17 @@ This walkthrough shows how you can create simple particle effects in the game st
 
 Please check the [Editing Particles](../../particles-reference/particles-reference-editor/index.md) page if you are not familiar with how to edit the particles.
 
-![images/particles-samples-material-0.png](images/particles-samples-simple-0.png) 
+![media/particles-samples-material-0.png](media/particles-samples-simple-0.png) 
 
 Start by creating a new Simple Particles Sample from the New project menu.
 
-![images/particles-samples-simple-1.png](images/particles-samples-simple-1.png) 
+![media/particles-samples-simple-1.png](media/particles-samples-simple-1.png) 
 
 There are five particle systems in the project. We will explain briefly what all of them show in order of increasing difficulty.
 
 ## Simple Fountain
 
-![images/particles-samples-simple-2.png](images/particles-samples-simple-2.png) 
+![media/particles-samples-simple-2.png](media/particles-samples-simple-2.png) 
 
 This particle system is almost the same as the pregenerated Smoke Particle System which you can create by right-clicking on the viewport and selecting a new particle system.
 
@@ -26,7 +26,7 @@ With these three steps you can create the Simple Fountain.
 
 ## Colliding Particles
 
-![images/particles-samples-simple-3.png](images/particles-samples-simple-3.png) 
+![media/particles-samples-simple-3.png](media/particles-samples-simple-3.png) 
 
 ### Color
 
@@ -60,7 +60,7 @@ Alternatively you can keep the shape around the particles and uncheck the IsSoli
 
 ## Big Fire
 
-![images/particles-samples-simple-4.png](images/particles-samples-simple-4.png) 
+![media/particles-samples-simple-4.png](media/particles-samples-simple-4.png) 
 
 Start by creating a new Smoke Particle System. It doesn't use any textures, so let's change that.
 
@@ -76,7 +76,7 @@ Try changing the material to adjust the colors. You can easily increase the inte
 
 All particle systems we have created so far have been using camera-facing billboards. In the next sample we will use Quads. Quads are flat squares just like the billboards, but rather than facing the camera they are fixed in space, with their own position, scale and 3d orientation.
 
-![images/particles-samples-simple-5.png](images/particles-samples-simple-5.png) 
+![media/particles-samples-simple-5.png](media/particles-samples-simple-5.png) 
 
 In this sample we have several quads which are standing vertical and are randomly rotated around the Y axis. When viewed from above you can see that they appear flat. This is not ideal if the user can freely rotate the camera, but in most games when the camera is restricted or the effects far away you might want to use quads and prevent them from automatically facing the camera.
 
@@ -94,13 +94,13 @@ To add some variation, add 180 degrees to Y axis to one of the orientations. Now
 
 Let's have a look at the Smoke particle system.
 
-![images/particles-samples-simple-6.gif](images/particles-samples-simple-6.gif) 
+![media/particles-samples-simple-6.gif](media/particles-samples-simple-6.gif) 
 
 By now you should know how to use updaters, initializers and materials, so we will skip this explanation.
 
 This effect only plays once, raather than indefinitely like the other particle systems.
 
-![images/particles-samples-simple-7.png](images/particles-samples-simple-7.png) 
+![media/particles-samples-simple-7.png](media/particles-samples-simple-7.png) 
 
 It only has one spawner and in the Loop settings it is set to One shot. The spawner will only fire once, then halt. It spawns 100 particles per second, but it only lives 0.1 ~ 0.15 seconds, which means it will burst 10-15 smoke particles once.
 
@@ -108,7 +108,7 @@ In fact, most of the effects you need in a game will be like this. All hit effec
 
 However you will notice that in the editor this effect plays repeatedly. There are a couple of editor-only settings you can use.
 
-![images/particles-samples-simple-8.png](images/particles-samples-simple-8.png) 
+![media/particles-samples-simple-8.png](media/particles-samples-simple-8.png) 
 
 Reset after X seconds stops the particle system and restarts it every X seconds. The default value is 5, so you can see how other particle systems flicker every 5 seconds or so. For the smoke effect we have set it to 2 so that it loops more often.
 

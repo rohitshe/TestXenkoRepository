@@ -10,11 +10,11 @@ Starts by **opening your scene**. 
 
 **Add an entity** that will be in charge of displaying the UI.
 
-![images/howto-create-an-ui-1.png](images/howto-create-an-ui-1.png) 
+![media/howto-create-an-ui-1.png](media/howto-create-an-ui-1.png) 
 
 **Add a UI component** to the entity.
 
-![images/howto-create-an-ui-2.png](images/howto-create-an-ui-2.png) 
+![media/howto-create-an-ui-2.png](media/howto-create-an-ui-2.png) 
 
 Ensure that the *Full Screen* property is checked, so that your UI is displayed on full screen.
 

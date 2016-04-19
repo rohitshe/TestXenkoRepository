@@ -1,12 +1,12 @@
 # Particle Emitters
 
-![images/particles-reference-emitters-0.png](images/particles-reference-emitters-0.png) 
+![media/particles-reference-emitters-0.png](media/particles-reference-emitters-0.png) 
 
 A particle emitter is a sub-container in the particle system, which is responsible for one single visual aspect of the entire effect. For instance, a fire effect would have flames, embers and smoke, and each of them will be managed by a separate Particle Emitter, so we will have three emitters in total. The Particle Emitter manages how many particles there are, how they appear, move and disappear, and how they are drawn.
 
 Emitters are contained in a list and they are updated and drawn in the order in which they appear on the list. You can easily control them by reordering the list.
 
-![images/particles-reference-emitters-1.png](images/particles-reference-emitters-1.png) 
+![media/particles-reference-emitters-1.png](media/particles-reference-emitters-1.png) 
 
 | Property         | Description                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------ |

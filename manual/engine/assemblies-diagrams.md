@@ -1,11 +1,11 @@
 # Assemblies diagrams
 
-![images/assemblies-diagrams-1.png](images/assemblies-diagrams-1.png) 
+![media/assemblies-diagrams-1.png](media/assemblies-diagrams-1.png) 
 
 
 
 
-![images/9503668.png](images/9503668.png) 
+![media/9503668.png](media/9503668.png) 
 
 
 

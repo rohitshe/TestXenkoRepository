@@ -25,7 +25,7 @@ Assets that will be compiled and packaged in your project are:
 
 
 
-![images/26968245.png](images/26968245.png) 
+![media/26968245.png](media/26968245.png) 
 
 
 

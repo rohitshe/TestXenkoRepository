@@ -1,6 +1,6 @@
 # Scene Renderers
 
-![images/scene-renderers-1.png](images/scene-renderers-1.png) 
+![media/scene-renderers-1.png](media/scene-renderers-1.png) 
 
  
 

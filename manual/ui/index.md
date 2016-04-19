@@ -39,9 +39,9 @@ A class diagram is available [here](controls/uielement-class-diagram.md).
 
 You can find a complete example by creating a new project in [Xenko Studio](../xenko-studio/index.md) and selecting the **GameMenu** template.
 
-![images/ui-1.png](images/ui-1.png) 
+![media/ui-1.png](media/ui-1.png) 
 
-![images/ui-2.png](images/ui-2.png) 
+![media/ui-2.png](media/ui-2.png) 
 
 # Performance
 

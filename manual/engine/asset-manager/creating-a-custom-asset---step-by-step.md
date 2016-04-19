@@ -15,7 +15,7 @@ In Xenko, an asset can have 3 representations at different time on a project:
 
 
 
-![images/9503662.png](images/9503662.png) 
+![media/9503662.png](media/9503662.png) 
 
 
 

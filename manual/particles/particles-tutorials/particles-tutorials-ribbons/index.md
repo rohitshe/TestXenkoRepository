@@ -6,13 +6,13 @@ This tutorial explains in depth how to create ribbons and trails using particles
 
 You can check the **Ribbon Particles Sample** if you need a quick look at a project which already uses ribbons and trails.
 
-![images/particles-tutorials-ribbons-0.jpg](images/particles-tutorials-ribbons-0.jpg)
+![media/particles-tutorials-ribbons-0.jpg](media/particles-tutorials-ribbons-0.jpg)
 
 ## Step-by-step
 
 Ribbons and trails are particle shape builders which build the mesh data as a strip connecting all particles, rather than individual quads.
 
-![images/particles-tutorials-ribbons-1.png](images/particles-tutorials-ribbons-1.png)
+![media/particles-tutorials-ribbons-1.png](media/particles-tutorials-ribbons-1.png)
 
 In the picture above we have the same particle data (shown as red dots), but in the first case we render them as individual quads (shown as blue rectangles). In the second case we choose to render them as a strip, connecting each particle to the next one and rendering the quad between two adjacent particles, rather than on top of each one. For the user it will appear as one continuous strip or *ribbon*.
 
@@ -22,7 +22,7 @@ To change the shape go to *Shape* and choose either *Ribbon* or *Trail*. They ar
 
 If you switched from a billboard shape to a ribbon or a trails you may experience the following problem.
 
-![images/particles-tutorials-ribbons-2.png](images/particles-tutorials-ribbons-2.png)
+![media/particles-tutorials-ribbons-2.png](media/particles-tutorials-ribbons-2.png)
 
 Rather than connecting the particles in order, the strip will erratically jump between seemingly random particles. This is the same problem alpha-blended quads have when they are not properly sorted and pop out in the wrong order.
 
@@ -46,7 +46,7 @@ The trail on the other hand is a surface firmly fixed in 3D space. It does so by
 
 The image below shows the different behavior for ribbons (red) and trails (yellow) when viewed from different camera angles.
 
-![images/particles-tutorials-ribbons-3.gif](images/particles-tutorials-ribbons-3.gif)
+![media/particles-tutorials-ribbons-3.gif](media/particles-tutorials-ribbons-3.gif)
 
 ### Texture Coordinates
 
@@ -54,7 +54,7 @@ Both ribbons and trails have texture coordinates options (or *UV coordinates*) u
 
 UV Coords define if the coordinates should be assigned as quads for each segment (AsIs), stretched between the first and the last particle in the ribbon (Stretched), or use actual world distance between particles to calculate how the V-coordinate should be mapped (DistanceBased). The image below shows the difference between the three methods.
 
-![images/particles-tutorials-ribbons-4.png](images/particles-tutorials-ribbons-4.png)
+![media/particles-tutorials-ribbons-4.png](media/particles-tutorials-ribbons-4.png)
 
  - AsIs - the texture will be mapped per segment, essentially copying the same quad stretched between every two particles. This can be useful if combined with flipbook animations (found in the Material settings).
  
@@ -66,7 +66,7 @@ UV Coords define if the coordinates should be assigned as quads for each segment
 
 Ribbons and trails will often have to be built around limited number of control points (particles) when the spawn rate is slow or the origin's movement is rapid. In such cases it is useful to add extra segments between adjacent particles and smooth the control line defining the ribbon.
 
-![images/particles-tutorials-ribbons-5.png](images/particles-tutorials-ribbons-5.png)
+![media/particles-tutorials-ribbons-5.png](media/particles-tutorials-ribbons-5.png)
 
  - None - no smoothing means there will only be one segment between each two particles, and the ribbon will appear segmented if there are sharp angles along the central axis.
  
@@ -76,4 +76,4 @@ Ribbons and trails will often have to be built around limited number of control 
 
 The animation below shows the difference between the three interpolation methods.
 
-![images/particles-tutorials-ribbons-6.gif](images/particles-tutorials-ribbons-6.gif)
+![media/particles-tutorials-ribbons-6.gif](media/particles-tutorials-ribbons-6.gif)

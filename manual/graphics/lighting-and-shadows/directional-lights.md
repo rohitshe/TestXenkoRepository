@@ -6,11 +6,11 @@ A directional light is a light coming uniformly from one direction and is often 
 
  
 
-![images/DirectionalLightOverview.png](images/DirectionalLightOverview.png) 
+![media/DirectionalLightOverview.png](media/DirectionalLightOverview.png) 
 
 In the studio, the directional light appears with the following icon:
 
-![images/DirectionalLight.png](images/DirectionalLight.png) 
+![media/DirectionalLight.png](media/DirectionalLight.png) 
 
  
 
@@ -24,7 +24,7 @@ In the studio, the directional light appears with the following icon:
 
 Once selected, the gizmo of the directional light displays its main direction:
 
-![images/DirectionalLightSelected.png](images/DirectionalLightSelected.png) 
+![media/DirectionalLightSelected.png](media/DirectionalLightSelected.png) 
 
  
 
@@ -48,7 +48,7 @@ Once selected, the gizmo of the directional light displays its main direction:
 
 Properties that defines a directional light:
 
-![images/DirectionalLightProperties.png](images/DirectionalLightProperties.png) 
+![media/DirectionalLightProperties.png](media/DirectionalLightProperties.png) 
 
  
 
@@ -71,7 +71,7 @@ Shadows bring significant information and realism to a scene.
 
 | Shadows **off**                                          | Shadows **on**                                               |
 | -------------------------------------------------------- | ------------------------------------------------------------ |
-| ![images/SceneNoShadows.png](images/SceneNoShadows.png)  | ![images/SceneWithShadows.png](images/SceneWithShadows.png)  |
+| ![media/SceneNoShadows.png](media/SceneNoShadows.png)  | ![media/SceneWithShadows.png](media/SceneWithShadows.png)  |
 
 
 In the case of a directional light, shadows effect in a scene can spawn on a large view range hence requiring a special treatment to improve their realism.
@@ -84,13 +84,13 @@ The cascade term implies that multiple textures are used to slice the depth rang
 
  
 
-![images/ShadowMappingCascades.png](images/ShadowMappingCascades.png) 
+![media/ShadowMappingCascades.png](media/ShadowMappingCascades.png) 
 
 If the debug property is set on the shadow, you can visualize the cascades. In the following example, we have a directional light configured with 4 cascades:
 
 | Cascades Debug Off                                                   | Cascades Debug On                                                    |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| ![images/directional-lights-8.png](images/directional-lights-8.png)  | ![images/directional-lights-9.png](images/directional-lights-9.png)  |
+| ![media/directional-lights-8.png](media/directional-lights-8.png)  | ![media/directional-lights-9.png](media/directional-lights-9.png)  |
 
 
 The colors shows the selected cascade texture for each distance range (Green:0, Blue:1, Purple: 2, Red: 3)

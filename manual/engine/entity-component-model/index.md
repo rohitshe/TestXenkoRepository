@@ -9,7 +9,7 @@ To improve flexibility, entity are component-based: they can contains as many co
 
 
 
-![images/7438980.png](images/7438980.png) 
+![media/7438980.png](media/7438980.png) 
 
 
 

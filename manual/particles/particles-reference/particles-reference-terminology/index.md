@@ -1,6 +1,6 @@
 # Particle Terminology
 
-![images/particles-reference-terminology-0.png](images/particles-reference-terminology-0.png) 
+![media/particles-reference-terminology-0.png](media/particles-reference-terminology-0.png) 
 
 - `Entity`
 	[Entity](../../../engine/entity-component-model/index.md) is the base class for objects that are managed by the high-level engine.

@@ -7,7 +7,7 @@ The following diagram shows the Scene Graphics Compositor by Layers interfaces a
 - A collection of @'SiliconStudio.Xenko.Rendering.Composers.SceneGraphicsLayer'
 - Each layer contains a collection of @'SiliconStudio.Xenko.Rendering.ISceneRenderer'
 
-![images/graphics-compositor-for-developers-1.png](images/graphics-compositor-for-developers-1.png) 
+![media/graphics-compositor-for-developers-1.png](media/graphics-compositor-for-developers-1.png) 
 
 # Renderers
 
@@ -21,7 +21,7 @@ The default renderers implementing the @'SiliconStudio.Xenko.Rendering.ISceneRen
 
  
 
-![images/graphics-compositor-for-developers-2.png](images/graphics-compositor-for-developers-2.png) 
+![media/graphics-compositor-for-developers-2.png](media/graphics-compositor-for-developers-2.png) 
 
  
 

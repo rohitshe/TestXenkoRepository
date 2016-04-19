@@ -4,21 +4,21 @@
 
 A spot light is a light producing a cone light positioned in space oriented to a specific direction.
 
-![images/SpotLightOverview.png](images/SpotLightOverview.png) 
+![media/SpotLightOverview.png](media/SpotLightOverview.png) 
 
 In the studio, the spot light appears with the following icon:
 
-![images/SpotLight.png](images/SpotLight.png) 
+![media/SpotLight.png](media/SpotLight.png) 
 
 Once selected, the gizmo of the spot light displays its main direction, range and the outer cone:
 
-![images/SpotLightSelected.png](images/SpotLightSelected.png) 
+![media/SpotLightSelected.png](media/SpotLightSelected.png) 
 
 # Properties
 
 Properties that defines a spot light:
 
-![images/SpotLightProperties.png](images/SpotLightProperties.png) 
+![media/SpotLightProperties.png](media/SpotLightProperties.png) 
 
  
 

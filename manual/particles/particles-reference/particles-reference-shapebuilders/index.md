@@ -1,6 +1,6 @@
 # Particle Shape Builders
 
-![images/particles-reference-shapebuilders-0.png](images/particles-reference-shapebuilders-0.png) 
+![media/particles-reference-shapebuilders-0.png](media/particles-reference-shapebuilders-0.png) 
 
 Shape Builders create mesh shapes from the living particles so that they can be rendered. Currently only one type of shape can be assigned to an emitter.
 
@@ -18,7 +18,7 @@ Every particle is expanded to a 1 meter by 1 meter up-facing quad. If the partic
 
 The picture below shows a billboard, a hexagon and a quad:
 
-![images/particles-reference-shapebuilders-1.png](images/particles-reference-shapebuilders-1.png) 
+![media/particles-reference-shapebuilders-1.png](media/particles-reference-shapebuilders-1.png) 
 
 ## More
 

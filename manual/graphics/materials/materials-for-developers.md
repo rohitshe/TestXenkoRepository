@@ -8,7 +8,7 @@ The following diagram shows the Material interfaces and implementation classes:
 - The @'SiliconStudio.Xenko.Rendering.Materials.MaterialDescriptor' is the editor-time description of the material before being compiled into a Material Shader.
 - The @'SiliconStudio.Xenko.Rendering.Material' class is the runtime material shader generated from the @'SiliconStudio.Xenko.Rendering.Materials.MaterialDescriptor'
 
-![images/materials-for-developers-1.png](images/materials-for-developers-1.png) 
+![media/materials-for-developers-1.png](media/materials-for-developers-1.png) 
 
  
 

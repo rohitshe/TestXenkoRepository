@@ -99,7 +99,7 @@ This example is quite simple but in a real project situation, the number of shad
 
 Schematically, adding a new attribute requires to update all the stages and intermediate structures from the vertex input to the last stage you want to use the attribute.
 
-![images/hlsl_add_normal.png](images/hlsl_add_normal.png) 
+![media/hlsl_add_normal.png](media/hlsl_add_normal.png) 
 
 # XKSL
 
@@ -205,5 +205,5 @@ class MyShader : ShaderBase
 
 In XKSL, adding a new attribute is as simple as adding it to the pool of streams and use it where you want!
 
-![images/xksl_add_normal.png](images/xksl_add_normal.png) 
+![media/xksl_add_normal.png](media/xksl_add_normal.png) 
 

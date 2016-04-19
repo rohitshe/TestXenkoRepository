@@ -44,7 +44,7 @@
     "resource": [
       {
         "files": [
-          "web.config", "download/**", "manual/**/images/**", "images/**",
+          "web.config", "download/**", "manual/**/media/**", "media/**",
         ],
         "case": false,
         "noNegate": false,

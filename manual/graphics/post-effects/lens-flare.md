@@ -2,11 +2,11 @@
 
 The lens flare effect simulates the artifacts produced by the internal reflection or scattering of the light within a real-world lens.
 
-![images/lens-flare-1.png](images/lens-flare-1.png) 
+![media/lens-flare-1.png](media/lens-flare-1.png) 
 
 The artifacts are generally aligned along the line defined by the original bright spot and the center of the screen.
 
-![images/lens-flare-2.png](images/lens-flare-2.png) 
+![media/lens-flare-2.png](media/lens-flare-2.png) 
 
 # Properties
 

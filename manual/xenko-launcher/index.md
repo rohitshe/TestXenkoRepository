@@ -11,7 +11,7 @@ The **launcher** is the starting point of Xenko, with it you can:
 
 # Overview
 
-![images/xenko-launcher-1.png](images/xenko-launcher-1.png) 
+![media/xenko-launcher-1.png](media/xenko-launcher-1.png) 
 
 - A: Start the game studio
 - B: Manage versions of xenko
@@ -27,7 +27,7 @@ To start the displayed version of Xenko just click on the button.
 
 To change the version of xenko to launch, click on the version you want in the list (B)
 
-![images/xenko-launcher-2.png](images/xenko-launcher-2.png)        **→**       ![images/xenko-launcher-3.png](images/xenko-launcher-3.png) 
+![media/xenko-launcher-2.png](media/xenko-launcher-2.png)        **→**       ![media/xenko-launcher-3.png](media/xenko-launcher-3.png) 
 
 Note: by default the launcher closes after starting the game studio. If you prefer keeping the launcher open you can uncheck the corresponding checkbox 
 
@@ -37,7 +37,7 @@ Note: by default the launcher closes after starting the game studio. If you pref
 
 Using the launcher you can **install**, **uninstall** **a version** as well as view a **specific version release notes**.
 
-![images/xenko-launcher-4.png](images/xenko-launcher-4.png) 
+![media/xenko-launcher-4.png](media/xenko-launcher-4.png) 
 
 - A: Display the release notes of the specific version
 - B: The name of the version
@@ -53,7 +53,7 @@ Note: The Visual Studio plugin is automatically installed when installing Xenko.
 
 The launcher proposes quick access to all the different ways to interact with us and the community.
 
-![images/xenko-launcher-5.png](images/xenko-launcher-5.png) 
+![media/xenko-launcher-5.png](media/xenko-launcher-5.png) 
 
 Depending on your problem or need, click on the most adapted link and wait to be redirected.
 
@@ -67,7 +67,7 @@ The open a recent project simply click on the item.
 
 Note that launcher is capable of determining the adequate version of Xenko, so you don't need to manually switch the version of Xenko before starting your project.
 
-![images/xenko-launcher-6.png](images/xenko-launcher-6.png) 
+![media/xenko-launcher-6.png](media/xenko-launcher-6.png) 
 
 - A: The name of the project
 - B: Update the project and open it with last version of Xenko.
@@ -82,7 +82,7 @@ The launcher also proposes you direct links to tutorials and news. 
 
 Just click on the item to be automatically redirected to the website.
 
-![images/xenko-launcher-7.png](images/xenko-launcher-7.png) 
+![media/xenko-launcher-7.png](media/xenko-launcher-7.png) 
 
 - A: Switch to the getting started stream
 - B: Switch to the news stream

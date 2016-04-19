@@ -14,7 +14,7 @@ Some gestures (*Drag* and Flick) can be restricted to specific shapes (*vertica
 
 ## Drag Gesture
 
-![images/dragGesture.png](images/dragGesture.png) 
+![media/dragGesture.png](media/dragGesture.png) 
 
 **Type** : Continuous
 
@@ -28,7 +28,7 @@ Some gestures (*Drag* and Flick) can be restricted to specific shapes (*vertica
 
 ## Flick Gesture 
 
-![images/flick.png](images/flick.png) 
+![media/flick.png](media/flick.png) 
 
 **Type** : Discrete
 
@@ -42,7 +42,7 @@ Some gestures (*Drag* and Flick) can be restricted to specific shapes (*vertica
 
 ## Long Press Gesture 
 
-![images/longPress.png](images/longPress.png) 
+![media/longPress.png](media/longPress.png) 
 
 **Type** : Discrete
 
@@ -56,7 +56,7 @@ Some gestures (*Drag* and Flick) can be restricted to specific shapes (*vertica
 
 ## Composite Gesture 
 
-![images/translation.png](images/translation.png) ![images/scale.png](images/scale.png) ![images/rotation.png](images/rotation.png) 
+![media/translation.png](media/translation.png) ![media/scale.png](media/scale.png) ![media/rotation.png](media/rotation.png) 
 
 **Type** : Continuous
 
@@ -70,7 +70,7 @@ Some gestures (*Drag* and Flick) can be restricted to specific shapes (*vertica
 
 ## Tap Gesture 
 
-![images/tap.png](images/tap.png) 
+![media/tap.png](media/tap.png) 
 
  
 

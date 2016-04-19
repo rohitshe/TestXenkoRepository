@@ -1,6 +1,6 @@
 # Particle Materials
 
-![images/particles-reference-materials-0.png](images/particles-reference-materials-0.png) 
+![media/particles-reference-materials-0.png](media/particles-reference-materials-0.png) 
 
 The particle materials are a simplified version of the [Materials](../../../graphics/materials/index.md) used for meshes. There is only one type of material currently, the Dynamic Emissive material.
 
@@ -8,7 +8,7 @@ The particle materials are a simplified version of the [Materials](../../../grap
 
 This material uses a translucent emissive color RGBA for the pixel shading. In HDR rendering mode the values are used as intensity and can be higher than 1.
 
-![images/particles-reference-materials-1.png](images/particles-reference-materials-1.png)
+![media/particles-reference-materials-1.png](media/particles-reference-materials-1.png)
 
 
 | Property            | Description                                                                                                     |
@@ -23,13 +23,13 @@ This material uses a translucent emissive color RGBA for the pixel shading. In H
 
 The flipbook animation considers a texture as a sequence of frames and displays it one frame at a time, like a flipbook.
 
-![images/particles-reference-materials-4.png](images/particles-reference-materials-4.png)
+![media/particles-reference-materials-4.png](media/particles-reference-materials-4.png)
 
 The picture above is an example of a 4 x 4 flipbook animation texture of an explosion.
 
 The flipbook animation has the following properties:
 
-![images/particles-reference-materials-2.png](images/particles-reference-materials-2.png)
+![media/particles-reference-materials-2.png](media/particles-reference-materials-2.png)
 
 | Property            | Description                                                                                                     |
 |---------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ The texture coordinates can go below 0 or above 1. How is the texture sampled de
 
 The scrolling animation has the following properties:
 
-![images/particles-reference-materials-3.png](images/particles-reference-materials-3.png)
+![media/particles-reference-materials-3.png](media/particles-reference-materials-3.png)
 
 
 | Property            | Description                                                                                                     |

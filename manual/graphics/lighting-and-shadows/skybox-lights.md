@@ -6,7 +6,7 @@ A skybox light is an ambient light emitted by a skybox.
 
  
 
-![images/SkyboxLightOverview.png](images/SkyboxLightOverview.png) 
+![media/SkyboxLightOverview.png](media/SkyboxLightOverview.png) 
 
 In order to use a skybox light, an entity must have both:
 
@@ -23,7 +23,7 @@ The following images show the difference between ambient and skybox lighting and
 
 | Ambient Lighting                                     | Skybox Lighting                                                                            | Skybox Lighting                                                                    | Skybox Lighting                                                                                    | Skybox Lighting                                                                                      |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| ![images/AmbientLight.png](images/AmbientLight.png)  | ![images/SkyboxLight-MaterialPureDiffuse.png](images/SkyboxLight-MaterialPureDiffuse.png)  | ![images/SkyboxLight-MaterialPlastic.png](images/SkyboxLight-MaterialPlastic.png)  | ![images/SkyboxLight-MaterialMetal100Gloss50.png](images/SkyboxLight-MaterialMetal100Gloss50.png)  | ![images/SkyboxLight-MaterialMetal100Gloss100.png](images/SkyboxLight-MaterialMetal100Gloss100.png)  |
+| ![media/AmbientLight.png](media/AmbientLight.png)  | ![media/SkyboxLight-MaterialPureDiffuse.png](media/SkyboxLight-MaterialPureDiffuse.png)  | ![media/SkyboxLight-MaterialPlastic.png](media/SkyboxLight-MaterialPlastic.png)  | ![media/SkyboxLight-MaterialMetal100Gloss50.png](media/SkyboxLight-MaterialMetal100Gloss50.png)  | ![media/SkyboxLight-MaterialMetal100Gloss100.png](media/SkyboxLight-MaterialMetal100Gloss100.png)  |
 |                                                      |                                                                                            |                                                                                    |                                                                                                    |                                                                                                      |
 | Material Pure Diffuse                                | Material Pure Diffuse                                                                      | Material Plastic                                                                   | Metal 100% Gloss 50%                                                                               | Metal 100% Gloss 100%                                                                                |
 
@@ -32,7 +32,7 @@ The following images show the difference between ambient and skybox lighting and
 
 Properties that defines a skybox light:
 
-![images/SkyboxLightProperties.png](images/SkyboxLightProperties.png) 
+![media/SkyboxLightProperties.png](media/SkyboxLightProperties.png) 
 
  
 

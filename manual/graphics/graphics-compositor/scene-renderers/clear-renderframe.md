@@ -2,7 +2,7 @@
 
 Clears a render frame. 
 
-![images/clear-renderframe-1.png](images/clear-renderframe-1.png) 
+![media/clear-renderframe-1.png](media/clear-renderframe-1.png) 
 
 # Properties
 

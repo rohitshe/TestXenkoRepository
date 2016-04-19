@@ -7,7 +7,7 @@ User usually want to manipulate Component contained in a specific entity, while 
 
 
 
-![images/7438984.png](images/7438984.png) 
+![media/7438984.png](media/7438984.png) 
 
 
 

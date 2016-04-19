@@ -6,7 +6,7 @@ They are used to tune, to embellish an image, for example by giving it a more "n
 
 They can also be used purely artistically to change the mood of a scene.
 
-![images/post-effects-reference-1.png](images/post-effects-reference-1.png) 
+![media/post-effects-reference-1.png](media/post-effects-reference-1.png) 
 
 Post-effects are usually applied on an image: this means they don't know vertices or meshes, they only work with the color values of each pixel (and sometimes their depth).
 

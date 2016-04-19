@@ -10,7 +10,7 @@ It makes it easy to work in a team with the same assets management experience.
 
 For game developers, the editor is also tightly integrated with your Visual Studio projects enabling to seamlessly sync and switch back-and-forth.
 
-![images/Editor.jpg](images/Editor.jpg) 
+![media/Editor.jpg](media/Editor.jpg) 
 
 # Interface
 
@@ -20,19 +20,19 @@ More information can be found on the page [Game Studio interface](../getting-sta
 
 You can create and browse assets in the asset view:
 
-![images/Editor2_assetview_thumb.jpg](images/Editor2_assetview_thumb.jpg) 
+![media/Editor2_assetview_thumb.jpg](media/Editor2_assetview_thumb.jpg) 
 
 Of course, you can also import existing assets such as FBX files:
 
-![images/EditorImportAssets_explorer_thumb.jpg](images/EditorImportAssets_explorer_thumb.jpg) 
+![media/EditorImportAssets_explorer_thumb.jpg](media/EditorImportAssets_explorer_thumb.jpg) 
 
 You can then edit those assets in the Property Editor:
 
-![images/EditorProperties_props_thumb.jpg](images/EditorProperties_props_thumb.jpg) 
+![media/EditorProperties_props_thumb.jpg](media/EditorProperties_props_thumb.jpg) 
 
 ...while checking live preview:
 
-![images/EditorProperties_preview_thumb.jpg](images/EditorProperties_preview_thumb.jpg) 
+![media/EditorProperties_preview_thumb.jpg](media/EditorProperties_preview_thumb.jpg) 
 
 ## Samples
 
@@ -42,5 +42,5 @@ You can access them by creating a new project, and selecting the appropriate sam
 
 Feel free to take a look at them, this should inspire you and give you concrete examples on how to use Xenko:
 
-![images/EditorNewSamples_thumb.jpg](images/EditorNewSamples_thumb.jpg) 
+![media/EditorNewSamples_thumb.jpg](media/EditorNewSamples_thumb.jpg) 
 

@@ -1,6 +1,6 @@
 # Editing Particle Effects
 
-![images/particles-reference-editor-0.png](images/particles-reference-editor-0.png) 
+![media/particles-reference-editor-0.png](media/particles-reference-editor-0.png) 
 
 This document assumes you are already familiar with the [Terminology](../particles-reference-terminology/index.md) regarding particles.
 
@@ -8,13 +8,13 @@ This document assumes you are already familiar with the [Terminology](../particl
 
 Particles can be created directly in the game studio by using the scene and the property grid windows.
 
-![images/particles-reference-editor-1.png](images/particles-reference-editor-1.png) 
+![media/particles-reference-editor-1.png](media/particles-reference-editor-1.png) 
 
 You can create a new entity which contains a particle system component by right-clicking on the scene tree and choosing a particle system type of entity. There are several presets to help you get started.
 
 The icon for an entity containing a particle system component is a small flame.
 
-![images/particles-reference-editor-2.png](images/particles-reference-editor-2.png) 
+![media/particles-reference-editor-2.png](media/particles-reference-editor-2.png) 
 
 Alternatively you can create the entity directly in the scene viewport by right-clicking at the location you want to place it. The gizmo icon for an entity containing a particle system component is a flame in a box stand.
 
@@ -24,7 +24,7 @@ If you create an empty particle system it won't have any particles so you won't 
 
 You can select an entity containing a particle system component and edit it using the Property Grid just like any other entity in the game studio.
 
-![images/particles-reference-editor-3.png](images/particles-reference-editor-3.png) 
+![media/particles-reference-editor-3.png](media/particles-reference-editor-3.png) 
 
 An entity requires the Transform component and the particle system component to contain a particle system. You can add a particle system component to any entity which doesn't have one already. If you want two particle systems to share the same transformation you can create two entities and add one of them as a child to the other.
 

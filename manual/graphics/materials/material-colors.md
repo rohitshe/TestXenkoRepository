@@ -12,13 +12,13 @@ The Material System supports several kinds of color/scalar providers:
 
 You can select the provider by clicking on the blue drop-down of a Diffuse Map/Specular Map/Normal Map...etc.:
 
-![images/material-colors-1.png](images/material-colors-1.png) 
+![media/material-colors-1.png](media/material-colors-1.png) 
 
 # Texture
 
 Sample the color/scalar from a given texture.
 
-![images/material-colors-2.png](images/material-colors-2.png) 
+![media/material-colors-2.png](media/material-colors-2.png) 
 
 | Property           | Description                                                                                                                                                                   |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,7 +41,7 @@ Sample the color/scalar from a given texture.
 
 The color is provided directly as a constant value over the whole material. In case of a scalar value, a simple slider is provided instead of a color picker.
 
-![images/material-colors-3.png](images/material-colors-3.png) 
+![media/material-colors-3.png](media/material-colors-3.png) 
 
 | Property     | Description             |
 | ------------ | ----------------------- |
@@ -54,7 +54,7 @@ Perform a binary operation from 2 color/scalar value providers.
 
 `Result = LeftColor  <operator> RightColor`
 
-![images/material-colors-4.png](images/material-colors-4.png) 
+![media/material-colors-4.png](media/material-colors-4.png) 
 
 | Property | Description                                      |
 | -------- | ------------------------------------------------ |

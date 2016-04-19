@@ -1,6 +1,6 @@
 # Graphics Compositor Overview
 
-![images/graphics-compositor-overview-1.png](images/graphics-compositor-overview-1.png) 
+![media/graphics-compositor-overview-1.png](media/graphics-compositor-overview-1.png) 
 
 With the graphics compositor you can:
 
@@ -18,7 +18,7 @@ With the graphics compositor you can:
 
 The graphics compositor is accessible by clicking on the scene root object and the properties of the graphics compositor will appear in the property editor.
 
-![images/graphics-compositor-overview-2.png](images/graphics-compositor-overview-2.png) 
+![media/graphics-compositor-overview-2.png](media/graphics-compositor-overview-2.png) 
 
  
 
@@ -30,7 +30,7 @@ The graphics compositor is accessible by clicking on the scene root object and t
 
 The graphics compositor is a pluggable system (you can write your own compositor) and currently comes with a default **compositor by layers**.
 
-![images/graphics-compositor-overview-3.png](images/graphics-compositor-overview-3.png) 
+![media/graphics-compositor-overview-3.png](media/graphics-compositor-overview-3.png) 
 
 Graphics composition by layers is an easy concept to grasp, as it is often used by many popular drawing applications.
 

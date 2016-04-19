@@ -6,7 +6,7 @@ The principle of HDR rendering is to render to a scene to a HDR render target an
 
 | LDR Rendering                                                                                                                | HDR Rendering                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| ![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png)  | ![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png)  |
+| ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png)  | ![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png)  |
 
 
 > **Note**
@@ -19,31 +19,31 @@ We would like to setup the following pipeline:
 
  
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-3.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-3.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-3.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-3.png) 
 
 Without a HDR to LDR rendering path, a scene illuminated with several lights with high intensities would just look white:
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-1.png) 
 
 # Step1: Go to the Graphics Compositor Properties
 
 In the current scene, select the root entity
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-4.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-4.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-4.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-4.png) 
 
 The properties of the graphics compositor are editable in the Property Editor:
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-5.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-5.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-5.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-5.png) 
 
 # Step2: Add a camera slot and Select a Camera
 
-Click on the ![images/add.png](images/add.png)  on the Cameras category:
+Click on the ![media/add.png](media/add.png)  on the Cameras category:
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-7.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-7.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-7.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-7.png) 
 
 And then click on the finger point to select a Camera in a Scene (If you don't have a camera in a scene, right click on the root scene to create a new camera)
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-8.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-8.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-8.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-8.png) 
 
 # Step3 : Add a layer and create a HDR RenderFrame Output
 
@@ -51,38 +51,38 @@ And then click on the finger point to select a Camera in a Scene (If you don't h
 - In the Output, select **RenderFrame**
 - In the **Format property** of the RenderFrame, select **HDR**
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-9.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-9.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-9.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-9.png) 
 
 # Step 4: Add Renderers to the HDR Layer
 
-Then on the HDR Layer, you can click on the Renderers ![images/add.png](images/add.png)  and add the following renderers:
+Then on the HDR Layer, you can click on the Renderers ![media/add.png](media/add.png)  and add the following renderers:
 
 - Add a **Clear RenderFrame**
 - Add a **Render Camera**
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-10.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-10.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-10.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-10.png) 
 
 # Step 5: Add a Render Effect to the Master (LDR) Layer
 
 Now we need to transform the HDR output of the HDR Layer to the renderframe LDR of the Windows output
 
-- Add a **Render Effect** by clicking on the Renderers ![images/add.png](images/add.png)
+- Add a **Render Effect** by clicking on the Renderers ![media/add.png](media/add.png)
 - For the Effect, select "**Post-Processing Effects**"
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-11.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-11.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-11.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-11.png) 
 
 # Step 6: Configure the Post Processing Effects with a Tone Map operator
 
 On the Post-Processing Effects
 
 - Disable all non-necessary effects (Depth Of Field, Bright Filter...etc.)
-- In the Color Transforms, press ![images/add.png](images/add.png)  to add a new color transformation and select the **ToneMap** transform
+- In the Color Transforms, press ![media/add.png](media/add.png)  to add a new color transformation and select the **ToneMap** transform
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-12.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-12.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-12.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-12.png) 
 
 The scene should now look more natural instead of a saturated white:
 
-![images/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png](images/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png) 
+![media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png](media/how-do-i-setup-a-hdr-pipeline-with-posteffects-2.png) 
 
  
 

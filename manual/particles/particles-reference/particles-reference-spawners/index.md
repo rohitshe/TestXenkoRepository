@@ -1,6 +1,6 @@
 # Particle Spawners
 
-![images/particles-reference-spawners-0.png](images/particles-reference-spawners-0.png) 
+![media/particles-reference-spawners-0.png](media/particles-reference-spawners-0.png) 
 
 Particle spawners control when, how many and at what rate new particles will be emitted in the emitter.
 
@@ -10,7 +10,7 @@ An emitter needs at least one spawner to have any particles at all, but it can a
 
 This spawner emits a fixed number of particles per second while it's active. It balances and interpolates them and it's stable even if the framerate changes or drops. For example at a rate of 20 particles per second the spawner will spawn one particle every three frames for games that run at 60 fps, and two particles for three frames (skipping every third frame) for games that run at 30 fps.
 
-![images/particles-reference-spawners-1.png](images/particles-reference-spawners-1.png) 
+![media/particles-reference-spawners-1.png](media/particles-reference-spawners-1.png) 
 
 | Property                | Description                                                                                            |
 |-------------------------|--------------------------------------------------------------------------------------------------------|
@@ -23,7 +23,7 @@ This spawner emits a fixed number of particles per second while it's active. It 
 
 This spawner emits a fixed number of particles every frame regardless of the actual framerate. This feature can be useful if you require fixed number of particles, for example exactly one every frame, which is good for trails and ribbons.
 
-![images/particles-reference-spawners-2.png](images/particles-reference-spawners-2.png) 
+![media/particles-reference-spawners-2.png](media/particles-reference-spawners-2.png) 
 
 | Property                | Description                                                                                            |
 |-------------------------|--------------------------------------------------------------------------------------------------------|

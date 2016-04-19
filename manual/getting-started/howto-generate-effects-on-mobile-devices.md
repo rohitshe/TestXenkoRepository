@@ -10,7 +10,7 @@ As a developer, this mode is useful when you are developing and iterating on you
 
 Right click on your package and click "Package Properties". Then, switch "Effect Compilation" to "LocalOrRemote". This will make platforms that don't support effect compilation connect back to developer PC, and compile effects remotely.
 
-![images/howto-generate-effects-on-mobile-devices-1.png](images/howto-generate-effects-on-mobile-devices-1.png)  ![images/howto-generate-effects-on-mobile-devices-2.png](images/howto-generate-effects-on-mobile-devices-2.png) 
+![media/howto-generate-effects-on-mobile-devices-1.png](media/howto-generate-effects-on-mobile-devices-1.png)  ![media/howto-generate-effects-on-mobile-devices-2.png](media/howto-generate-effects-on-mobile-devices-2.png) 
 
 As a result, you can seamlessly develop your games on mobile devices without worrying of pre-generating effect permutations.
 
@@ -24,13 +24,13 @@ As you want to deploy your application for testing or release, effects should be
 
 In order to do so, go to "Package Properties" and enable "Record Used Effect" option.
 
-![images/howto-generate-effects-on-mobile-devices-3.png](images/howto-generate-effects-on-mobile-devices-3.png) 
+![media/howto-generate-effects-on-mobile-devices-3.png](media/howto-generate-effects-on-mobile-devices-3.png) 
 
 Launch again your game. It will connect back to GameStudio automatically and notify it of any effect that are required to run this game session.
 
 In the Asset View, GameStudio has an "import last effects compiled remotely", with a number next to it showing how many new effects would be added (if greyed out a, it means no effects have been compiled, or you have already imported them).
 
-![images/howto-generate-effects-on-mobile-devices-4.png](images/howto-generate-effects-on-mobile-devices-4.png) ![images/howto-generate-effects-on-mobile-devices-5.png](images/howto-generate-effects-on-mobile-devices-5.png) 
+![media/howto-generate-effects-on-mobile-devices-4.png](media/howto-generate-effects-on-mobile-devices-4.png) ![media/howto-generate-effects-on-mobile-devices-5.png](media/howto-generate-effects-on-mobile-devices-5.png) 
 
 As soon as you click the button, shaders will be imported as "EffectLog" asset. This asset contains shader permutations, and will be used on next compilation to pregenerate those shaders. You should then be able to compile and deploy your game on any platform.
 
@@ -85,7 +85,7 @@ Then, games will connect to this router and ask for a "Effect Compiler Service" 
 
 
 
-![images/24382052.png](images/24382052.png) 
+![media/24382052.png](media/24382052.png) 
 
 
 
@@ -95,7 +95,7 @@ In order for games to properly establish connections to router for all the platf
 
 
 
-![images/24382060.png](images/24382060.png) 
+![media/24382060.png](media/24382060.png) 
 
 
 

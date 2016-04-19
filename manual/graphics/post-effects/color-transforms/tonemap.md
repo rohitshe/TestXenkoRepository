@@ -4,7 +4,7 @@ Tone-mapping takes as input an HDR buffer, and re-map its color to a [0, 255] ra
 
 Obviously there are many possible ways to remap colors from an HDR space to an LDR, depending on the formula you choose.
 
-![images/tonemap-1.png](images/tonemap-1.png) 
+![media/tonemap-1.png](media/tonemap-1.png) 
 
 Several tone-mapping operators are supported out-of-the-box:
 

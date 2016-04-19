@@ -4,15 +4,15 @@
 
 A point light is emitting light in all directions within a sphere region.
 
-![images/PointLightOverview.png](images/PointLightOverview.png) 
+![media/PointLightOverview.png](media/PointLightOverview.png) 
 
 In the studio, the point light appears with the following icon:
 
-![images/PointLight.png](images/PointLight.png) 
+![media/PointLight.png](media/PointLight.png) 
 
 Once selected, the gizmo of the point light displays its sphere influence:
 
-![images/PointLightSelected.png](images/PointLightSelected.png) 
+![media/PointLightSelected.png](media/PointLightSelected.png) 
 
  
 
@@ -24,7 +24,7 @@ Once selected, the gizmo of the point light displays its sphere influence:
 
 Properties that defines a point light:
 
-![images/PointLightProperties.png](images/PointLightProperties.png) 
+![media/PointLightProperties.png](media/PointLightProperties.png) 
 
  
 

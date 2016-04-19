@@ -1,6 +1,6 @@
 # Particle Updaters
 
-![images/particles-reference-updaters-0.png](images/particles-reference-updaters-0.png) 
+![media/particles-reference-updaters-0.png](media/particles-reference-updaters-0.png) 
 
 Once a particle is spawned it can change over time before it disappears. Updaters act on all living particles over time, changing their attributes like position, velocity, color, etc. For example a gravity force is an updater which updates the particle's velocity with a constant value, making it accelerate faster towards the ground.
 
@@ -10,7 +10,7 @@ There are several built-in updaters and more will be added in the future. The [C
 
 There are several properties common for many updaters. Depending on the updater some or all of them may be missing, if they are irrelevant. The common properties are explained below:
 
-![images/particles-reference-updaters-11.png](images/particles-reference-updaters-11.png) 
+![media/particles-reference-updaters-11.png](media/particles-reference-updaters-11.png) 
 
 | Property                    | Description                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------|
@@ -24,11 +24,11 @@ There are several properties common for many updaters. Depending on the updater 
 
 ## Collider
 
-![images/particles-reference-updaters-5.gif](images/particles-reference-updaters-5.gif) 
+![media/particles-reference-updaters-5.gif](media/particles-reference-updaters-5.gif) 
 
 A collider is an updater which changes the particle's position and velocity when it collides with a predefined shape.
 
-![images/particles-reference-updaters-3.png](images/particles-reference-updaters-3.png) 
+![media/particles-reference-updaters-3.png](media/particles-reference-updaters-3.png) 
 
 
 | Property              | Description                                                                                                                      |
@@ -43,12 +43,12 @@ A collider is an updater which changes the particle's position and velocity when
 
 ## Force Field
 
-![images/particles-reference-updaters-6.gif](images/particles-reference-updaters-6.gif) 
+![media/particles-reference-updaters-6.gif](media/particles-reference-updaters-6.gif) 
 
 
 The force field is defined by a bounding shape and several force vectors which operate on the particles based on their relative position to the bounding shape.
 
-![images/particles-reference-updaters-1.png](images/particles-reference-updaters-1.png) 
+![media/particles-reference-updaters-1.png](media/particles-reference-updaters-1.png) 
 
  
 
@@ -75,7 +75,7 @@ Particles farther than falloff end will always be afected with the coefficient S
 
 Coefficient for particles in between changes linearly as shown below:
 
-![images/particles-reference-updaters-2.png](images/particles-reference-updaters-2.png) 
+![media/particles-reference-updaters-2.png](media/particles-reference-updaters-2.png) 
 
 For example, if the bounding shape is a sphere with a radius 10m, particles within 1m from its center (0.1 x 10m) will be moved with full strength. After the 1m distance the strength will linearly decrease until it reaches zero at 9m distance (0.9 x 10m). After that point the forces won't affect the particle.
 
@@ -83,7 +83,7 @@ For example, if the bounding shape is a sphere with a radius 10m, particles with
 
 #### Sphere
 
-![images/particles-reference-updaters-7.png](images/particles-reference-updaters-7.png) 
+![media/particles-reference-updaters-7.png](media/particles-reference-updaters-7.png) 
 
 <sub>Image license: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>, sphere image from the <a href="https://commons.wikimedia.org/wiki/File:Sphere_wireframe_10deg_6r.svg">"Sphere wireframe" work</a> by <a href="https://commons.wikimedia.org/wiki/User:Geek3">Geek3</a> under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a></sub>
 
@@ -97,7 +97,7 @@ The vortex force vector goes around the sphere's Y axis at the particle's positi
 
 #### Box
 
-![images/particles-reference-updaters-8.png](images/particles-reference-updaters-8.png) 
+![media/particles-reference-updaters-8.png](media/particles-reference-updaters-8.png) 
 
 When the bounding shape is a box, the falloff distance is the longest of the three distances on the X, Y and Z axes. The distance is relative to the box's sizes, with 1.0 being the box's surface.
 
@@ -110,7 +110,7 @@ The vortex force vector goes around the box's Y axis at the particle's position 
 
 #### Cylinder
 
-![images/particles-reference-updaters-9.png](images/particles-reference-updaters-9.png) 
+![media/particles-reference-updaters-9.png](media/particles-reference-updaters-9.png) 
 
 When the bounding shape is a cylinder, the falloff distance is based on the radial distance of the particle from the cylinder's local Y axis. Particle's height (position on the Y axis) is ignored unless the particle is outside the cylinder, in which case the distance is always 1.
 
@@ -123,7 +123,7 @@ The vortex force vector goes around the cylinder's Y axis at the particle's posi
 
 #### Torus
 
-![images/particles-reference-updaters-10.png](images/particles-reference-updaters-10.png) 
+![media/particles-reference-updaters-10.png](media/particles-reference-updaters-10.png) 
 
 <sub>Image license: <a href="https://gnu.org/licenses/fdl.html">GFDL</a>, <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>, torus image from the <a href="https://commons.wikimedia.org/wiki/File:Simple_Torus.svg">"A simple Torus" work</a> by Yassine Mrabet under GFDL, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a></sub>
 
@@ -143,7 +143,7 @@ The gravity updater is a very simplified force which affects all particles regar
 
 It's eidtable so that it can be used in games with different scales and behavior.
 
-![images/particles-reference-updaters-4.png](images/particles-reference-updaters-4.png) 
+![media/particles-reference-updaters-4.png](media/particles-reference-updaters-4.png) 
 
 The gravity force ignores most properties like offset and inheritance, and only uses the following attributes:
 

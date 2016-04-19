@@ -2,7 +2,7 @@
 
 Applies an effect to a render frame 
 
-![images/render-effect-1.png](images/render-effect-1.png) 
+![media/render-effect-1.png](media/render-effect-1.png) 
 
 # Properties
 

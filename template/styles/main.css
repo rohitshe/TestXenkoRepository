@@ -3,7 +3,7 @@ body {
 }
 
 .sidefilter {
-    top: 180px;
+    top: 174px;
 }
 
 .sidetoc {
@@ -45,14 +45,24 @@ th, td {
     margin-top:230px
   }
   .sidefilter {
-    top: 250px;
+    top: 244px;
   }
   .sidetoc {
     top: 310px;
   }
 }
 
+/* make container auto adjust up to 1370px */
+.container {
+  width: initial;
+  max-width: 1370px;
+}
+
 .level1 {
+  margin-top: 5px;
+}
+
+.toc .level1 > li {
   margin-top: 5px;
 }
 
@@ -78,12 +88,17 @@ th, td {
 }
 
 /* Already defined on navbar, but since we have conflict with current Xenko navbar we redefine them on breadcrumb */
+.navbar-default2 {
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    background-color: #f5f5f5;
+    border-color: #d0d0d0;
+}
+
 .breadcrumb {
     margin-top: 0px;
     margin-bottom: 0px;
-    border-width: 0 0 1px;
-    border-radius: 0;
-    border-color: #e7e7e7;
 }
 
 h1, h2, h3, h4, h5, h6, span.xref {
@@ -93,4 +108,24 @@ h1, h2, h3, h4, h5, h6, span.xref {
 
 #search {
     margin-top: 8px !important;
+}
+
+/* In this article right menu */
+.affix {
+  top: 150px;
+}
+
+/* adjust before size so that anchor (#title) makes text scroll to proper location without hiding it under title bar */
+h1:before, h2:before, h3:before, h4:before {
+  height: 180px;
+  margin-top: -180px;
+}
+
+/* View Source and Improve this doc buttons */
+#_content>a{
+  margin-top: 185px;
+}
+
+footer {
+  text-align: center;
 }
